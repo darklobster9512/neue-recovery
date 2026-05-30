@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Phone, ArrowRight, Star } from "lucide-react";
+import { Phone, ArrowRight, Star, ShieldCheck } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Autoplay from "embla-carousel-autoplay";
 import { NewsCarousel } from "@/components/NewsCarousel";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { useSettings } from "@/hooks/useSettings";
 
 const AnimatedCounter = ({ end, duration = 1800, suffix = "" }: { end: number; duration?: number; suffix?: string }) => {
   const [count, setCount] = useState(0);

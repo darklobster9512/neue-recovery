@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { EditorialHero } from "@/components/EditorialHero";
 import partnerBkaImage from "@/assets/partner-bka-cooperation.jpg";
 import partnerCoinbaseImage from "@/assets/partner-coinbase-meeting.jpg";
 import partnerBinanceImage from "@/assets/partner-binance-collaboration.jpg";

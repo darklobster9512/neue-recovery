@@ -108,7 +108,7 @@ const Index = () => {
             </p>
 
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.08] font-normal max-w-4xl mb-8">
-              Gestohlene Krypto-Werte. Juristisch zurückgeholt.
+              Wir holen Ihre Krypto-Werte zurück — rechtlich, international, nachweisbar.
             </h1>
 
             <p className="font-sans text-base lg:text-lg text-primary-foreground/80 max-w-2xl leading-relaxed mb-12">

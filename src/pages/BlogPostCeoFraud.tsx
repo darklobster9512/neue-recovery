@@ -1,63 +1,21 @@
 import { Section } from "@/components/ui/section";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Calendar, Clock, User, Scale, Mail, ChevronRight, MapPin, Phone, AlertTriangle, Shield, Award, Linkedin, Twitter, Facebook, Youtube } from "lucide-react";
-import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PhoneLink } from "@/components/PhoneLink";
+import { EditorialHero } from "@/components/EditorialHero";
 
 const BlogPostCeoFraud = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
-      {/* Hero Section with Breadcrumb */}
-      <Section className="py-20 lg:py-32 relative overflow-hidden h-[50vh] flex items-center bg-gray-800">
-        <div className="absolute inset-0 w-full h-full" style={{ top: '-64px', height: 'calc(100% + 64px)' }}>
-          <video
-            src="/video.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover"
-            style={{width:"177.78vh", height:"calc(100vh + 64px)", minWidth:"100%", minHeight:"calc(100% + 64px)"}}
-            aria-label="Crypto Background Video"
-          />
-        </div>
-        <div className="absolute inset-0 bg-black/70"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/30"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto">
-            {/* Breadcrumb */}
-            <Breadcrumb className="mb-8">
-              <BreadcrumbList>
-                <BreadcrumbItem>
-                  <BreadcrumbLink href="/" className="text-white/80 hover:text-white">Home</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="text-white/60" />
-                <BreadcrumbItem>
-                  <BreadcrumbLink href="/blog" className="text-white/80 hover:text-white">Blog</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="text-white/60" />
-                <BreadcrumbPage className="text-white">CEO-Fraud und Überweisungsbetrug</BreadcrumbPage>
-              </BreadcrumbList>
-            </Breadcrumb>
-            
-            
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-white leading-tight" style={{ textShadow: 'var(--text-glow-strong), 0 0 60px hsl(214 100% 60% / 0.8)' }}>
-              CEO-Fraud und <span className="bg-gradient-primary bg-clip-text text-transparent">Überweisungsbetrug</span>
-            </h1>
-            
-            <p className="text-xl lg:text-2xl text-gray-100 mb-8 leading-relaxed" style={{ textShadow: 'var(--text-glow), 0 0 30px hsl(214 100% 60% / 0.4)' }}>
-              Was tun bei Falschüberweisung nach gefälschten E-Mails?
-            </p>
-            
-          </div>
-        </div>
-      </Section>
+      <EditorialHero
+        eyebrow="Bovensiepen & Partner — Insights"
+        breadcrumb={[
+          { label: "Home", href: "/" },
+          { label: "News", href: "/blog" },
+          { label: "CEO-Fraud" },
+        ]}
+        title={<>CEO-Fraud und<br />Überweisungsbetrug.</>}
+        lead="Was tun bei Falschüberweisung nach gefälschten E-Mails?"
+      />
 
       {/* Article Content - transparent background */}
       <Section className="py-16">

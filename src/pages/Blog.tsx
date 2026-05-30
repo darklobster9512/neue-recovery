@@ -1,8 +1,8 @@
 import { Section } from "@/components/ui/section";
-import { Calendar, Clock, User, ChevronRight } from "lucide-react";
+import { Calendar, Clock, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { EditorialHero } from "@/components/EditorialHero";
 
 const Blog = () => {
   const blogPosts = [
@@ -37,36 +37,15 @@ const Blog = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
-
-      {/* Hero Section */}
-      <Section className="py-20 lg:py-32 relative overflow-hidden h-[50vh] flex items-center bg-gray-800">
-        <div className="absolute inset-0 w-full h-full" style={{ top: '-64px', height: 'calc(100% + 64px)' }}>
-          <video
-            src="/video.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover"
-            style={{width:"177.78vh", height:"calc(100vh + 64px)", minWidth:"100%", minHeight:"calc(100% + 64px)"}}
-            aria-label="Crypto Background Video"
-          />
-        </div>
-        <div className="absolute inset-0 bg-black/70"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/30"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-white leading-tight" style={{ textShadow: 'var(--text-glow-strong), 0 0 60px hsl(214 100% 60% / 0.8)' }}>
-              <span className="bg-gradient-primary bg-clip-text text-transparent">Aktuelles</span> & Rechtsnews
-            </h1>
-            <p className="text-xl lg:text-2xl text-gray-100 mb-8 leading-relaxed" style={{ textShadow: 'var(--text-glow), 0 0 30px hsl(214 100% 60% / 0.4)' }}>
-              Fallberichte und Rechtsentwicklungen aus den Bereichen Krypto-Recovery, Cybercrime und Kapitalmarktrecht
-            </p>
-          </div>
-        </div>
-      </Section>
+      <EditorialHero
+        eyebrow="Bovensiepen & Partner — News & Insights"
+        breadcrumb={[
+          { label: "Home", href: "/" },
+          { label: "News" },
+        ]}
+        title={<>Aktuelles &<br />Rechtsnews.</>}
+        lead="Fallberichte und Rechtsentwicklungen aus den Bereichen Krypto-Recovery, Cybercrime und Kapitalmarktrecht."
+      />
 
       {/* Blog Posts Grid - 3 Columns */}
       <Section className="py-16">

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -19,200 +19,161 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ChevronDown, Menu } from "lucide-react";
+import { useEffect, useState } from "react";
+
+const kompetenzen = [
+  { to: "/kompetenz/cybercrime", label: "Cybercrime" },
+  { to: "/kompetenz/datenschutz-und-compliance", label: "Datenschutz & Compliance" },
+  { to: "/kompetenz/gesellschafts-und-unternehmensrecht", label: "Gesellschafts- & Unternehmensrecht" },
+  { to: "/kompetenz/immobilienrecht", label: "Immobilienrecht" },
+  { to: "/kompetenz/private-clients-family-offices", label: "Private Clients / Family Offices" },
+  { to: "/kompetenz/prozessfuhrung", label: "Prozessführung" },
+  { to: "/kompetenz/wertpapier-und-kapitalmarktrecht", label: "Wertpapier- & Kapitalmarktrecht" },
+  { to: "/kompetenz/kryptonachverfolgung-und-mittelherkunftsnachweis", label: "Kryptonachverfolgung" },
+];
 
 export const Header = () => {
+  const { pathname } = useLocation();
+  const isHome = pathname === "/";
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const transparent = isHome && !scrolled;
+
+  const navText = transparent
+    ? "text-white/90 hover:text-white"
+    : "text-foreground/80 hover:text-foreground";
+  const wrapper = transparent
+    ? "fixed top-0 inset-x-0 z-50 bg-transparent"
+    : "sticky top-0 inset-x-0 z-50 bg-background/95 backdrop-blur border-b border-border";
+
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 bg-gradient-glass backdrop-blur-md border-b border-[var(--border-glass)] shadow-glass">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between max-w-6xl">
-        <div className="flex items-center">
-          <Link to="/">
-            <img 
-              src="/lovable-uploads/3863a302-63a5-4e77-ac24-0c7f1592c2ea.png" 
-              alt="Bovensiepen & Partner Logo" 
-              className="h-12 w-auto"
-            />
-          </Link>
-        </div>
-        <div className="hidden md:flex items-center space-x-6">
-          {/* Dropdown - Kanzlei */}
+    <nav className={wrapper}>
+      <div className="container mx-auto px-6 h-20 flex items-center justify-between max-w-7xl">
+        <Link to="/" className="flex items-center gap-3">
+          <span
+            className={`font-serif text-lg md:text-xl tracking-tight ${
+              transparent ? "text-white" : "text-foreground"
+            }`}
+          >
+            Bovensiepen <span className="opacity-60">&</span> Partner
+          </span>
+        </Link>
+
+        <div className="hidden lg:flex items-center gap-8">
           <DropdownMenu>
-            <DropdownMenuTrigger className="text-white hover:text-primary transition-all duration-300 hover:drop-shadow-[0_0_10px_hsl(214_100%_60%_/_0.8)] flex items-center gap-1" style={{ textShadow: 'var(--text-glow)' }}>
-              Kanzlei
-              <ChevronDown className="h-4 w-4" />
+            <DropdownMenuTrigger className={`text-sm tracking-wide flex items-center gap-1 transition-colors ${navText}`}>
+              Kanzlei <ChevronDown className="h-3.5 w-3.5" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-gray-900 border-gray-700 z-50">
-              <DropdownMenuItem className="text-white hover:bg-primary hover:text-white focus:bg-primary focus:text-white">
-                <Link to="/#team" className="w-full">Team</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="text-white hover:bg-primary hover:text-white focus:bg-primary focus:text-white">
-                <Link to="/blog" className="w-full">News</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="text-white hover:bg-primary hover:text-white focus:bg-primary focus:text-white">
-                <Link to="/unsere-partner" className="w-full">Unsere Partner</Link>
-              </DropdownMenuItem>
+            <DropdownMenuContent className="z-50 min-w-[200px] rounded-none border-border">
+              <DropdownMenuItem asChild><Link to="/#team" className="w-full">Team</Link></DropdownMenuItem>
+              <DropdownMenuItem asChild><Link to="/blog" className="w-full">News</Link></DropdownMenuItem>
+              <DropdownMenuItem asChild><Link to="/unsere-partner" className="w-full">Unsere Partner</Link></DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Dropdown - Kompetenzen */}
           <DropdownMenu>
-            <DropdownMenuTrigger className="text-white hover:text-primary transition-all duration-300 hover:drop-shadow-[0_0_10px_hsl(214_100%_60%_/_0.8)] flex items-center gap-1" style={{ textShadow: 'var(--text-glow)' }}>
-              Kompetenzen
-              <ChevronDown className="h-4 w-4" />
+            <DropdownMenuTrigger className={`text-sm tracking-wide flex items-center gap-1 transition-colors ${navText}`}>
+              Kompetenzen <ChevronDown className="h-3.5 w-3.5" />
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-gray-900 border-gray-700 z-50">
-              <DropdownMenuItem className="text-white hover:bg-primary hover:text-white focus:bg-primary focus:text-white">
-                <Link to="/kompetenz/cybercrime" className="w-full">Cybercrime</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="text-white hover:bg-primary hover:text-white focus:bg-primary focus:text-white">
-                <Link to="/kompetenz/datenschutz-und-compliance" className="w-full">Datenschutz und Compliance</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="text-white hover:bg-primary hover:text-white focus:bg-primary focus:text-white">
-                <Link to="/kompetenz/gesellschafts-und-unternehmensrecht" className="w-full">Gesellschafts- und Unternehmensrecht</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="text-white hover:bg-primary hover:text-white focus:bg-primary focus:text-white">
-                <Link to="/kompetenz/immobilienrecht" className="w-full">Immobilienrecht</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="text-white hover:bg-primary hover:text-white focus:bg-primary focus:text-white">
-                <Link to="/kompetenz/private-clients-family-offices" className="w-full">Private Clients / Family Offices</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="text-white hover:bg-primary hover:text-white focus:bg-primary focus:text-white">
-                <Link to="/kompetenz/prozessfuhrung" className="w-full">Prozessführung</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="text-white hover:bg-primary hover:text-white focus:bg-primary focus:text-white">
-                <Link to="/kompetenz/wertpapier-und-kapitalmarktrecht" className="w-full">Wertpapier- und Kapitalmarktrecht</Link>
-              </DropdownMenuItem>
-              <DropdownMenuItem className="text-white hover:bg-primary hover:text-white focus:bg-primary focus:text-white">
-                <Link to="/kompetenz/kryptonachverfolgung-und-mittelherkunftsnachweis" className="w-full">Kryptonachverfolgung und Mittelherkunftsnachweis</Link>
-              </DropdownMenuItem>
+            <DropdownMenuContent className="z-50 min-w-[280px] rounded-none border-border">
+              {kompetenzen.map((k) => (
+                <DropdownMenuItem key={k.to} asChild>
+                  <Link to={k.to} className="w-full">{k.label}</Link>
+                </DropdownMenuItem>
+              ))}
             </DropdownMenuContent>
           </DropdownMenu>
 
-          {/* Einzelne Links */}
-          <Link to="/blog-post/krypto-betrugsopfer-bekommt-869-bitcoin-zurueck" className="text-white hover:text-primary transition-all duration-300 hover:drop-shadow-[0_0_10px_hsl(214_100%_60%_/_0.8)]" style={{ textShadow: 'var(--text-glow)' }}>
+          <Link to="/blog-post/krypto-betrugsopfer-bekommt-869-bitcoin-zurueck" className={`text-sm tracking-wide transition-colors ${navText}`}>
             Erfolge
           </Link>
-          <Link to="/kontakt" className="text-white hover:text-primary transition-all duration-300 hover:drop-shadow-[0_0_10px_hsl(214_100%_60%_/_0.8)]" style={{ textShadow: 'var(--text-glow)' }}>
+          <Link to="/kontakt" className={`text-sm tracking-wide transition-colors ${navText}`}>
             Kontakt
           </Link>
-          <Link to="/stellenangebote" className="text-white hover:text-primary transition-all duration-300 hover:drop-shadow-[0_0_10px_hsl(214_100%_60%_/_0.8)]" style={{ textShadow: 'var(--text-glow)' }}>
-            Stellenangebote
+          <Link to="/stellenangebote" className={`text-sm tracking-wide transition-colors ${navText}`}>
+            Karriere
           </Link>
 
           <Link to="/kontakt">
-            <Button variant="outline" className="bg-gradient-glass backdrop-blur-md border-white/30 text-white hover:bg-white/20 hover:border-primary/50 transition-all duration-300 shadow-glass hover:shadow-[0_0_30px_hsl(214_100%_60%_/_0.6)] hover:border-primary/80" style={{ textShadow: 'var(--text-glow)', boxShadow: '0 0 20px hsl(214 100% 60% / 0.3), var(--shadow-glass)' }}>
-              Beratung anfragen
+            <Button
+              variant={transparent ? "outline" : "default"}
+              className={
+                transparent
+                  ? "rounded-none border-white/40 bg-transparent text-white hover:bg-white hover:text-primary"
+                  : "rounded-none bg-primary text-primary-foreground hover:bg-primary-dark"
+              }
+            >
+              Mandat anfragen
             </Button>
           </Link>
         </div>
 
-        {/* Mobile Navigation */}
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="outline" size="sm" className="bg-gradient-glass backdrop-blur-md border-white/30 text-white hover:bg-white/20 p-2">
+              <Button
+                variant="outline"
+                size="sm"
+                className={`rounded-none border ${
+                  transparent ? "border-white/40 bg-transparent text-white hover:bg-white/10" : ""
+                }`}
+              >
                 <Menu className="h-5 w-5" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] bg-gray-900/95 backdrop-blur-md border-gray-700">
+            <SheetContent side="right" className="w-[320px] bg-background border-l border-border">
               <div className="flex flex-col gap-6 mt-8">
-                {/* Logo */}
-                <Link to="/" className="flex justify-center">
+                <Link to="/" className="font-serif text-lg">
                   <SheetClose asChild>
-                    <img 
-                      src="/lovable-uploads/3863a302-63a5-4e77-ac24-0c7f1592c2ea.png" 
-                      alt="Bovensiepen & Partner Logo" 
-                      className="h-10 w-auto"
-                    />
+                    <span>Bovensiepen <span className="opacity-60">&</span> Partner</span>
                   </SheetClose>
                 </Link>
 
-                {/* Navigation Items */}
                 <Accordion type="single" collapsible className="w-full">
-                  {/* Kanzlei Dropdown */}
-                  <AccordionItem value="kanzlei" className="border-gray-700">
-                    <AccordionTrigger className="text-white hover:text-primary">
-                      Kanzlei
-                    </AccordionTrigger>
+                  <AccordionItem value="kanzlei" className="border-border">
+                    <AccordionTrigger className="text-sm">Kanzlei</AccordionTrigger>
                     <AccordionContent>
-                      <div className="flex flex-col gap-3 pl-4">
-                        <SheetClose asChild>
-                          <Link to="/#team" className="text-gray-300 hover:text-primary text-left">Team</Link>
-                        </SheetClose>
-                        <SheetClose asChild>
-                          <Link to="/blog" className="text-gray-300 hover:text-primary text-left">News</Link>
-                        </SheetClose>
-                        <SheetClose asChild>
-                          <Link to="/unsere-partner" className="text-gray-300 hover:text-primary text-left">Unsere Partner</Link>
-                        </SheetClose>
+                      <div className="flex flex-col gap-3 pl-2 text-sm">
+                        <SheetClose asChild><Link to="/#team">Team</Link></SheetClose>
+                        <SheetClose asChild><Link to="/blog">News</Link></SheetClose>
+                        <SheetClose asChild><Link to="/unsere-partner">Unsere Partner</Link></SheetClose>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
-
-                  {/* Kompetenzen Dropdown */}
-                  <AccordionItem value="kompetenzen" className="border-gray-700">
-                    <AccordionTrigger className="text-white hover:text-primary">
-                      Kompetenzen
-                    </AccordionTrigger>
+                  <AccordionItem value="kompetenzen" className="border-border">
+                    <AccordionTrigger className="text-sm">Kompetenzen</AccordionTrigger>
                     <AccordionContent>
-                      <div className="flex flex-col gap-3 pl-4">
-                        <SheetClose asChild>
-                          <Link to="/kompetenz/cybercrime" className="text-gray-300 hover:text-primary text-left">Cybercrime</Link>
-                        </SheetClose>
-                        <SheetClose asChild>
-                          <Link to="/kompetenz/datenschutz-und-compliance" className="text-gray-300 hover:text-primary text-left">Datenschutz und Compliance</Link>
-                        </SheetClose>
-                        <SheetClose asChild>
-                          <Link to="/kompetenz/gesellschafts-und-unternehmensrecht" className="text-gray-300 hover:text-primary text-left">Gesellschafts- und Unternehmensrecht</Link>
-                        </SheetClose>
-                        <SheetClose asChild>
-                          <Link to="/kompetenz/immobilienrecht" className="text-gray-300 hover:text-primary text-left">Immobilienrecht</Link>
-                        </SheetClose>
-                        <SheetClose asChild>
-                          <Link to="/kompetenz/private-clients-family-offices" className="text-gray-300 hover:text-primary text-left">Private Clients / Family Offices</Link>
-                        </SheetClose>
-                        <SheetClose asChild>
-                          <Link to="/kompetenz/prozessfuhrung" className="text-gray-300 hover:text-primary text-left">Prozessführung</Link>
-                        </SheetClose>
-                        <SheetClose asChild>
-                          <Link to="/kompetenz/wertpapier-und-kapitalmarktrecht" className="text-gray-300 hover:text-primary text-left">Wertpapier- und Kapitalmarktrecht</Link>
-                        </SheetClose>
-                        <SheetClose asChild>
-                          <Link to="/kompetenz/kryptonachverfolgung-und-mittelherkunftsnachweis" className="text-gray-300 hover:text-primary text-left">Kryptonachverfolgung und Mittelherkunftsnachweis</Link>
-                        </SheetClose>
+                      <div className="flex flex-col gap-3 pl-2 text-sm">
+                        {kompetenzen.map((k) => (
+                          <SheetClose asChild key={k.to}>
+                            <Link to={k.to}>{k.label}</Link>
+                          </SheetClose>
+                        ))}
                       </div>
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>
 
-                {/* Direct Links */}
-                <div className="flex flex-col gap-4">
-                  <SheetClose asChild>
-                    <Link to="/blog-post/krypto-betrugsopfer-bekommt-869-bitcoin-zurueck" className="text-white hover:text-primary text-left">
-                      Erfolge
-                    </Link>
-                  </SheetClose>
-                  <SheetClose asChild>
-                    <Link to="/kontakt" className="text-white hover:text-primary text-left">
-                      Kontakt
-                    </Link>
-                  </SheetClose>
-                  <SheetClose asChild>
-                    <Link to="/stellenangebote" className="text-white hover:text-primary text-left">
-                      Stellenangebote
-                    </Link>
-                  </SheetClose>
+                <div className="flex flex-col gap-3 text-sm">
+                  <SheetClose asChild><Link to="/blog-post/krypto-betrugsopfer-bekommt-869-bitcoin-zurueck">Erfolge</Link></SheetClose>
+                  <SheetClose asChild><Link to="/kontakt">Kontakt</Link></SheetClose>
+                  <SheetClose asChild><Link to="/stellenangebote">Karriere</Link></SheetClose>
                 </div>
 
-                {/* CTA Button */}
-                <div className="mt-6">
-                  <SheetClose asChild>
-                    <Link to="/kontakt" className="w-full">
-                      <Button variant="outline" className="w-full bg-gradient-glass backdrop-blur-md border-white/30 text-white hover:bg-white/20 hover:border-primary/50 transition-all duration-300">
-                        Beratung anfragen
-                      </Button>
-                    </Link>
-                  </SheetClose>
-                </div>
+                <SheetClose asChild>
+                  <Link to="/kontakt">
+                    <Button className="w-full rounded-none bg-primary text-primary-foreground hover:bg-primary-dark">
+                      Mandat anfragen
+                    </Button>
+                  </Link>
+                </SheetClose>
               </div>
             </SheetContent>
           </Sheet>

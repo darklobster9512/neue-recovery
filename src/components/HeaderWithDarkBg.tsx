@@ -1,12 +1,6 @@
 import { Header } from "@/components/Header";
 
-const HeaderWithDarkBg = () => {
-  return (
-    <div className="relative">
-      <div className="absolute top-0 left-0 right-0 h-16 bg-[hsl(214_100%_14%)] z-40" />
-      <Header />
-    </div>
-  );
-};
+// Backwards-compat: the new Header is solid by default.
+const HeaderWithDarkBg = () => <Header />;
 
 export { HeaderWithDarkBg };

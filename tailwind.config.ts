@@ -18,6 +18,11 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				serif: ['"Libre Baskerville"', 'Georgia', 'serif'],
+				sans: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+				display: ['"Libre Baskerville"', 'Georgia', 'serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',

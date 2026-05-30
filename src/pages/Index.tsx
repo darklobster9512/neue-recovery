@@ -79,7 +79,6 @@ const testimonials = [
 ];
 
 const Index = () => {
-  const { phoneEnabled } = useSettings();
   return (
     <div className="min-h-screen bg-background">
       <Header />

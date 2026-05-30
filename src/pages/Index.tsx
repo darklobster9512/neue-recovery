@@ -154,7 +154,9 @@ const Index = () => {
             <div className="container mx-auto px-6 lg:px-12 max-w-7xl py-5 flex flex-wrap items-center gap-x-10 gap-y-2 text-[10px] uppercase tracking-[0.25em] text-primary-foreground/60 font-sans">
               <span>Seit 2014</span>
               <span className="opacity-40">·</span>
-              <span>500+ Mandate</span>
+              <span>500+ Recovery-Mandate</span>
+              <span className="opacity-40">·</span>
+              <span>Blockchain-Forensik</span>
               <span className="opacity-40">·</span>
               <span>International tätig</span>
             </div>

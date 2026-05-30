@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { EditorialHero } from "@/components/EditorialHero";
 import partnerBkaImage from "@/assets/partner-bka-cooperation.jpg";
 import partnerCoinbaseImage from "@/assets/partner-coinbase-meeting.jpg";
 import partnerBinanceImage from "@/assets/partner-binance-collaboration.jpg";
@@ -71,36 +72,16 @@ const UnserePartner = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <EditorialHero
+        eyebrow="Bovensiepen & Partner — Netzwerk"
+        breadcrumb={[
+          { label: "Home", href: "/" },
+          { label: "Unsere Partner" },
+        ]}
+        title={<>Unser<br />Netzwerk.</>}
+        lead="Etablierte Kooperationen mit Strafverfolgungsbehörden, Krypto-Börsen und Aufsichtsorganisationen."
+      />
 
-      {/* Hero Section */}
-      <Section className="py-20 lg:py-32 relative overflow-hidden h-[50vh] flex items-center bg-gray-800">
-        <div className="absolute inset-0 w-full h-full" style={{ top: '-64px', height: 'calc(100% + 64px)' }}>
-          <video
-            src="/video.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 object-cover"
-            style={{width:"177.78vh", height:"calc(100vh + 64px)", minWidth:"100%", minHeight:"calc(100% + 64px)"}}
-            aria-label="Crypto Background Video"
-          />
-        </div>
-        <div className="absolute inset-0 bg-black/70"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/30"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-white leading-tight" style={{ textShadow: 'var(--text-glow-strong), 0 0 60px hsl(214 100% 60% / 0.8)' }}>
-              Unser <span className="bg-gradient-primary bg-clip-text text-transparent">Netzwerk</span>
-            </h1>
-            <p className="text-xl lg:text-2xl text-gray-100 mb-8 leading-relaxed" style={{ textShadow: 'var(--text-glow), 0 0 30px hsl(214 100% 60% / 0.4)' }}>
-              Etablierte Kooperationen mit Strafverfolgungsbehörden, Krypto-Börsen und Aufsichtsorganisationen
-            </p>
-          </div>
-        </div>
-      </Section>
 
       {/* Global Network Section */}
       <Section className="py-16 bg-gradient-to-br from-primary via-primary/90 to-primary/80 relative overflow-hidden">

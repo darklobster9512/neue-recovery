@@ -19,6 +19,7 @@ import { useLocation } from "react-router-dom";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useSettings } from "@/hooks/useSettings";
+import { EditorialHero } from "@/components/EditorialHero";
 import heroImage from "@/assets/contact-hero-bg.jpg";
 
 const contactSchema = z.object({
@@ -333,74 +334,44 @@ Mit freundlichen Grüßen`;
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <EditorialHero
+        eyebrow="Bovensiepen & Partner — Kontakt"
+        breadcrumb={[
+          { label: "Home", href: "/" },
+          { label: "Kontakt" },
+        ]}
+        title={<>Diskrete Erstberatung<br />in Krypto-Sachen.</>}
+        lead="Wir prüfen Ihren Sachverhalt vertraulich — Rückmeldung in der Regel innerhalb von 60 Minuten."
+        meta={
+          <>
+            <span className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5" />Kostenlose Erstberatung</span>
+            <span className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5" />Absolut vertraulich</span>
+            <span className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5" />Rückmeldung in 60 Minuten</span>
+          </>
+        }
+      >
+        {phoneEnabled && (
+          <Button
+            size="lg"
+            className="rounded-none h-14 px-10 text-xs font-semibold tracking-[0.2em] uppercase bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+            asChild
+          >
+            <a href={`tel:${phone}`}>
+              <Phone className="mr-2 h-4 w-4" />
+              Soforthilfe: Jetzt anrufen
+            </a>
+          </Button>
+        )}
+        <Button
+          variant="outline"
+          size="lg"
+          className="rounded-none h-14 px-10 text-xs font-semibold tracking-[0.2em] uppercase border-primary-foreground/70 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+          onClick={scrollToForm}
+        >
+          Kostenlose Erstberatung anfragen
+        </Button>
+      </EditorialHero>
 
-      {/* Hero Section */}
-      <Section className="py-16 lg:py-20 relative overflow-hidden h-[40vh] flex items-center bg-gray-800">
-        <div className="absolute inset-0 w-full h-full">
-          <video
-            src="/video.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            className="absolute inset-0 w-full h-full object-cover"
-            aria-label="Professional Law Office Background Video"
-          />
-        </div>
-        <div className="absolute inset-0 bg-black/70"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-primary/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: 'var(--text-glow-strong)' }}>
-              Diskrete Erstberatung<br />
-              <span className="bg-gradient-primary bg-clip-text text-transparent drop-shadow-lg">in Krypto-Sachen</span>
-            </h1>
-            <p className="text-xl lg:text-2xl text-gray-100 mb-8 leading-relaxed" style={{ textShadow: 'var(--text-glow)' }}>
-              Wir prüfen Ihren Sachverhalt vertraulich — Rückmeldung in der Regel innerhalb von 60 Minuten
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-              {phoneEnabled && (
-                <Button 
-                  size="lg" 
-                  className="text-lg px-8 py-6 h-auto bg-white text-primary hover:bg-white/90"
-                  asChild
-                >
-                  <a href={`tel:${phone}`}>
-                    <Phone className="mr-2 h-5 w-5" />
-                    Soforthilfe: Jetzt anrufen
-                  </a>
-                </Button>
-              )}
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="text-lg px-8 py-6 h-auto bg-gradient-glass backdrop-blur-md border-white/30 text-white hover:bg-white/20"
-                onClick={scrollToForm}
-              >
-                Kostenlose Erstberatung anfragen
-              </Button>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-200">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary" />
-                Kostenlose Erstberatung
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary" />
-                Absolut vertraulich
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary" />
-                Rückmeldung in 60 Minuten
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
 
       {/* Social Proof Section */}
       <Section className="py-12 bg-gradient-glass backdrop-blur-md">

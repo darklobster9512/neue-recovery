@@ -86,90 +86,81 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero — Architectural Split */}
-      <section className="relative bg-background text-foreground">
-        <div className="container mx-auto px-6 lg:px-12 max-w-7xl border-x border-primary/10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-            {/* Content Side */}
-            <div className="lg:col-span-7 py-20 lg:py-32 lg:pr-16 flex flex-col justify-center border-b lg:border-b-0 border-primary/10">
-              <div className="inline-flex items-center mb-10">
-                <span className="text-accent text-[10px] font-bold tracking-[0.3em] uppercase">
-                  Crypto Recovery <span className="mx-2 text-primary/30">|</span> Seit 2014
-                </span>
-              </div>
+      {/* Hero — Cinematic Full-Bleed */}
+      <section className="relative bg-primary text-primary-foreground min-h-[88vh] flex flex-col overflow-hidden">
+        <video
+          src="/video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover"
+          aria-label="Bovensiepen & Partner"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/55 to-primary/30" />
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/40" />
 
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-primary font-normal mb-10">
-                Ihre verlorenen<br />
-                <span className="italic text-accent">Krypto-Werte.</span><br />
-                Zurückgeholt.
-              </h1>
+        <div className="relative z-10 flex-1 flex flex-col justify-end">
+          <div className="container mx-auto px-6 lg:px-12 max-w-7xl pt-40 pb-20 lg:pb-24">
+            <p className="text-[11px] font-sans tracking-[0.3em] uppercase text-primary-foreground/70 mb-8">
+              Bovensiepen &amp; Partner <span className="mx-2 opacity-50">—</span> Rechtsanwälte
+            </p>
 
-              <div className="flex gap-6 mb-12">
-                <div className="w-px bg-accent shrink-0" />
-                <p className="text-lg lg:text-xl text-foreground/70 max-w-lg leading-relaxed">
-                  Spezialisierte Kanzlei für die Nachverfolgung und Rückführung gestohlener Krypto-Assets.
-                  Wir vereinen juristische Durchschlagskraft mit technologischer Exzellenz.
-                </p>
-              </div>
+            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.08] font-normal max-w-4xl mb-8">
+              Wirtschaftsrecht mit forensischer Tiefe.
+            </h1>
 
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
-                <Link to="/kontakt">
-                  <Button
-                    size="lg"
-                    className="rounded-none bg-primary text-primary-foreground hover:bg-accent transition-colors duration-300 h-14 px-10 text-xs font-bold tracking-[0.2em] uppercase shadow-xl"
-                  >
-                    Kostenlose Fallprüfung
-                  </Button>
-                </Link>
+            <p className="font-sans text-base lg:text-lg text-primary-foreground/80 max-w-2xl leading-relaxed mb-12">
+              Wir beraten Unternehmen, Family Offices und Privatmandanten in komplexen
+              wirtschafts- und kapitalmarktrechtlichen Verfahren — mit besonderem Fokus
+              auf Cybercrime, Kryptonachverfolgung und Prozessführung.
+            </p>
 
-                {phoneEnabled && (
-                  <div className="flex flex-col border-l border-primary/20 pl-6">
-                    <span className="text-[10px] uppercase tracking-widest text-foreground/40 mb-1 font-mono">
-                      Ansprechpartner 24/7
-                    </span>
-                    <a href={`tel:${phone}`} className="text-primary font-semibold hover:text-accent transition-colors">
-                      {phone}
-                    </a>
-                  </div>
-                )}
-              </div>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
+              <Link to="/kontakt">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-none h-14 px-10 text-xs font-semibold tracking-[0.2em] uppercase border-primary-foreground/70 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary transition-colors"
+                >
+                  Mandat anfragen
+                </Button>
+              </Link>
+
+              <a
+                href="#kompetenzen"
+                className="inline-flex items-center gap-3 text-xs font-semibold tracking-[0.2em] uppercase text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              >
+                Unsere Kompetenzen
+                <ArrowRight className="h-4 w-4" />
+              </a>
+
+              {phoneEnabled && (
+                <div className="flex flex-col sm:border-l sm:border-primary-foreground/20 sm:pl-6">
+                  <span className="text-[10px] uppercase tracking-widest text-primary-foreground/50 mb-1 font-sans">
+                    Ansprechpartner
+                  </span>
+                  <a href={`tel:${phone}`} className="text-primary-foreground font-medium hover:text-primary-foreground/80 transition-colors">
+                    {phone}
+                  </a>
+                </div>
+              )}
             </div>
+          </div>
 
-            {/* Visual Side */}
-            <div className="lg:col-span-5 relative min-h-[500px] lg:min-h-[700px] flex items-center justify-center p-8 lg:p-12 bg-primary/[0.03]">
-              <div className="relative w-full h-full group">
-                {/* Architectural Frame */}
-                <div className="absolute -inset-4 border border-accent/20 pointer-events-none transition-transform duration-700 group-hover:scale-[1.02]" />
-
-                <div className="relative w-full h-full overflow-hidden aspect-[4/5] lg:aspect-auto">
-                  <video
-                    src="/video.mp4"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    preload="metadata"
-                    className="absolute inset-0 w-full h-full object-cover"
-                    aria-label="Crypto Recovery"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
-                </div>
-
-                {/* Status Badge */}
-                <div className="absolute -bottom-6 -left-6 bg-background p-6 lg:p-8 shadow-2xl border-t-4 border-accent">
-                  <div className="text-[10px] text-foreground/40 uppercase tracking-widest mb-2 font-mono">
-                    Status: Active Recovery
-                  </div>
-                  <div className="flex items-baseline gap-2">
-                    <span className="font-serif text-3xl font-bold text-primary">500+</span>
-                    <span className="text-xs text-foreground/60 font-medium">Erfolgreiche Mandate</span>
-                  </div>
-                </div>
-              </div>
+          <div className="relative z-10 border-t border-primary-foreground/15">
+            <div className="container mx-auto px-6 lg:px-12 max-w-7xl py-5 flex flex-wrap items-center gap-x-10 gap-y-2 text-[10px] uppercase tracking-[0.25em] text-primary-foreground/60 font-sans">
+              <span>Seit 2014</span>
+              <span className="opacity-40">·</span>
+              <span>500+ Mandate</span>
+              <span className="opacity-40">·</span>
+              <span>International tätig</span>
             </div>
           </div>
         </div>
       </section>
+
 
 
       {/* Manifest */}

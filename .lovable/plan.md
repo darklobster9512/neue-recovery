@@ -1,29 +1,28 @@
-## Hero-Headline visuell aufwerten
+## Hero-Headline seriöser gestalten
 
-In `src/pages/Index.tsx` wird die aktuelle H1 so umgebaut, dass der Hauptsatz "Wir holen Ihre Krypto-Werte zurück" durch einen dezenten hellblauen Vertikal-Gradient hervorgehoben wird und sich klar von der Subline absetzt.
+### Ziel
+Den aktuellen hellblauen Gradient-Effekt der Hero-H1 in `src/pages/Index.tsx` entfernen und stattdessen einen seriöseren, zurückhaltenden Look umsetzen: reines Weiß für die Headline plus eine schmale hellblaue Akzentlinie darunter.
 
-### Änderungen
+### Änderungen in `src/pages/Index.tsx` (Hero-Block)
 
-1. **Hauptzeile** ("Wir holen Ihre Krypto-Werte zurück")
-   - Gradient-Text: `from-sky-300 via-sky-400 to-sky-500` (vertikal, oben→unten)
-   - Dezenter blauer Glow: `drop-shadow` mit ~20 % Sky-500
-   - Bleibt `font-bold`, gleiche Größe wie bisher
+1. **Hauptzeile** (`"Wir holen Ihre Krypto-Werte zurück"`)
+   - Entferne: `bg-gradient-to-b`, `bg-clip-text`, `text-transparent`, `drop-shadow`
+   - Setze stattdessen: `text-white` (oder `text-primary-foreground`)
+   - Schrift bleibt `font-serif`, gleiche Größe und Gewicht
 
-2. **Subline** ("rechtlich, international, nachweisbar")
-   - Wird optisch zurückgenommen: kleinere Größe, `uppercase`, `tracking-wide`
-   - Farbe: gedecktes Slate-Grau (`text-slate-400`)
-   - Trennzeichen werden zu schmalen vertikalen Strichen `|` zwischen den Wörtern
+2. **Akzentlinie**
+   - Neue Element direkt unter der Headline oder unter der Subline
+   - Dünne Linie (`h-px` oder `h-[1px]`), zentriert
+   - Farbe: `bg-sky-500/40` oder `bg-sky-400/30`
+   - Breite: z. B. `w-24` oder `w-32` — dezent, nicht zu breit
 
-3. **Akzentlinie**
-   - Dünne, mittig zentrierte Linie unter dem Block mit horizontalem Gradient (transparent → sky-500/50 → transparent)
+3. **Subline** bleibt unverändert
+   - Weiterhin `uppercase`, `tracking-wide`, `text-primary-foreground/70`
 
 ### Technische Details
-
-- Nur visuelle Änderung in `src/pages/Index.tsx` (Hero-Block, ca. Zeile 110–115)
-- Falls Tailwind v3 im Projekt: `bg-gradient-to-b` statt `bg-linear-to-b` verwenden
-- Farben über Tailwind-Klassen (sky-300/400/500, slate-400/600) — keine neuen Design-Tokens nötig
-- Keine Änderungen an Layout, Navigation, anderen Sektionen oder Business-Logik
+- Keine neuen Design-Tokens nötig
+- Keine Änderungen an Layout, Navigation oder anderen Sektionen
+- Nur visuelle Anpassung im Hero-Bereich
 
 ### Ergebnis
-
-Der Hauptsatz wirkt wie "in das dunkle Hintergrundbild eingraviert", mit einem kühlen, seriösen Hellblau-Schimmer — die Subline tritt als zurückhaltender Untertitel auf, was die Hierarchie deutlich verstärkt.
+Headline wirkt klarer, schärfer und seriöser. Die einzelne blaue Linie gibt einen ruhigen, professionellen Akzent ohne visuellen Lärm.

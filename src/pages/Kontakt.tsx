@@ -354,11 +354,11 @@ Mit freundlichen Grüßen`;
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: 'var(--text-glow-strong)' }}>
-              Schnelle Hilfe bei<br />
-              <span className="bg-gradient-primary bg-clip-text text-transparent drop-shadow-lg">Krypto-Betrug</span>
+              Diskrete Erstberatung<br />
+              <span className="bg-gradient-primary bg-clip-text text-transparent drop-shadow-lg">in Krypto-Sachen</span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-100 mb-8 leading-relaxed" style={{ textShadow: 'var(--text-glow)' }}>
-              Kostenlose Erstberatung – Rückmeldung in der Regel innerhalb von 60 Minuten
+              Wir prüfen Ihren Sachverhalt vertraulich — Rückmeldung in der Regel innerhalb von 60 Minuten
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
@@ -387,15 +387,15 @@ Mit freundlichen Grüßen`;
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-200">
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-primary" />
-                100% kostenlose Erstberatung
+                Kostenlose Erstberatung
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-primary" />
-                Kein Erfolg = keine Kosten
+                Absolut vertraulich
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle className="h-4 w-4 text-primary" />
-                24/7 Notfall-Hotline
+                Rückmeldung in 60 Minuten
               </div>
             </div>
           </div>
@@ -407,7 +407,7 @@ Mit freundlichen Grüßen`;
         <div className="container mx-auto px-4">
           <div className="text-center mb-8">
             <p className="text-muted-foreground text-sm uppercase tracking-wider font-medium">
-              Vertrauen von führenden Institutionen
+              Bekannt aus Verfahren und Kooperationen mit
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-8 lg:gap-12 opacity-70 hover:opacity-100 transition-opacity">

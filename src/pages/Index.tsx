@@ -104,17 +104,18 @@ const Index = () => {
         <div className="relative z-10 flex-1 flex flex-col justify-end">
           <div className="container mx-auto px-6 lg:px-12 max-w-7xl pt-40 pb-20 lg:pb-24">
             <p className="text-[11px] font-sans tracking-[0.3em] uppercase text-primary-foreground/70 mb-8">
-              Bovensiepen &amp; Partner <span className="mx-2 opacity-50">—</span> Rechtsanwälte
+              Bovensiepen &amp; Partner <span className="mx-2 opacity-50">—</span> Crypto Recovery &amp; Wirtschaftsrecht
             </p>
 
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.08] font-normal max-w-4xl mb-8">
-              Wirtschaftsrecht mit forensischer Tiefe.
+              Gestohlene Krypto-Werte. Juristisch zurückgeholt.
             </h1>
 
             <p className="font-sans text-base lg:text-lg text-primary-foreground/80 max-w-2xl leading-relaxed mb-12">
-              Wir beraten Unternehmen, Family Offices und Privatmandanten in komplexen
-              wirtschafts- und kapitalmarktrechtlichen Verfahren — mit besonderem Fokus
-              auf Cybercrime, Kryptonachverfolgung und Prozessführung.
+              Spezialisierte Kanzlei für die forensische Nachverfolgung und rechtliche
+              Rückführung gestohlener Krypto-Assets. Wir verbinden Blockchain-Analyse
+              mit internationaler Prozessführung — für Privatmandanten, Family Offices
+              und Unternehmen.
             </p>
 
             <div className="flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-10">
@@ -153,7 +154,9 @@ const Index = () => {
             <div className="container mx-auto px-6 lg:px-12 max-w-7xl py-5 flex flex-wrap items-center gap-x-10 gap-y-2 text-[10px] uppercase tracking-[0.25em] text-primary-foreground/60 font-sans">
               <span>Seit 2014</span>
               <span className="opacity-40">·</span>
-              <span>500+ Mandate</span>
+              <span>500+ Recovery-Mandate</span>
+              <span className="opacity-40">·</span>
+              <span>Blockchain-Forensik</span>
               <span className="opacity-40">·</span>
               <span>International tätig</span>
             </div>

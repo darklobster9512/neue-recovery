@@ -294,73 +294,43 @@ export default function Stellenangebote() {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <EditorialHero
+        eyebrow="Bovensiepen & Partner — Karriere"
+        breadcrumb={[
+          { label: "Home", href: "/" },
+          { label: "Karriere" },
+        ]}
+        title={<>Karriere bei<br />Bovensiepen & Partner.</>}
+        lead="Spezialisierte Kanzlei für Krypto-Recovery, Wirtschafts- und Kapitalmarktrecht — mit eigener Blockchain-Forensik."
+        meta={
+          <>
+            <span className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5" />Flexible Arbeitszeiten</span>
+            <span className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5" />Mentoring & Weiterbildung</span>
+            <span className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5" />Attraktive Vergütung</span>
+          </>
+        }
+      >
+        <Button
+          size="lg"
+          className="rounded-none h-14 px-10 text-xs font-semibold tracking-[0.2em] uppercase bg-primary-foreground text-primary hover:bg-primary-foreground/90"
+          onClick={scrollToJobs}
+        >
+          <Briefcase className="mr-2 h-4 w-4" />
+          Offene Stellen ansehen
+        </Button>
+        <Button
+          variant="outline"
+          size="lg"
+          className="rounded-none h-14 px-10 text-xs font-semibold tracking-[0.2em] uppercase border-primary-foreground/70 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+          asChild
+        >
+          <Link to="/kontakt?job=initiativbewerbung">
+            Initiativbewerbung
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
+        </Button>
+      </EditorialHero>
 
-      {/* Hero Section */}
-      <Section className="py-16 lg:py-24 relative overflow-hidden h-[60vh] flex items-center bg-gray-800">
-        <div className="absolute inset-0 w-full h-full">
-          <video
-            src="/video.mp4"
-            autoPlay
-            loop
-            muted
-            playsInline
-            preload="metadata"
-            className="absolute inset-0 w-full h-full object-cover"
-            aria-label="Legal Team Working Background Video"
-          />
-        </div>
-        <div className="absolute inset-0 bg-black/70"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-primary/20"></div>
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight" style={{ textShadow: 'var(--text-glow-strong)' }}>
-              Karriere bei<br />
-              <span className="bg-gradient-primary bg-clip-text text-transparent drop-shadow-lg">Bovensiepen & Partner</span>
-            </h1>
-            <p className="text-xl lg:text-2xl text-gray-100 mb-8 leading-relaxed" style={{ textShadow: 'var(--text-glow)' }}>
-              Spezialisierte Kanzlei für Krypto-Recovery, Wirtschafts- und Kapitalmarktrecht — mit eigener Blockchain-Forensik
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
-              <Button 
-                size="lg" 
-                className="text-lg px-8 py-6 h-auto bg-white text-primary hover:bg-white/90"
-                onClick={scrollToJobs}
-              >
-                <Briefcase className="mr-2 h-5 w-5" />
-                Offene Stellen ansehen
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="text-lg px-8 py-6 h-auto bg-gradient-glass backdrop-blur-md border-white/30 text-white hover:bg-white/20"
-                asChild
-              >
-                <Link to="/kontakt?job=initiativbewerbung">
-                  Initiativbewerbung
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Link>
-              </Button>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-gray-200">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary" />
-                Flexible Arbeitszeiten
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary" />
-                Mentoring & Weiterbildung
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary" />
-                Attraktive Vergütung
-              </div>
-            </div>
-          </div>
-        </div>
-      </Section>
 
       {/* Benefits Section */}
       <Section className="py-20 bg-gradient-to-br from-background via-background to-primary/5">

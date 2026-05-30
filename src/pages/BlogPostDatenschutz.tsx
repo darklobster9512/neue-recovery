@@ -53,7 +53,7 @@ const BlogPostDatenschutz = () => {
             </h1>
             
             <p className="text-xl lg:text-2xl text-gray-100 mb-8 leading-relaxed" style={{ textShadow: 'var(--text-glow), 0 0 30px hsl(214 100% 60% / 0.4)' }}>
-              Expertise in Datenschutz und rechtlicher Compliance
+              DSGVO, Geldwäscheprävention und NIS 2 — beratungsstark und prüfungssicher
             </p>
           </div>
         </div>
@@ -65,7 +65,7 @@ const BlogPostDatenschutz = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-foreground mb-8 leading-relaxed">
-                An Datenschutz und Compliance führt kein Weg mehr vorbei. Strenge gesetzliche Regulierungen mit hohen Strafdrohungen haben diese Rechtsgebiete von einem Schattendasein in das Zentrum der unternehmerischen Aufmerksamkeit gerückt. Laufend neue gesetzliche Vorgaben und gerichtliche/behördliche Entscheidungen stellen alle Beteiligten vor große Herausforderungen. Als zertifizierte Datenschutz- und Geldwäschebeauftragte sind wir mit den aktuellen Spielregeln vertraut und meistern mit unseren Mandant:innen die Herausforderungen der neuesten Judikatur und Gesetzgebung.
+                Datenschutz und Compliance bestimmen heute den unternehmerischen Alltag. Bußgelder, Schadenersatzansprüche und Reputationsrisiken sind real. Als zertifizierte Datenschutz- und Geldwäschebeauftragte beraten wir bei der Umsetzung von DSGVO und NIS 2, beim Aufbau wirksamer Compliance-Strukturen und bei der Erstellung von Mittelherkunftsnachweisen — insbesondere für Mandant:innen mit Krypto-Vermögen.
               </p>
             </div>
           </div>
@@ -112,7 +112,7 @@ const BlogPostDatenschutz = () => {
                     Erstellung von Mittelherkunftsnachweisen
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Wer in Kryptowährungen investiert, wird von seiner Kryptohandelsbörse und/oder Bank regelmäßig nach einem Mittelherkunftsnachweis gefragt. Die Erbringung eines solchen Nachweises ist häufig mit scheinbar unüberwindbaren Hindernissen verbunden. Als Rechtsanwälte, zertifizierte Geldwäschebeauftragte und Blockchain-Forensiker unterstützen wir unsere Mandant:innen bei der raschen Bescheinigung der Unbedenklichkeit ihrer Vermögenswerte und deren Herkunft.
+                    Banken und Krypto-Börsen verlangen bei Auszahlungen oder Transfers regelmäßig einen vollständigen Mittelherkunftsnachweis (Source of Funds). Als Rechtsanwält:innen, zertifizierte Geldwäschebeauftragte und Blockchain-Forensiker erstellen wir prüfungssichere Nachweise, die den AML-Anforderungen der Institute standhalten — von der On-Chain-Analyse bis zur strukturierten Dokumentation.
                   </AccordionContent>
                 </AccordionItem>
 

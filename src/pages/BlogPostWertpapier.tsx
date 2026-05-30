@@ -62,11 +62,11 @@ const BlogPostWertpapier = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-foreground mb-8 leading-relaxed">
-                Wir verstehen den Kapitalmarkt/komplexe Finanzinstrumente und stehen auf Herausforderungen.
+                Wir beraten und vertreten in allen Fragen des Wertpapier- und Kapitalmarktrechts — von der Produktstrukturierung über aufsichtsrechtliche Verfahren bis zur Durchsetzung von Anlegeransprüchen.
               </p>
 
               <p className="mb-8 text-foreground">
-                Die Dynamik des Kapitalmarkts und die Vielzahl an gesetzlichen Spielregeln macht es professionellen Marktteilnehmern ebenso wie Anlegern schwer den Durchblick zu behalten. Komplexe Finanzprodukte sind schon lange nicht mehr institutionellen Anlegern vorbehalten, sondern werden allzu oft auch an private Kunden verkauft. Mit dem Vormarsch von „Kryptowährungen" drängt nunmehr eine gänzlich neue Assetklasse in den Markt.
+                Die Regulierungsdichte am Kapitalmarkt nimmt stetig zu. Mit Kryptowerten und tokenisierten Finanzinstrumenten ist eine neue Asset-Klasse hinzugekommen, deren rechtliche Einordnung — von MiCAR über Prospektpflichten bis hin zu Geldwäsche- und Compliance-Vorgaben — fundierte Expertise erfordert. Wir verbinden klassisches Kapitalmarktrecht mit eigener Krypto-Kompetenz und begleiten Marktteilnehmer und Anleger gleichermaßen.
               </p>
             </div>
           </div>
@@ -95,7 +95,7 @@ const BlogPostWertpapier = () => {
                     Beratung von FinTechs, Wertpapierfirmen und -dienstleister
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Von der Mitarbeiterschulung (Compliance) bis hin zur rechtskonformen Umsetzung neuer Produktideen. Wir bringen Know-How ein und stehen unseren Mandant:innen beratend und gestaltend zur Seite.
+                    Wir beraten FinTechs, Wertpapierfirmen und Krypto-Asset-Dienstleister bei Lizenzierung, Compliance-Aufbau, Produktgestaltung und der Umsetzung aufsichtsrechtlicher Vorgaben — von MiFID II bis MiCAR.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -104,7 +104,7 @@ const BlogPostWertpapier = () => {
                     Schadenersatzansprüche iZm (Krypto-) Futures, Swaps, Investmentfonds, Anleihen
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Aus über 10 Jahren Erfahrung im Zusammenhang mit Schadenersatzprozessen wissen wir worauf es ankommt. Verständnis von Finanzprodukten und Verhandlungsgeschick sind der Schlüssel zum Erfolg.
+                    Wir setzen Schadenersatzansprüche aus fehlerhafter Anlageberatung, Prospekthaftung und Pflichtverletzungen bei komplexen Finanzprodukten durch — einschließlich Krypto-Derivaten, Futures, Swaps und Investmentfonds. Über zehn Jahre Prozesserfahrung fließen in jedes Mandat ein.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -113,7 +113,7 @@ const BlogPostWertpapier = () => {
                     Kryptowährungen, Finanzierungen
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Streitigkeiten im Zusammenhang mit Kreditverträgen und Finanzierungen beschäftigen uns seit Beginn unserer juristischen Tätigkeit. Kryptowährungen sind unser Steckenpferd.
+                    Krypto-Assets sind ein Kernbereich unserer Kanzlei. Wir beraten bei der Strukturierung von Token-Emissionen, bei Streitigkeiten aus Krypto-Investments und Krediten und bei der rechtssicheren Integration von Krypto-Werten in bestehende Finanzierungen.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -122,7 +122,7 @@ const BlogPostWertpapier = () => {
                     Zivilrechtliche-, aufsichts- und verwaltungsbehördliche Verfahren
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Verfahren im Zusammenhang mit Finanzprodukten stellen eine besondere Herausforderung dar. Wir nehmen die Herausforderung an und sorgen mit Akribie und Verhandlungsgeschick für das beste Ergebnis.
+                    Wir vertreten in Zivilprozessen, aufsichts- und verwaltungsbehördlichen Verfahren rund um Finanz- und Krypto-Produkte — vor Gerichten ebenso wie gegenüber FMA, BaFin und vergleichbaren Aufsichtsstellen.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -143,7 +143,7 @@ const BlogPostWertpapier = () => {
                 Unsere Expert:innen
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Hier dann nochmal auf der Landingpage abgleichen bei der Sektion Unser Team, wer hierfür zuständig ist, und dann die Anwälte austauschen in der Sektion
+                Spezialisierte Berater:innen für Wertpapier-, Kapitalmarkt- und Krypto-Asset-Recht
               </p>
             </div>
 
@@ -211,10 +211,10 @@ const BlogPostWertpapier = () => {
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Benötigen Sie rechtliche Beratung im Wertpapier- und Kapitalmarktrecht?
+                Erstberatung anfragen
               </h2>
               <p className="text-lg text-white/90 mb-8 leading-relaxed">
-                Kontaktieren Sie unsere Experten für eine unverbindliche Erstberatung. Wir helfen Ihnen bei allen Fragen rund um Wertpapiere, Kapitalmarktrecht und digitale Assets.
+                Wertpapiere, Kapitalmarktprodukte, Token oder Krypto-Assets — wir prüfen Ihren Sachverhalt und nennen Ihnen die belastbaren rechtlichen Handlungsoptionen.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/kontakt">

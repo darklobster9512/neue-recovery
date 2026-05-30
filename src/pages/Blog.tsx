@@ -59,10 +59,10 @@ const Blog = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-white leading-tight" style={{ textShadow: 'var(--text-glow-strong), 0 0 60px hsl(214 100% 60% / 0.8)' }}>
-              <span className="bg-gradient-primary bg-clip-text text-transparent">Blog</span> & Rechtsnews
+              <span className="bg-gradient-primary bg-clip-text text-transparent">Aktuelles</span> & Rechtsnews
             </h1>
             <p className="text-xl lg:text-2xl text-gray-100 mb-8 leading-relaxed" style={{ textShadow: 'var(--text-glow), 0 0 30px hsl(214 100% 60% / 0.4)' }}>
-              Aktuelle Fälle, Rechtsentwicklungen und Expertenwissen zu Kryptowährungen und CyberCrime
+              Fallberichte und Rechtsentwicklungen aus den Bereichen Krypto-Recovery, Cybercrime und Kapitalmarktrecht
             </p>
           </div>
         </div>

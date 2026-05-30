@@ -61,15 +61,15 @@ const BlogPostGesellschaftsrecht = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-foreground mb-8 leading-relaxed">
-                Unternehmensrecht verstehen wir als Querschnitt verschiedener Rechtsgebiete.
+                Wir beraten Unternehmen in allen Phasen — von der Gründung über laufende gesellschaftsrechtliche Themen bis hin zu Transaktionen und Streitigkeiten. Dabei verstehen wir Unternehmensrecht als interdisziplinäre Aufgabe.
               </p>
 
               <p className="mb-8 text-foreground">
-                In unserer täglichen Arbeit mit erfolgreichen nationalen sowie internationalen Unternehmen werden wir mit unterschiedlichsten unternehmerischen Problemstellungen und Bedürfnissen konfrontiert. Aufgrund der breit-gefächerten Spezialgebiete bei Bovensiepen & Partner ist es uns möglich, Unternehmen interdisziplinär und vollumfänglich zu betreuen. Wir stehen Ihnen vom allgemeinen Gesellschaftsrecht und der Betreuung bei alltäglichen unternehmensrechtlichen Fragestellungen, über Herausforderungen im Datenschutz/Compliance bis hin zu Fragen im Marken-, Medien- und Arbeitsrecht zur Verfügung.
+                Bei Mandant:innen aus dem Krypto- und Blockchain-Bereich begleiten wir die Gründung und Strukturierung von Krypto-Asset-Dienstleistern, MiCAR-Lizenzierungen sowie die Tokenisierung von Beteiligungen. Unsere kanzleieigene Krypto-Kompetenz erlaubt es, regulatorische, gesellschafts- und kapitalmarktrechtliche Fragen aus einer Hand zu beantworten.
               </p>
 
               <p className="mb-8 text-foreground">
-                Im Bereich des Gesellschaftsrechts gestalten wir Lösungen, die auf Ihre individuellen Bedürfnisse zugeschnitten sind – von der Wahl der geeigneten Gesellschaftsform und der Gesellschaftsgründung, bis hin zur rechtlichen Abwicklung des Kaufs oder Verkaufs Ihres Unternehmens. Bei Gesellschafterstreitigkeiten können Sie auf ein erfahrenes Team an Mediatoren und Prozessanwälten vertrauen (Dispute Resolution), dies sowohl auf nationaler als auch internationaler Ebene.
+                Im Streitfall vertreten wir Gesellschafter, Geschäftsführer und Unternehmen vor Gericht und in Schiedsverfahren — national wie international.
               </p>
             </div>
           </div>

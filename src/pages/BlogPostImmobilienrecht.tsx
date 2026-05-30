@@ -61,11 +61,11 @@ const BlogPostImmobilienrecht = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-foreground mb-8 leading-relaxed">
-                Eigentumswohnungen, Einfamilienhäuser, Zinshäuser oder Zweitwohnsitze – jede Immobilie ist einzigartig und bedarf daher besonderer Expertise. Ganz gleich, ob Sie Privatperson oder Unternehmer, Verkäufer oder Käufer, Investor oder Bauträger sind, bei uns erhalten Sie umfassende Beratung in allen immobilien- und baurechtlichen Angelegenheiten. Von der Planungsphase bis zur Realisierung Ihres Immobilienprojekts stehen wir Ihnen mit unserem Know-How zur Seite und unterstützen Sie bei der Erstellung und Prüfung von Vertragsdokumenten sowie in der gesamten rechtlichen Umsetzung Ihres Vorhabens.
+                Wir beraten Privatpersonen, Investoren und Bauträger in allen immobilien- und baurechtlichen Angelegenheiten — von der Strukturierung über Vertragsgestaltung und Due Diligence bis zur Abwicklung und gerichtlichen Durchsetzung.
               </p>
 
               <p className="mb-8 text-foreground">
-                Als Mediatoren setzen wir uns dafür ein, im Falle von Konflikten eine rasche und effektive Lösung zu finden. Für den Fall, dass der Weg zu Gericht dennoch unvermeidbar ist, vertreten wir Sie auch bei Gerichtsprozessen oder Behörden in allen bau-, miet- oder wohnungseigentumsrechtlichen Angelegenheiten.
+                Bei Immobilientransaktionen mit Bezug zu digitalen Vermögenswerten — etwa wenn der Kaufpreis aus Krypto-Beständen finanziert wird — übernehmen wir die rechtssichere Aufbereitung des Mittelherkunftsnachweises gegenüber Notar, Bank und Treuhänder. Damit lassen sich Verzögerungen im Closing vermeiden, die bei Krypto-Vermögen heute regelmäßig auftreten.
               </p>
             </div>
           </div>
@@ -240,10 +240,10 @@ const BlogPostImmobilienrecht = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Opfer von Cybercrime geworden?
+                Immobilienprojekt rechtssicher umsetzen
               </h2>
               <p className="text-lg text-white mb-8 leading-relaxed">
-                Verlieren Sie keine Zeit! Je schneller Sie handeln, desto größer sind Ihre Chancen auf Erfolg.
+                Wir prüfen Ihre Transaktion, gestalten Verträge und übernehmen — wo erforderlich — auch den Mittelherkunftsnachweis bei Finanzierungen aus digitalen Vermögenswerten.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -252,7 +252,7 @@ const BlogPostImmobilienrecht = () => {
                   className="text-lg px-8 py-4 h-auto bg-white/20 backdrop-blur-md border-white/30 text-white hover:bg-white/30 hover:border-white/50 transition-all duration-300"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Sofort-Beratung: +43 (0) 512 563020
+                  +43 (0) 512 563020
                 </Button>
                 <Button 
                   variant="outline" 
@@ -264,7 +264,7 @@ const BlogPostImmobilienrecht = () => {
                 </Button>
               </div>
               <p className="text-sm text-white/80 mt-4">
-                📧 Erstberatung kostenlos | 🔒 Absolut vertraulich | ⚡ 24/7 Erreichbarkeit
+                Erstberatung kostenlos · Absolut vertraulich · Mandatsannahme nach Konfliktprüfung
               </p>
             </div>
           </div>

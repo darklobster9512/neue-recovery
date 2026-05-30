@@ -53,7 +53,7 @@ const BlogPostCeoFraud2 = () => {
             </h1>
             
             <p className="text-xl lg:text-2xl text-gray-100 mb-8 leading-relaxed" style={{ textShadow: 'var(--text-glow), 0 0 30px hsl(214 100% 60% / 0.4)' }}>
-              Ihr Anwalt für CyberCrime und Internetkriminalität
+              Rechtliche Aufarbeitung digitaler Angriffe — mit eigener Blockchain-Forensik
             </p>
           </div>
         </div>
@@ -65,24 +65,20 @@ const BlogPostCeoFraud2 = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-foreground mb-8 leading-relaxed">
-                Internetkriminalität – auch bekannt als CyberCrime – zählt zu den dynamischsten Bedrohungen unserer Zeit. Digitale Prozesse durchdringen heute nahezu jeden Lebensbereich – ob im Beruf oder im Privatleben. Diese Entwicklung nutzen Cyberkriminelle gezielt aus: Phishing-Attacken, Anlagebetrug mit Kryptowährungen, Ransomware-Angriffe auf Unternehmen oder Identitätsdiebstahl sind längst keine Einzelfälle mehr.
+                Cybercrime ist heute eine der häufigsten Ursachen erheblicher Vermögensschäden — bei Unternehmen ebenso wie bei Privatpersonen. Anlagebetrug über vermeintliche Krypto-Plattformen, CEO Fraud, Phishing, Ransomware und Identitätsdiebstahl gehören längst zum Tagesgeschäft organisierter Tätergruppen.
               </p>
 
               <p className="mb-8 text-foreground">
-                Als auf CyberCrime spezialisierte Kanzlei unterstützen wir unsere Mandant:innen seit Jahren bei der rechtlichen Aufarbeitung von Angriffen im digitalen Raum. Unser Fokus liegt auf der forensischen Nachverfolgung von Kryptotransaktionen, der Sicherung von Beweismitteln sowie der effektiven Vertretung in Strafverfahren, Ermittlungsverfahren und zivilrechtlichen Klagen.
+                Unsere Kanzlei begleitet Mandant:innen durch die gesamte rechtliche Aufarbeitung: Beweissicherung, Strafanzeige, zivilrechtliche Durchsetzung und — wo Krypto-Werte betroffen sind — die forensische Nachverfolgung der Geldflüsse bis zur Empfänger-Börse. Wir koordinieren das Zusammenspiel von Strafverfolgung, Krypto-Börsen und Finanzinstituten mit dem Ziel, entwendete Vermögenswerte einzufrieren und zurückzuführen.
               </p>
 
               <p className="mb-8 text-foreground">
-                Wir verfügen über fundierte Expertise als zertifizierte Datenschutz- und Geldwäschebeauftragte und arbeiten eng mit technischen CyberSecurity-Spezialisten zusammen. Dadurch garantieren wir eine gesamtheitliche und technisch fundierte Betreuung – von der Analyse des Angriffs bis zur rechtlichen Durchsetzung Ihrer Ansprüche.
+                Als zertifizierte Datenschutz- und Geldwäschebeauftragte mit eigener Blockchain-Forensik-Kompetenz verbinden wir juristische und technische Analyse in einer Hand. Wir vertreten Sie gegenüber Behörden, Plattformbetreibern, Banken und Krypto-Börsen — national wie grenzüberschreitend.
               </p>
 
+              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Schnelles Handeln entscheidet</h2>
               <p className="mb-8 text-foreground">
-                Als Ihr Anwalt für CyberCrime vertreten wir Sie auch vor der Datenschutzbehörde sowie gegenüber Plattformbetreibern, Finanzdienstleistern oder Kryptowährungsbörsen. Unsere langjährige Erfahrung im Bereich Internetkriminalität macht uns zu einem verlässlichen Partner – auch in komplexen und grenzüberschreitenden Fällen.
-              </p>
-
-              <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Vertrauen Sie auf erfahrene Spezialisten für CyberCrime</h2>
-              <p className="mb-8 text-foreground">
-                Unsere Kanzlei vereint juristische Präzision mit technischem Know-how. Wenn Sie Opfer eines Cyberangriffs wurden oder präventiv rechtliche Beratung suchen: Wir sind für Sie da – schnell, diskret und professionell.
+                In den ersten Stunden nach einem Vorfall entscheidet sich häufig, ob Vermögenswerte noch erreichbar sind. Wir nehmen Ihren Sachverhalt umgehend auf, sichern Beweise und leiten die nötigen Schritte ein — diskret und in enger Abstimmung mit Ihnen.
               </p>
             </div>
           </div>
@@ -100,7 +96,7 @@ const BlogPostCeoFraud2 = () => {
                 Unsere Schwerpunkte
               </h2>
               <p className="text-lg text-white leading-relaxed max-w-2xl mx-auto">
-                Expertise in allen Bereichen der Internetkriminalität
+                Prävention, Reaktion und Rückführung entwendeter Vermögenswerte
               </p>
             </div>
 
@@ -111,7 +107,7 @@ const BlogPostCeoFraud2 = () => {
                     Prävention – Cyber Resilienz
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Die NIS2 Richtlinie wurde noch nicht einmal in nationales Recht (NISG 2024) gegossen, schon steht mit dem Cyber Resilience Act (Verordnung über horizontale Cybersicherheitsanforderungen für Produkte mit digitalen Elementen) der nächste EU-Rechtsakt zur Sicherstellung von Cybersicherheitsanforderungen in den Startlöchern.
+                    Mit NIS2 (NISG 2024) und dem Cyber Resilience Act steigen die regulatorischen Anforderungen an Unternehmen erheblich. Wir begleiten Sie bei Gap-Analyse, Umsetzung der organisatorischen und technischen Pflichten sowie der Dokumentation gegenüber Aufsichtsbehörden.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -120,7 +116,7 @@ const BlogPostCeoFraud2 = () => {
                     Ransomware – Incident Response
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Ihr Unternehmen wurde gehackt, Daten sind verschlüsselt und die Angreifer verlangen Lösegeld? Es steht viel auf dem Spiel! Gemeinsam mit unseren auf Cyber-Attacken spezialisierten IT-Security und Forensik Partnern unterstützen wir Sie diskret bei der schnellstmöglichen Bewältigung dieser Herausforderung.
+                    Bei Ransomware-Angriffen koordinieren wir gemeinsam mit erfahrenen IT-Forensikern die Incident Response — von der Eindämmung über die rechtliche Bewertung einer etwaigen Lösegeldforderung bis zur Meldung an Datenschutz- und Aufsichtsbehörden. Bei Krypto-Lösegeldzahlungen verfolgen wir die Transaktionen on-chain, um spätere Rückführungen vorzubereiten.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -129,7 +125,7 @@ const BlogPostCeoFraud2 = () => {
                     Anlagebetrug – Datenmissbrauch
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Vom vermeintlich lukrativen Investment mit Online Trading, bis hin zur missbräuchlichen Verwendung Ihrer Daten (Identitätsdiebstahl und Geldwäsche). Schnelles und koordiniertes Handeln ist Voraussetzung, um eine Chance zu haben, das "investierte" Vermögen zurück zu erhalten und weiteren Schaden zu verhindern. Wir kennen die Methoden der Verbrecher und wissen was zu tun ist.
+                    Vermeintlich lukrative Krypto-Investments, gefälschte Trading-Plattformen und der Missbrauch persönlicher Daten zählen zu den häufigsten Schadensbildern. Wir analysieren die Geldflüsse — bei Krypto-Zahlungen on-chain bis zur Empfänger-Börse — und leiten Auskunfts-, Einfrierungs- und Herausgabeverfahren ein. Entscheidend ist ein abgestimmtes Vorgehen aus Strafanzeige, zivilrechtlicher Sicherung und Kommunikation mit Banken und Krypto-Dienstleistern.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -138,7 +134,7 @@ const BlogPostCeoFraud2 = () => {
                     Hass im Netz
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Das Internet ist kein rechtsfreier Raum. Hasspostings, Beleidigungen über soziale Medien oder Cybermobbing sind nicht erst seit dem am 1. Jänner 2021 in Kraft getretenen "Hass im Netz" Gesetzespaket rechtswidrig. Wir unterstützen Sie bei der strafrechtlichen Verfolgung der Täter und setzen Ihre zivil- und medienrechtlichen Ansprüche durch.
+                    Hasspostings, Beleidigungen in sozialen Medien und Cybermobbing sind rechtswidrig. Wir betreiben die Identifizierung der Verantwortlichen, leiten Straf- und Unterlassungsverfahren ein und setzen Ihre zivil- und medienrechtlichen Ansprüche konsequent durch.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -147,7 +143,7 @@ const BlogPostCeoFraud2 = () => {
                     Asset-/Krypto Tracing
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Die Analyse und Nachverfolgung von Kryptotransaktionen ("Follow the Money") ist nicht nur bei der Aufklärung von Straftaten essentiell. Auch in zivilrechtlichen Verfahren, Erbstreitigkeiten und Insolvenzen steigt der Bedarf an Experten auf diesem Gebiet. Als erfahrene Rechtsanwält:innen und zertifizierte Blockchain-Forensiker bieten wir unseren Mandant:innen Expertise aus einer Hand.
+                    Als zertifizierte Blockchain-Forensiker rekonstruieren wir Krypto-Transaktionsketten und ordnen Wallets realen Gegenparteien zu. Diese Analyse ist die Grundlage für die Rückholung entwendeter Krypto-Werte — in Strafverfahren ebenso wie in zivilrechtlichen Streitigkeiten, Insolvenzen und Erbsachen.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>

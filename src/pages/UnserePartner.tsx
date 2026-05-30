@@ -93,10 +93,10 @@ const UnserePartner = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 text-white leading-tight" style={{ textShadow: 'var(--text-glow-strong), 0 0 60px hsl(214 100% 60% / 0.8)' }}>
-              Unsere <span className="bg-gradient-primary bg-clip-text text-transparent">Partner</span>
+              Unser <span className="bg-gradient-primary bg-clip-text text-transparent">Netzwerk</span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-100 mb-8 leading-relaxed" style={{ textShadow: 'var(--text-glow), 0 0 30px hsl(214 100% 60% / 0.4)' }}>
-              Starke Allianzen für maximale Erfolgsaussichten bei der Krypto-Asset-Recovery
+              Etablierte Kooperationen mit Strafverfolgungsbehörden, Krypto-Börsen und Aufsichtsorganisationen
             </p>
           </div>
         </div>
@@ -111,14 +111,12 @@ const UnserePartner = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 items-center">
               <div className="col-span-1 md:col-span-1">
                 <h2 className="text-2xl lg:text-3xl font-bold text-white text-center">
-                  Ein globales Netzwerk für Ihre Rechte
+                  Internationales Netzwerk
                 </h2>
               </div>
               <div className="col-span-1 md:col-span-3">
                 <p className="text-lg lg:text-xl text-white leading-relaxed text-left">
-                  In der komplexen Welt der Kryptowährungen sind starke Partnerschaften entscheidend für den Erfolg. 
-                  Unsere strategischen Allianzen mit führenden Börsen, Strafverfolgungsbehörden und internationalen 
-                  Regulierungsorganisationen ermöglichen es uns, auch in den schwierigsten Fällen erfolgreich zu sein.
+                  Die Rückführung digitaler Vermögenswerte erfordert ein Zusammenspiel aus rechtlicher Expertise, technischer Forensik und etablierten Kontakten zu Strafverfolgungsbehörden, Krypto-Börsen und internationalen Aufsichtsorganisationen. Unsere Kooperationspartner unterstützen uns dabei, auch in grenzüberschreitenden Verfahren handlungsfähig zu bleiben.
                 </p>
               </div>
             </div>
@@ -197,11 +195,10 @@ const UnserePartner = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center max-w-6xl mx-auto">
               <div className="col-span-1 md:col-span-2">
                 <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-white">
-                  Profitieren Sie von unserem Netzwerk
+                  Vertrauliche Erstberatung
                 </h2>
                 <p className="text-lg lg:text-xl text-white leading-relaxed">
-                  Unsere einzigartigen Partnerschaften ermöglichen es uns, auch in den komplexesten Fällen 
-                  erfolgreich zu sein. Kontaktieren Sie uns für eine kostenlose Erstberatung.
+                  Unser Netzwerk ist ein Baustein — entscheidend ist die rechtliche und forensische Bearbeitung Ihres Falls. Wir prüfen Ihren Sachverhalt diskret und nennen Ihnen die belastbaren Handlungsoptionen.
                 </p>
               </div>
               <div className="col-span-1 md:col-span-1">
@@ -209,7 +206,7 @@ const UnserePartner = () => {
                   <Link to="/kontakt">
                     <Button size="lg" className="bg-white/20 hover:bg-white/30 text-white font-semibold px-8 py-3 border border-white/20 backdrop-blur-sm w-full">
                       <Phone className="h-5 w-5 mr-2" />
-                      Kostenlose Beratung
+                      Erstberatung anfragen
                     </Button>
                   </Link>
                   <Button size="lg" variant="outline" className="bg-transparent hover:bg-white/10 text-white border-white/30 font-semibold px-8 py-3">

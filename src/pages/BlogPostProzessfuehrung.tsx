@@ -61,11 +61,11 @@ const BlogPostProzessfuehrung = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-foreground mb-8 leading-relaxed">
-                Ist ein gerichtliches Verfahren unausweichlich, steigen wir gemeinsam „in den Ring".
+                Wir vertreten Mandant:innen vor sämtlichen Gerichten und Behörden — von komplexen Wirtschaftsverfahren über Anlegerprozesse bis zur grenzüberschreitenden Durchsetzung von Ansprüchen.
               </p>
 
               <p className="mb-8 text-foreground">
-                Das Verhandeln ist der Inbegriff der klassischen rechtsanwaltlichen Tätigkeit. Das bestmögliche Ergebnis für unsere Mandant:innen hat dabei oberste Priorität. Breites juristisches Wissen und taktisches sowie menschliches Feingefühl zeichnen uns als gute Verhandler aus. Für uns beginnen Verhandlungen jedoch nicht erst im Gerichtssaal. Gut verhandelte außergerichtliche Lösungen – auch im Mediationsweg – sind unseres Erachtens einem Gerichtsprozess regelmäßig vorzuziehen.
+                Eine außergerichtliche Lösung ist häufig die effizienteste. Lässt sich diese nicht erzielen, führen wir das Verfahren stringent und prozesserfahren — auch in Konstellationen, in denen Krypto-Vermögenswerte eine Rolle spielen: ob bei der Sicherung digitaler Assets, der Durchsetzung von Auskunfts- und Herausgabeansprüchen gegenüber Krypto-Börsen oder bei der Vollstreckung im internationalen Rahmen.
               </p>
             </div>
           </div>
@@ -83,7 +83,7 @@ const BlogPostProzessfuehrung = () => {
                 Unsere Schwerpunkte
               </h2>
               <p className="text-lg text-white leading-relaxed max-w-2xl mx-auto">
-                Unsere Schwerpunkte in der Prozessführung
+                Gerichtliche und außergerichtliche Durchsetzung — national und grenzüberschreitend
               </p>
             </div>
 
@@ -118,10 +118,10 @@ const BlogPostProzessfuehrung = () => {
 
                 <AccordionItem value="anleger" className="bg-white/10 backdrop-blur-md rounded-lg border border-white/20">
                   <AccordionTrigger className="px-6 py-4 text-white hover:text-white/80 text-left font-semibold">
-                    Anlegerverfahren
+                    Anleger- und Krypto-Verfahren
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Verfahren im Zusammenhang mit Finanzprodukten sind eine besondere Herausforderung. Wir nehmen die Herausforderung an und sorgen mit unserer langjährigen Expertise für das beste Ergebnis.
+                    Wir vertreten geschädigte Anleger:innen bei Ansprüchen aus fehlerhafter Beratung, Prospekthaftung sowie bei Schäden aus Krypto-Investments und betrügerischen Trading-Plattformen — einschließlich der forensischen Nachverfolgung der Geldflüsse on-chain und der Vorbereitung von Auskunfts- und Einfrierungsverfahren gegenüber Krypto-Börsen.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -169,7 +169,7 @@ const BlogPostProzessfuehrung = () => {
                 Unsere Expert:innen
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Hier dann nochmal auf der Landingpage abgleichen bei der Sektion Unser Team, wer hierfür zuständig ist, und dann die Anwälte austauschen in der Sektion
+                Prozesserfahrene Anwält:innen für komplexe Wirtschafts-, Anleger- und Krypto-Verfahren
               </p>
             </div>
 
@@ -255,10 +255,10 @@ const BlogPostProzessfuehrung = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Opfer von Cybercrime geworden?
+                Verfahren prüfen lassen
               </h2>
               <p className="text-lg text-white mb-8 leading-relaxed">
-                Verlieren Sie keine Zeit! Je schneller Sie handeln, desto größer sind Ihre Chancen auf Erfolg.
+                Wir bewerten Ihre Erfolgsaussichten und entwickeln eine belastbare Prozessstrategie — gerichtlich, behördlich oder im Verhandlungsweg.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -267,7 +267,7 @@ const BlogPostProzessfuehrung = () => {
                   className="text-lg px-8 py-4 h-auto bg-white/20 backdrop-blur-md border-white/30 text-white hover:bg-white/30 hover:border-white/50 transition-all duration-300"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Sofort-Beratung: +43 (0) 512 563020
+                  +43 (0) 512 563020
                 </Button>
                 <Button 
                   variant="outline" 
@@ -279,7 +279,7 @@ const BlogPostProzessfuehrung = () => {
                 </Button>
               </div>
               <p className="text-sm text-white/80 mt-4">
-                📧 Erstberatung kostenlos | 🔒 Absolut vertraulich | ⚡ 24/7 Erreichbarkeit
+                Erstberatung kostenlos · Absolut vertraulich · Mandatsannahme nach Konfliktprüfung
               </p>
             </div>
           </div>

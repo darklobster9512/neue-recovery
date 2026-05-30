@@ -319,7 +319,7 @@ export default function Stellenangebote() {
               <span className="bg-gradient-primary bg-clip-text text-transparent drop-shadow-lg">Bovensiepen & Partner</span>
             </h1>
             <p className="text-xl lg:text-2xl text-gray-100 mb-8 leading-relaxed" style={{ textShadow: 'var(--text-glow)' }}>
-              Wachse mit einer spezialisierten Kanzlei für Krypto-Recht und Streitführung
+              Spezialisierte Kanzlei für Krypto-Recovery, Wirtschafts- und Kapitalmarktrecht — mit eigener Blockchain-Forensik
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10">
@@ -366,9 +366,9 @@ export default function Stellenangebote() {
       <Section className="py-20 bg-gradient-to-br from-background via-background to-primary/5">
         <div className="container mx-auto px-4">
           <SectionHeader>
-            <SectionTitle>Warum Bovensiepen & Partner?</SectionTitle>
+            <SectionTitle>Arbeiten bei Bovensiepen & Partner</SectionTitle>
             <SectionDescription>
-              Entdecken Sie die Vorteile einer Karriere in unserer innovativen und wachsenden Kanzlei
+              Eine spezialisierte Wirtschaftskanzlei mit Schwerpunkt auf Krypto-Recovery, Kapitalmarkt- und Wirtschaftsrecht
             </SectionDescription>
           </SectionHeader>
 

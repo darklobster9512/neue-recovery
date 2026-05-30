@@ -61,15 +61,15 @@ const BlogPostPrivateClients = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-foreground mb-8 leading-relaxed">
-                Wir begleiten unsere Mandant:innen bei der langfristigen Planung ihres Vermögens. Unser Ziel ist es, sowohl privates als auch unternehmerisches Vermögen vor innerfamiliären Konflikten zu schützen und eine geregelte Weitergabe an die nächste Generation sicherzustellen.
+                Wir beraten Privatpersonen und Family Offices in allen Fragen der langfristigen Vermögens- und Nachfolgeplanung — diskret, vorausschauend und mit Blick auf die familiäre Gesamtsituation.
               </p>
 
               <p className="mb-8 text-foreground">
-                Bei Bovensiepen & Partner beraten wir Private Clients bei der vorsorglichen Vermögens- und Nachfolgeplanung. Hierbei unterstützen wir Sie insbesondere bei der Vorsorge für den Ablebensfall sowie für den Fall unvorhersehbarer Lebensumstände, wie etwa den Verlust der Geschäftsfähigkeit durch Krankheit oder Unfall. Unser erfahrenes Team berücksichtigt hierbei in höchstem Maße Ihre persönliche und familiäre Lebenssituation und erarbeitet auf Sie abgestimmte Lösungen zum Schutz Ihres Vermögens. Als Schnittstelle zu unserem gesellschaftsrechtlichen Schwerpunkt beraten wir auch Familienunternehmen (Family Offices) bei der Gestaltung der Vermögensstrukturen und der gesellschaftsrechtlichen Nachfolge.
+                Unser Fokus liegt auf der rechtssicheren Gestaltung von Testamenten, Schenkungen, Vorsorgevollmachten und Ehe-/Partnerschaftsverträgen sowie der gesellschaftsrechtlichen Strukturierung von Familienvermögen. Zunehmend gehören dazu auch digitale Vermögenswerte: Krypto-Bestände bedürfen einer eigenen Nachlassplanung — von der Zugangs- und Schlüsselverwahrung bis zur dokumentierten Mittelherkunft gegenüber Banken und Erben. Hier greift unsere kanzleieigene Blockchain-Kompetenz unmittelbar.
               </p>
 
               <p className="mb-8 text-foreground">
-                Als Mediatoren setzen wir uns dafür ein, im Falle von Konflikten eine rasche und effektive Lösung zu finden. Für den Fall, dass der Weg zu Gericht dennoch unvermeidbar ist, vertreten wir Sie mit vollem Einsatz bei Gerichtsprozessen.
+                Im Konfliktfall agieren wir zunächst als Mediatoren. Lässt sich eine außergerichtliche Lösung nicht erzielen, vertreten wir Sie konsequent vor Gericht.
               </p>
             </div>
           </div>
@@ -98,7 +98,7 @@ const BlogPostPrivateClients = () => {
                     Nachfolgeplanung
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Eine vorausschauende Nachfolgeplanung sichert den reibungslosen Übergang Ihres Vermögens in die nächste Generation. Dies sind häufig sensible Themen, welche neben qualifizierter rechtlicher Expertise auch höchste Sensibilität und Feingefühl in der Beratung erfordern.
+                    Eine vorausschauende Nachfolgeplanung sichert den geordneten Übergang Ihres Vermögens — einschließlich Beteiligungen, Immobilien und digitaler Assets wie Krypto-Beständen — in die nächste Generation. Wir verbinden juristische Präzision mit der gebotenen Sensibilität für familiäre Konstellationen.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -107,7 +107,7 @@ const BlogPostPrivateClients = () => {
                     Testamente
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Rest in Peace! Für ein friedvolles Ableben sollte die Vermögensnachfolge vom Erblasser:in geregelt werden. Wir analysieren auf der Grundlage der gesetzlichen Erbfolge und Ihres Vermögens Ihre erbrechtliche Ausgangssituation und modifizieren diese nach Ihren Wünschen und Zielen.
+                    Wir analysieren Ihre erbrechtliche Ausgangslage auf Basis der gesetzlichen Erbfolge und gestalten Testamente, die Ihren Wünschen entsprechen — inklusive Regelungen zu Krypto-Wallets, Zugangsdaten und Verwahrlösungen, die im Erbfall typischerweise besondere Anforderungen stellen.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -116,7 +116,7 @@ const BlogPostPrivateClients = () => {
                     Vorsorgevollmachten und Patientenverfügungen
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Tut gar nicht weh! Vorsorgevollmachten und Patientenverfügungen sind essenzielle Instrumente, um Ihre Selbstbestimmung im Falle einer Entscheidungsunfähigkeit zu wahren. Mit einer Vorsorgevollmacht bestimmen Sie vertrauenswürdige Personen, die in Ihrem Namen handeln dürfen. Eine Patientenverfügung stellt sicher, dass Ihre medizinischen Wünsche respektiert und umgesetzt werden.
+                    Vorsorgevollmachten und Patientenverfügungen sichern Ihre Selbstbestimmung im Fall einer Entscheidungsunfähigkeit. Wir bestimmen mit Ihnen vertrauenswürdige bevollmächtigte Personen und formulieren medizinische Vorgaben rechtssicher und durchsetzbar.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -125,7 +125,7 @@ const BlogPostPrivateClients = () => {
                     Schenkungsverträge unter Lebenden und auf den Todesfall
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    "Nehmen ist seeliger als Geben" - oder andersum? Schenkungen, sowohl unter Lebenden als auch von Todes wegen, sind wichtige Instrumente der Vermögensübertragung. Durch frühzeitige Schenkungen können steuerliche Vorteile genutzt und Familienstreitigkeiten vermieden werden. Wir beraten Sie, wie Sie Ihre Vermögenswerte rechtssicher und nach Ihren Wünschen übertragen können und dennoch bestmöglich abgesichert bleiben.
+                    Schenkungen zu Lebzeiten und auf den Todesfall sind zentrale Instrumente der Vermögensübertragung. Wir gestalten sie steuerlich optimiert und konfliktvermeidend — und berücksichtigen dabei die zunehmende Praxis, auch Krypto-Vermögenswerte frühzeitig zu übertragen.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -134,7 +134,7 @@ const BlogPostPrivateClients = () => {
                     Partnerschafts- und Eheverträge
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    "Bis dass der Tod uns scheidet" - weil das nicht der einzige Scheidungsgrund ist... Partnerschafts- und Eheverträge schaffen Klarheit und schützen beide Partner:innen vor möglichen zukünftigen Konflikten.
+                    Partnerschafts- und Eheverträge schaffen rechtliche Klarheit über Güterstand, Vermögenszuordnung und Versorgungsregelungen — und damit Sicherheit für beide Seiten.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -143,7 +143,7 @@ const BlogPostPrivateClients = () => {
                     Interfamiliäre Übertragung von Kapitalanlagen, Unternehmen und Immobilien
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Eine Übertragung von Kapitalanlagen, Betrieben und Immobilien zu Lebzeiten des Abgebenden ist natürlich besser als eine plötzliche Übernahme wegen Krankheit oder Todesfall. Oft ist es gewünscht und ratsam, den Senior oder die Seniorin noch als beratende Partner an der Seite zu haben. Daher sollte mit der Planung der Übertragung rechtzeitig begonnen werden. Dies erfordert eine sorgfältige rechtliche Vorbereitung, um steuerliche Belastungen zu minimieren und eine reibungslose Vermögensübergabe zu gewährleisten.
+                    Die Übertragung von Kapitalanlagen, Unternehmensbeteiligungen und Immobilien zu Lebzeiten erlaubt eine geordnete Übergabe und steuerlich optimierte Strukturierung. Wir begleiten den gesamten Prozess — vom Übertragungsvertrag bis zu begleitenden Nießbrauch- und Versorgungsregelungen.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -152,7 +152,7 @@ const BlogPostPrivateClients = () => {
                     Gesellschafts- und erbrechtliche Planung der Vermögens- und Unternehmensnachfolge
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Bei der gesellschafts- und erbrechtlichen Planung der Vermögens- und Unternehmensnachfolge geht es um mehr als rein juristische Angelegenheiten. Neben der Beantwortung rechtlicher Fragen stehen bei diesen Themen oft auch Emotionen und familieninterne Befindlichkeiten im Mittelpunkt. Wir gehen mit dieser Ausnahmesituation einfühlsam, aber auch souverän und zielgerichtet um.
+                    Wir verbinden gesellschafts- und erbrechtliche Gestaltung zu einem stimmigen Gesamtkonzept — von der Holding-Struktur über Familienpoolverträge bis zur Übertragung digitaler Vermögenswerte. Sachorientiert, mit Augenmaß für die familiäre Dynamik.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -262,10 +262,10 @@ const BlogPostPrivateClients = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Opfer von Cybercrime geworden?
+                Vertrauliche Erstberatung
               </h2>
               <p className="text-lg text-white mb-8 leading-relaxed">
-                Verlieren Sie keine Zeit! Je schneller Sie handeln, desto größer sind Ihre Chancen auf Erfolg.
+                Wir nehmen uns Zeit für die Analyse Ihrer Vermögens- und Familiensituation und entwickeln eine tragfähige Gesamtlösung.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -274,7 +274,7 @@ const BlogPostPrivateClients = () => {
                   className="text-lg px-8 py-4 h-auto bg-white/20 backdrop-blur-md border-white/30 text-white hover:bg-white/30 hover:border-white/50 transition-all duration-300"
                 >
                   <Phone className="mr-2 h-5 w-5" />
-                  Sofort-Beratung: +43 (0) 512 563020
+                  +43 (0) 512 563020
                 </Button>
                 <Button 
                   variant="outline" 
@@ -286,7 +286,7 @@ const BlogPostPrivateClients = () => {
                 </Button>
               </div>
               <p className="text-sm text-white/80 mt-4">
-                📧 Erstberatung kostenlos | 🔒 Absolut vertraulich | ⚡ 24/7 Erreichbarkeit
+                Erstberatung kostenlos · Absolut vertraulich · Mandatsannahme nach Konfliktprüfung
               </p>
             </div>
           </div>

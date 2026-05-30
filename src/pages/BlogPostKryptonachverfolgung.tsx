@@ -62,7 +62,7 @@ const BlogPostKryptonachverfolgung = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-foreground mb-8 leading-relaxed">
-                Kryptowährungen bieten viele Vorteile, aber auch Herausforderungen – insbesondere, wenn es um die Nachverfolgung von Transaktionen und den Nachweis der Mittelherkunft geht. Wir helfen dabei, Krypto-Transaktionen transparent und nachvollziehbar zu machen, um gesetzliche Anforderungen zu erfüllen und finanzielle Risiken zu minimieren. Mit spezialisierten Analyse-Tools und fundiertem Know-how identifizieren wir Geldflüsse, decken potenzielle Risiken auf und unterstützen bei der rechtssicheren Dokumentation.
+                Die rechtliche Einordnung von Krypto-Transaktionen und der Nachweis ihrer Mittelherkunft gehören zu den anspruchsvollsten Aufgaben im modernen Wirtschaftsrecht. Unsere Kanzlei verbindet juristische Expertise mit zertifizierter Blockchain-Forensik. Wir rekonstruieren Geldflüsse on-chain, dokumentieren die Herkunft digitaler Vermögenswerte gerichtsfest und unterstützen Mandant:innen gegenüber Banken, Krypto-Börsen, Aufsichts- und Strafverfolgungsbehörden — von der Erstanalyse bis zur Durchsetzung von Herausgabe- und Schadenersatzansprüchen.
               </p>
             </div>
           </div>
@@ -80,7 +80,7 @@ const BlogPostKryptonachverfolgung = () => {
                 Unsere Schwerpunkte
               </h2>
               <p className="text-lg text-white leading-relaxed max-w-2xl mx-auto">
-                Unsere Schwerpunkte in der Kryptonachverfolgung und Mittelherkunft
+                Forensische Analyse, rechtssichere Dokumentation und Durchsetzung
               </p>
             </div>
 
@@ -91,9 +91,9 @@ const BlogPostKryptonachverfolgung = () => {
                     Mittelherkunftsnachweis
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Unsere Kanzlei erstellt rechtssichere Mittelherkunftsnachweise für Kryptowährungen, um die Transparenz und Nachvollziehbarkeit Ihrer Transaktionen sicherzustellen und gesetzliche Anforderungen zu erfüllen. Dafür analysieren wir Transaktionshistorien im Detail, identifizieren die beteiligten Wallet-Adressen und verknüpfen diese mit den entsprechenden Krypto-Börsen. Mit modernsten Blockchain-Analysetools gewährleisten wir eine lückenlose Dokumentation und machen komplexe Transaktionsketten nachvollziehbar.
+                    Wir erstellen Mittelherkunftsnachweise (Source of Funds), die den Anforderungen von Banken, Krypto-Börsen und Aufsichtsbehörden standhalten. Grundlage ist eine vollständige On-Chain-Analyse der relevanten Wallets und Transaktionsketten — mit Zeitstempeln, Beträgen, Gegenparteien und Risikoindikatoren. Das Ergebnis ist eine prüfungssichere Dokumentation, die im KYC/AML-Verfahren ebenso belastbar ist wie im Vorhalt gegenüber Finanzinstituten.
                     <br /><br />
-                    Wir legen besonderen Wert auf die transparente Darstellung der Herkunft von Einzahlungen und erfassen alle relevanten Informationen wie Zeitstempel, Beträge und beteiligte Wallets. Dabei prüfen wir die Mittelherkunft auf potenzielle Risiken und bereiten die Nachweise rechtskonform auf, um den Anforderungen von Banken und Kryptohandelsbörsen gerecht zu werden.
+                    Auf Wunsch koordinieren wir die Vorlage gegenüber dem jeweiligen Institut und vertreten Sie bei Rückfragen oder bei der Freigabe blockierter Beträge.
                   </AccordionContent>
                 </AccordionItem>
 
@@ -102,7 +102,7 @@ const BlogPostKryptonachverfolgung = () => {
                     Asset-/Krypto Nachverfolgung
                   </AccordionTrigger>
                   <AccordionContent className="px-6 pb-4 text-white/90">
-                    Die Analyse und Nachverfolgung von Kryptotransaktionen ("Follow the Money") ist nicht nur bei der Aufklärung von Straftaten essentiell. Auch in zivilrechtlichen Verfahren, Erbstreitigkeiten und Insolvenzen steigt der Bedarf an Experten auf diesem Gebiet. Als erfahrene Rechtsanwält:innen und zertifizierte Blockchain-Forensiker bieten wir unseren Mandant:innen Expertise aus einer Hand.
+                    Im Zentrum unserer Arbeit steht die Rückholung entwendeter oder unrechtmäßig transferierter Krypto-Vermögenswerte. Mittels „Follow the Money"-Analyse identifizieren wir die Empfänger-Wallets, ordnen sie Börsen oder Dienstleistern zu und schaffen damit die Grundlage für Auskunfts-, Einfrierungs- und Herausgabeanträge — auch grenzüberschreitend. Die Methodik ist ebenso einsetzbar in Strafverfahren, zivilrechtlichen Streitigkeiten, Insolvenzen und Erbsachen.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -123,7 +123,7 @@ const BlogPostKryptonachverfolgung = () => {
                 Unsere Expert:innen
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Hier dann nochmal auf der Landingpage abgleichen bei der Sektion Unser Team, wer hierfür zuständig ist, und dann die Anwälte austauschen in der Sektion
+                Rechtsanwält:innen und zertifizierte Blockchain-Forensiker mit Erfahrung in komplexen Krypto-Mandaten
               </p>
             </div>
 
@@ -207,10 +207,10 @@ const BlogPostKryptonachverfolgung = () => {
           <div className="container mx-auto px-4 text-center">
             <div className="max-w-3xl mx-auto">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Benötigen Sie rechtliche Unterstützung bei Kryptonachverfolgung?
+                Vertrauliche Erstberatung
               </h2>
               <p className="text-lg text-white/90 mb-8 leading-relaxed">
-                Kontaktieren Sie unsere Experten für eine unverbindliche Erstberatung. Wir helfen Ihnen bei der Kryptonachverfolgung und dem Nachweis der Mittelherkunft.
+                Ob Mittelherkunftsnachweis, Rückführung entwendeter Krypto-Werte oder Vorbereitung eines Verfahrens — wir prüfen Ihren Sachverhalt diskret und nennen Ihnen die belastbaren Handlungsoptionen.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/kontakt">

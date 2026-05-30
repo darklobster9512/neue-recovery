@@ -34,10 +34,10 @@ const BlogPostKryptonachverfolgung = () => (
       {
         title: "Asset- und Krypto-Nachverfolgung",
         content:
-          "Im Zentrum unserer Arbeit steht die Rückholung entwendeter oder unrechtmäßig transferierter Krypto-Vermögenswerte. Mittels „Follow the Money"-Analyse identifizieren wir die Empfänger-Wallets, ordnen sie Börsen oder Dienstleistern zu und schaffen damit die Grundlage für Auskunfts-, Einfrierungs- und Herausgabeanträge — auch grenzüberschreitend.",
+          'Im Zentrum unserer Arbeit steht die Rückholung entwendeter oder unrechtmäßig transferierter Krypto-Vermögenswerte. Mittels „Follow the Money"-Analyse identifizieren wir die Empfänger-Wallets, ordnen sie Börsen oder Dienstleistern zu und schaffen damit die Grundlage für Auskunfts-, Einfrierungs- und Herausgabeanträge — auch grenzüberschreitend.',
       },
     ]}
-    ctaTitle={<>Vertrauliche Erstberatung.</> as unknown as string}
+    ctaTitle="Vertrauliche Erstberatung."
     ctaBody="Ob Mittelherkunftsnachweis, Rückführung entwendeter Krypto-Werte oder Vorbereitung eines Verfahrens — wir prüfen Ihren Sachverhalt diskret und nennen Ihnen die belastbaren Handlungsoptionen."
   />
 );

@@ -24,7 +24,7 @@ const BlogPostGesellschaftsrecht = () => (
       {
         title: "Allgemeines Unternehmensrecht / externe Rechtsabteilung",
         content:
-          "Gute Beratung im Unternehmensrecht erfordert fächerübergreifende Kenntnis und ein Verständnis für wirtschaftliche und operative Zusammenhänge. Wir unterstützen Unternehmen unterschiedlicher Größe laufend als „externe Rechtsabteilung".",
+          'Gute Beratung im Unternehmensrecht erfordert fächerübergreifende Kenntnis und ein Verständnis für wirtschaftliche und operative Zusammenhänge. Wir unterstützen Unternehmen unterschiedlicher Größe laufend als „externe Rechtsabteilung".',
       },
       {
         title: "Beratung zu allen Bereichen des Gesellschaftsrechts",

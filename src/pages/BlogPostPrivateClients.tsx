@@ -61,15 +61,15 @@ const BlogPostPrivateClients = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-foreground mb-8 leading-relaxed">
-                Wir begleiten unsere Mandant:innen bei der langfristigen Planung ihres Vermögens. Unser Ziel ist es, sowohl privates als auch unternehmerisches Vermögen vor innerfamiliären Konflikten zu schützen und eine geregelte Weitergabe an die nächste Generation sicherzustellen.
+                Wir beraten Privatpersonen und Family Offices in allen Fragen der langfristigen Vermögens- und Nachfolgeplanung — diskret, vorausschauend und mit Blick auf die familiäre Gesamtsituation.
               </p>
 
               <p className="mb-8 text-foreground">
-                Bei Bovensiepen & Partner beraten wir Private Clients bei der vorsorglichen Vermögens- und Nachfolgeplanung. Hierbei unterstützen wir Sie insbesondere bei der Vorsorge für den Ablebensfall sowie für den Fall unvorhersehbarer Lebensumstände, wie etwa den Verlust der Geschäftsfähigkeit durch Krankheit oder Unfall. Unser erfahrenes Team berücksichtigt hierbei in höchstem Maße Ihre persönliche und familiäre Lebenssituation und erarbeitet auf Sie abgestimmte Lösungen zum Schutz Ihres Vermögens. Als Schnittstelle zu unserem gesellschaftsrechtlichen Schwerpunkt beraten wir auch Familienunternehmen (Family Offices) bei der Gestaltung der Vermögensstrukturen und der gesellschaftsrechtlichen Nachfolge.
+                Unser Fokus liegt auf der rechtssicheren Gestaltung von Testamenten, Schenkungen, Vorsorgevollmachten und Ehe-/Partnerschaftsverträgen sowie der gesellschaftsrechtlichen Strukturierung von Familienvermögen. Zunehmend gehören dazu auch digitale Vermögenswerte: Krypto-Bestände bedürfen einer eigenen Nachlassplanung — von der Zugangs- und Schlüsselverwahrung bis zur dokumentierten Mittelherkunft gegenüber Banken und Erben. Hier greift unsere kanzleieigene Blockchain-Kompetenz unmittelbar.
               </p>
 
               <p className="mb-8 text-foreground">
-                Als Mediatoren setzen wir uns dafür ein, im Falle von Konflikten eine rasche und effektive Lösung zu finden. Für den Fall, dass der Weg zu Gericht dennoch unvermeidbar ist, vertreten wir Sie mit vollem Einsatz bei Gerichtsprozessen.
+                Im Konfliktfall agieren wir zunächst als Mediatoren. Lässt sich eine außergerichtliche Lösung nicht erzielen, vertreten wir Sie konsequent vor Gericht.
               </p>
             </div>
           </div>

@@ -107,9 +107,19 @@ const Index = () => {
               Bovensiepen &amp; Partner <span className="mx-2 opacity-50">—</span> Crypto Recovery &amp; Wirtschaftsrecht
             </p>
 
-            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.08] font-normal max-w-4xl mb-8">
-              Wir holen Ihre Krypto-Werte zurück — rechtlich, international, nachweisbar.
+            <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.08] font-normal max-w-4xl mb-6">
+              <span className="block bg-gradient-to-b from-sky-200 via-sky-300 to-sky-500 bg-clip-text text-transparent drop-shadow-[0_2px_12px_rgba(56,189,248,0.25)]">
+                Wir holen Ihre Krypto-Werte zurück
+              </span>
             </h1>
+
+            <p className="font-sans text-xs md:text-sm tracking-[0.28em] uppercase text-primary-foreground/70 mb-10 flex flex-wrap items-center gap-x-3 gap-y-2">
+              <span>rechtlich</span>
+              <span className="text-primary-foreground/30">|</span>
+              <span>international</span>
+              <span className="text-primary-foreground/30">|</span>
+              <span>nachweisbar</span>
+            </p>
 
             <p className="font-sans text-base lg:text-lg text-primary-foreground/80 max-w-2xl leading-relaxed mb-12">
               Spezialisierte Kanzlei für die forensische Nachverfolgung und rechtliche

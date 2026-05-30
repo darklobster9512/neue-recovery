@@ -1,48 +1,50 @@
-## Texte auf allen Unterseiten überarbeiten
+## Kompetenzseiten neu gestalten – im Look der neuen Startseite
 
-Ziel: alle Seiten außer der Startseite bekommen seriösere, präzisere juristische Tonalität, und wo inhaltlich passend einen Bezug zum Schwerpunkt **Crypto Recovery / Blockchain-Forensik**. Layout, Komponenten und Routing bleiben unverändert.
+Ziel: Alle 7 Kompetenzseiten unter `/kompetenz/*` bekommen die gleiche visuelle Sprache wie die überarbeitete `Index.tsx` (cinematischer Hero, Serif-Headlines, Akzentlinie, ruhige Sektionen, Uppercase-Tracking-Labels). Inhalte bleiben unverändert – nur Gestaltung.
 
-### Tonalitäts-Leitlinien (für alle Seiten)
-- Knapper, juristisch-präziser Stil — keine werblichen Floskeln
-- Aktiv statt passiv, keine Buzzwords
-- Headlines: nominal, ruhig (z. B. "Mandantenkontakt" statt "Lassen Sie uns sprechen!")
-- Wo passend: ein Satz Brückenschlag zur Krypto-/Blockchain-Kompetenz der Kanzlei
+### Betroffene Seiten
+- `BlogPostKryptonachverfolgung.tsx`
+- `BlogPostCeoFraud2.tsx` (Cybercrime)
+- `BlogPostWertpapier.tsx` (Kapitalmarktrecht)
+- `BlogPostPrivateClients.tsx`
+- `BlogPostProzessfuehrung.tsx`
+- `BlogPostImmobilienrecht.tsx`
+- `BlogPostGesellschaftsrecht.tsx`
+- `BlogPostDatenschutz.tsx`
 
-### Seiten & Bearbeitungslogik
+### Einheitliches Layout-Template
 
-**Kontakt-Bezogen**
-- `Kontakt.tsx` — seriösere Anrede, Hinweis auf Erstberatung auch für Crypto-Recovery-Mandate
-- `UnserePartner.tsx` — sachliche Profile, Crypto-Recovery-Expertise hervorheben wo zutreffend
-- `Stellenangebote.tsx` — sachlicher Ton, Nennung Schwerpunktbereiche inkl. Blockchain-Forensik
+**1. Hero (full-bleed, cinematic)**
+- Vollflächiges `bg-primary` mit `video.mp4`, Gradient-Overlay wie Startseite (`from-primary/85 via-primary/55 to-primary/30` + Top-Gradient)
+- Eyebrow-Label in Uppercase/Tracking: `BOVENSIEPEN & PARTNER — KOMPETENZ`
+- H1 in `font-serif`, `text-4xl md:text-6xl lg:text-7xl`, reines Weiß (kein Gradient-Text, kein Glow) – konsistent zur Vorgabe „Reines Weiß + blaue Akzentlinie"
+- Blaue Akzentlinie `h-px w-24 bg-sky-400/40`
+- Kurzer Lead-Text (1 Satz) in `text-primary-foreground/80`
+- Breadcrumb dezent oben in `text-primary-foreground/60`
+- Höhe `min-h-[70vh]`
 
-**Kompetenzseiten** (`/kompetenz/*`)
-- `BlogPostKryptonachverfolgung.tsx` — Hauptseite, voller Fokus
-- `BlogPostCeoFraud2.tsx` (Cybercrime) — direkter Crypto-Bezug ausbauen
-- `BlogPostWertpapier.tsx` — Brücke zu Krypto-Assets als Kapitalmarktinstrumente
-- `BlogPostPrivateClients.tsx` — Krypto-Vermögen in Family-Office-Kontext
-- `BlogPostProzessfuehrung.tsx` — internationale Durchsetzung inkl. Krypto-Fälle
-- `BlogPostImmobilienrecht.tsx` — sachlicher Ton, dezenter Hinweis auf Mittelherkunftsnachweise (Krypto → Immobilie)
-- `BlogPostGesellschaftsrecht.tsx` — sachlicher Ton, knapper Hinweis auf Krypto-Unternehmen
-- `BlogPostDatenschutz.tsx` — sachlicher Ton, kein erzwungener Krypto-Bezug
+**2. Intro-Sektion**
+- Heller Hintergrund, zweispaltig (Eyebrow + großes Serif-Statement links, Fließtext rechts)
+- Akzentlinie zur Trennung
 
-**Blog-Übersicht & Blog-Posts**
-- `Blog.tsx` — seriösere Intro-Texte
-- 4 Blog-Post-Seiten (`BlogPost.tsx`, `BlogPostCeoFraud.tsx`, `BlogPostKreditgebuehr.tsx`) — Einleitungen und Fließtext seriöser, faktischer
+**3. Schwerpunkte / Leistungen**
+- Nummerierte Liste im Stil der `kompetenzen`-Sektion auf der Startseite (01, 02, 03 … in Serif, Trennlinien, Hover-Akzent)
+- Ersetzt den bisherigen FAQ-Accordion-Block mit Gradient-Primary-Hintergrund
 
-**Ausgeschlossen** (laut Antwort):
-- `Index.tsx` (Startseite)
-- `Impressum.tsx`, `Datenschutz.tsx`, `AGB.tsx`, `Haftungsausschluss.tsx` (formale Pflichttexte)
-- `Auth.tsx`, `Admin.tsx`, `NotFound.tsx` (System-Seiten)
+**4. CTA-Sektion**
+- Ruhig, `bg-primary`, Serif-Headline, blaue Akzentlinie, einzelner Button → Kontakt
+
+**5. Footer** – unverändert
+
+### Technische Eckpunkte
+- Keine Änderungen an Routen, Komponenten-Imports, Daten oder Settings
+- `Section`-Komponente weiterhin nutzbar, Hero aber als eigenständige `<section>` wie auf der Startseite
+- Glow-Textshadows (`var(--text-glow-strong)`) und `bg-gradient-primary bg-clip-text` werden entfernt – konsistent zur neuen Startseite
+- Inhalte (Texte, Akkordeon-Items, Listen) bleiben 1:1 erhalten, nur in neue Struktur überführt
+- Keine neuen Bilder/Assets
 
 ### Vorgehen
-1. Pro Seite: bestehenden Text lesen, ersetzen mit überarbeiteter Version
-2. Reine Text-Änderungen — keine Komponenten, Imports, Routen, Styles, Bilder
-3. SEO-relevante Felder (Title, Meta-Description, H1) mit anpassen, falls vorhanden
-4. Keine Änderungen an Datenbank, Settings oder Edge Functions
+Welle 1 (4 Seiten): Kryptonachverfolgung, CeoFraud2, Wertpapier, Immobilienrecht
+Welle 2 (4 Seiten): PrivateClients, Prozessfuehrung, Gesellschaftsrecht, Datenschutz
 
-### Größe & Aufteilung
-Da es ~14 Seiten sind, arbeite ich sie thematisch in zwei Wellen ab:
-- **Welle 1**: Kompetenzseiten (7 Dateien) — höchster Hebel für Crypto-Recovery-Bezug
-- **Welle 2**: Kontakt, Partner, Stellenangebote, Blog-Übersicht + Blog-Posts (7 Dateien)
-
-Das hält jede Welle überschaubar und du kannst nach Welle 1 stoppen oder Feedback geben.
+Nach Welle 1 kurzer Check möglich, bevor Welle 2 läuft.

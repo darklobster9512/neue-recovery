@@ -81,50 +81,96 @@ const testimonials = [
 ];
 
 const Index = () => {
+  const { phone, phoneEnabled } = useSettings();
   return (
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero — Crypto Recovery focus */}
-      <section className="relative bg-primary text-primary-foreground overflow-hidden">
-        <div className="container mx-auto px-6 max-w-7xl pt-32 lg:pt-40 pb-24 lg:pb-32">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            <div className="lg:col-span-7">
-              <p className="eyebrow text-primary-foreground/60 mb-8">
-                Crypto Recovery · Seit 2014
-              </p>
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-[4.5rem] leading-[1.05] tracking-tight mb-8">
-                Ihre verlorenen<br />Krypto-Werte.<br />
-                <span className="text-primary-foreground/70">Zurückgeholt.</span>
+      {/* Hero — Architectural Split */}
+      <section className="relative bg-background text-foreground">
+        <div className="container mx-auto px-6 lg:px-12 max-w-7xl border-x border-primary/10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
+            {/* Content Side */}
+            <div className="lg:col-span-7 py-20 lg:py-32 lg:pr-16 flex flex-col justify-center border-b lg:border-b-0 border-primary/10">
+              <div className="inline-flex items-center mb-10">
+                <span className="text-accent text-[10px] font-bold tracking-[0.3em] uppercase">
+                  Crypto Recovery <span className="mx-2 text-primary/30">|</span> Seit 2014
+                </span>
+              </div>
+
+              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-primary font-normal mb-10">
+                Ihre verlorenen<br />
+                <span className="italic text-accent">Krypto-Werte.</span><br />
+                Zurückgeholt.
               </h1>
-              <p className="font-serif text-xl lg:text-2xl text-primary-foreground/80 leading-snug mb-10 max-w-xl">
-                Spezialisierte Kanzlei für die Nachverfolgung und Rückführung gestohlener Krypto-Assets.
-              </p>
-              <Link to="/kontakt">
-                <Button size="lg" className="rounded-none bg-primary-foreground text-primary hover:bg-primary-foreground/90 h-12 px-7">
-                  Kostenlose Fallprüfung <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
+
+              <div className="flex gap-6 mb-12">
+                <div className="w-px bg-accent shrink-0" />
+                <p className="text-lg lg:text-xl text-foreground/70 max-w-lg leading-relaxed">
+                  Spezialisierte Kanzlei für die Nachverfolgung und Rückführung gestohlener Krypto-Assets.
+                  Wir vereinen juristische Durchschlagskraft mit technologischer Exzellenz.
+                </p>
+              </div>
+
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
+                <Link to="/kontakt">
+                  <Button
+                    size="lg"
+                    className="rounded-none bg-primary text-primary-foreground hover:bg-accent transition-colors duration-300 h-14 px-10 text-xs font-bold tracking-[0.2em] uppercase shadow-xl"
+                  >
+                    Kostenlose Fallprüfung
+                  </Button>
+                </Link>
+
+                {phoneEnabled && (
+                  <div className="flex flex-col border-l border-primary/20 pl-6">
+                    <span className="text-[10px] uppercase tracking-widest text-foreground/40 mb-1 font-mono">
+                      Ansprechpartner 24/7
+                    </span>
+                    <a href={`tel:${phone}`} className="text-primary font-semibold hover:text-accent transition-colors">
+                      {phone}
+                    </a>
+                  </div>
+                )}
+              </div>
             </div>
 
-            <div className="lg:col-span-5">
-              <div className="relative aspect-[4/5] overflow-hidden border border-primary-foreground/15">
-                <video
-                  src="/video.mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  preload="metadata"
-                  className="absolute inset-0 w-full h-full object-cover"
-                  aria-label="Crypto Recovery Background Video"
-                />
-                <div className="absolute inset-0 bg-primary/30" />
+            {/* Visual Side */}
+            <div className="lg:col-span-5 relative min-h-[500px] lg:min-h-[700px] flex items-center justify-center p-8 lg:p-12 bg-primary/[0.03]">
+              <div className="relative w-full h-full group">
+                {/* Architectural Frame */}
+                <div className="absolute -inset-4 border border-accent/20 pointer-events-none transition-transform duration-700 group-hover:scale-[1.02]" />
+
+                <div className="relative w-full h-full overflow-hidden aspect-[4/5] lg:aspect-auto">
+                  <video
+                    src="/video.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    aria-label="Crypto Recovery"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent" />
+                </div>
+
+                {/* Status Badge */}
+                <div className="absolute -bottom-6 -left-6 bg-background p-6 lg:p-8 shadow-2xl border-t-4 border-accent">
+                  <div className="text-[10px] text-foreground/40 uppercase tracking-widest mb-2 font-mono">
+                    Status: Active Recovery
+                  </div>
+                  <div className="flex items-baseline gap-2">
+                    <span className="font-serif text-3xl font-bold text-primary">500+</span>
+                    <span className="text-xs text-foreground/60 font-medium">Erfolgreiche Mandate</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
+
 
       {/* Manifest */}
       <section className="border-b border-border">

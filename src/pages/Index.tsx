@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { Phone, ArrowRight, Star } from "lucide-react";
+import { Phone, ArrowRight, Star, ShieldCheck } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Autoplay from "embla-carousel-autoplay";
 import { NewsCarousel } from "@/components/NewsCarousel";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { useSettings } from "@/hooks/useSettings";
 
 const AnimatedCounter = ({ end, duration = 1800, suffix = "" }: { end: number; duration?: number; suffix?: string }) => {
   const [count, setCount] = useState(0);
@@ -78,42 +79,65 @@ const testimonials = [
 ];
 
 const Index = () => {
+  const { phoneEnabled } = useSettings();
   return (
     <div className="min-h-screen bg-background">
       <Header />
 
-      {/* Hero — split screen */}
+      {/* Hero — Crypto Recovery focus */}
       <section className="relative bg-primary text-primary-foreground overflow-hidden">
-        <div className="container mx-auto px-6 max-w-7xl pt-32 lg:pt-40 pb-24">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
-            <div className="lg:col-span-6">
-              <p className="eyebrow text-primary-foreground/60 mb-8">
-                Kanzlei · München · Seit 2014
+        <div className="container mx-auto px-6 max-w-7xl pt-28 lg:pt-32 pb-16">
+          <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+            <div className="lg:col-span-7">
+              <p className="eyebrow text-primary-foreground/60 mb-6">
+                Crypto Recovery · Cybercrime · Seit 2014
               </p>
-              <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] tracking-tight mb-8">
-                Recht für die<br />
-                digitale Ökonomie.
+              <h1 className="font-serif text-5xl md:text-6xl lg:text-[4.25rem] leading-[1.05] tracking-tight mb-5">
+                Ihre verlorenen<br />Krypto-Werte.<br />
+                <span className="text-primary-foreground/70">Zurückgeholt.</span>
               </h1>
-              <p className="text-lg text-primary-foreground/75 leading-relaxed max-w-xl mb-10">
-                Bovensiepen <span className="opacity-60">&</span> Partner vertritt Mandantinnen und Mandanten in
-                komplexen Vermögens-, Krypto- und Cybercrime-Verfahren — diskret, präzise und mit messbarem Erfolg.
+              <p className="font-serif text-xl lg:text-2xl text-primary-foreground/85 leading-snug mb-6 max-w-2xl">
+                Spezialisierte Kanzlei für die Nachverfolgung und Rückführung gestohlener Bitcoin, Ethereum und Stablecoins.
               </p>
-              <div className="flex flex-col sm:flex-row gap-3">
+              <p className="text-base text-primary-foreground/70 leading-relaxed max-w-xl mb-8">
+                Ob Wallet-Hack, Exchange-Betrug, Phishing oder Investment-Scam — wir kombinieren juristische
+                Durchsetzungskraft mit forensischer Blockchain-Analyse. Über 500 begleitete Fälle,
+                Zusammenarbeit mit Strafverfolgungsbehörden und führenden Exchanges weltweit.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-3 mb-10">
                 <Link to="/kontakt">
                   <Button size="lg" className="rounded-none bg-primary-foreground text-primary hover:bg-primary-foreground/90 h-12 px-7">
-                    Mandat anfragen <ArrowRight className="ml-2 h-4 w-4" />
+                    Kostenlose Fallprüfung <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
-                <Link to="/kontakt">
-                  <Button variant="outline" size="lg" className="rounded-none border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary h-12 px-7">
-                    <Phone className="mr-2 h-4 w-4" /> Erstberatung
-                  </Button>
-                </Link>
+                {phoneEnabled && (
+                  <Link to="/kontakt">
+                    <Button variant="outline" size="lg" className="rounded-none border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground hover:text-primary h-12 px-7">
+                      <Phone className="mr-2 h-4 w-4" /> 24/7 Notfall-Hotline
+                    </Button>
+                  </Link>
+                )}
+              </div>
+
+              {/* Trust KPIs */}
+              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-primary-foreground/15 max-w-xl">
+                <div>
+                  <div className="font-serif text-3xl lg:text-4xl text-primary-foreground">500+</div>
+                  <div className="eyebrow text-primary-foreground/55 mt-2">Fälle</div>
+                </div>
+                <div>
+                  <div className="font-serif text-3xl lg:text-4xl text-primary-foreground">€ Mio.</div>
+                  <div className="eyebrow text-primary-foreground/55 mt-2">Zurückgeführt</div>
+                </div>
+                <div>
+                  <div className="font-serif text-3xl lg:text-4xl text-primary-foreground">10+</div>
+                  <div className="eyebrow text-primary-foreground/55 mt-2">Jahre</div>
+                </div>
               </div>
             </div>
 
-            <div className="lg:col-span-6 relative">
-              <div className="relative aspect-[4/5] lg:aspect-[5/6] overflow-hidden border border-primary-foreground/15">
+            <div className="lg:col-span-5 relative">
+              <div className="relative aspect-[4/5] overflow-hidden border border-primary-foreground/15">
                 <video
                   src="/video.mp4"
                   autoPlay
@@ -122,29 +146,40 @@ const Index = () => {
                   playsInline
                   preload="metadata"
                   className="absolute inset-0 w-full h-full object-cover"
-                  aria-label="Crypto Background Video"
+                  aria-label="Crypto Recovery Background Video"
                 />
-                <div className="absolute inset-0 bg-primary/30" />
+                <div className="absolute inset-0 bg-primary/40" />
+                <div className="absolute top-5 left-5 right-5 flex items-center gap-2 text-xs uppercase tracking-[0.18em] text-primary-foreground/80">
+                  <ShieldCheck className="h-4 w-4" />
+                  <span>Multi-Chain Asset Tracing</span>
+                </div>
               </div>
-              <div className="hidden lg:block absolute -bottom-6 -left-6 bg-background text-foreground p-6 max-w-[280px] border border-border">
-                <p className="eyebrow mb-2">500+ Fälle</p>
-                <p className="font-serif text-lg leading-snug">
-                  Über ein Jahrzehnt Erfahrung in der Rückführung digitaler Vermögenswerte.
+              <div className="hidden lg:block absolute -bottom-6 -left-6 bg-background text-foreground p-5 max-w-[280px] border border-border">
+                <p className="eyebrow mb-2">Unterstützte Assets</p>
+                <p className="font-serif text-base leading-snug">
+                  BTC · ETH · USDT · USDC · BNB · SOL — und 30+ weitere Chains.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/15">
-          <div className="container mx-auto px-6 max-w-7xl py-6 flex flex-wrap items-center gap-x-10 gap-y-3 text-xs uppercase tracking-[0.18em] text-primary-foreground/60">
-            <span>Kostenlose Erstanalyse</span>
-            <span className="opacity-40">·</span>
-            <span>Erfolgsbasierte Honorierung</span>
-            <span className="opacity-40">·</span>
-            <span>24/7 Notfall-Hotline</span>
-            <span className="opacity-40">·</span>
-            <span>Mehrsprachig</span>
+        {/* Partner / Trust logos strip */}
+        <div className="border-t border-primary-foreground/15 bg-primary/95">
+          <div className="container mx-auto px-6 max-w-7xl py-6">
+            <div className="flex flex-wrap items-center justify-between gap-x-10 gap-y-4">
+              <span className="eyebrow text-primary-foreground/50">In Zusammenarbeit mit</span>
+              <div className="flex flex-wrap items-center gap-x-8 gap-y-3">
+                {partnerLogos.map((p) => (
+                  <img
+                    key={p.name}
+                    src={p.logo}
+                    alt={p.name}
+                    className="h-7 w-auto object-contain opacity-60 brightness-0 invert hover:opacity-100 transition-opacity"
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

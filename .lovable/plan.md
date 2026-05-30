@@ -1,64 +1,57 @@
+# Hero-Section Redesign — Crypto Recovery Fokus
+
 ## Ziel
+Die aktuelle Hero ist generisch („Recht für die digitale Ökonomie"). Sie soll klar und unmissverständlich auf **Crypto Recovery / Rückführung gestohlener Krypto-Vermögenswerte** ausgerichtet sein — als erstes Versprechen, nicht als Nebensatz.
 
-Die gesamte Website (Startseite + alle Unterseiten) wird visuell komplett neu aufgesetzt – seriöser, ruhiger, Kanzlei-würdig. **Inhalte, Texte, Bilder und Videos bleiben unverändert**, nur die Gestaltung wird ausgetauscht.
+## Neue Inhalte
 
-## Design-Direktion
+**Eyebrow:** `Crypto Recovery · Cybercrime · Seit 2014`
 
-**Farbwelt – „Navy Trust"**
-- Primär: tiefes Navy `#0f1b3d` (HSL 222 62% 15%)
-- Sekundär: gedecktes Mittelblau `#1e3a5f`
-- Akzent: Stahlblau `#3b6fa0` (sparsam, für CTAs & Links)
-- Flächen: Off-White `#e8edf3` und reines Weiß
-- Keine Glows, keine Neon-Effekte, keine Verläufe mit hoher Sättigung – stattdessen flache Flächen, feine Linien, dezente Schatten
+**Headline (H1, serif):**
+> Ihre verlorenen Krypto-Werte. Zurückgeholt.
 
-**Typografie**
-- Headlines: **Libre Baskerville** (Serif, klassisch, juristisch)
-- Body & UI: **IBM Plex Sans** (klar, technisch-präzise)
-- Über `@fontsource` eingebunden, in `tailwind.config.ts` als `font-serif` / `font-sans` gemappt
-- Großzügige Zeilenhöhen, viel Weißraum, ruhige Hierarchie
+**Sub-Headline (serif, kleiner):**
+> Spezialisierte Kanzlei für die Nachverfolgung und Rückführung gestohlener Bitcoin, Ethereum und Stablecoins.
 
-**Layout-Sprache – Split Screen**
-- Hero: zweispaltig – links Headline + Claim + CTA, rechts großes Bild/Video
-- Unterseiten: konsequent zweispaltige Bänder (Text | Bild, Bild | Text alternierend)
-- Klare horizontale Trennlinien (hairline borders) statt Cards mit Schatten
-- Container max-w-7xl, viel `py-24`-Rhythmus
+**Fließtext:**
+> Ob Wallet-Hack, Exchange-Betrug, Phishing oder Investment-Scam — wir kombinieren juristische Durchsetzungskraft mit forensischer Blockchain-Analyse. Über 500 begleitete Fälle, Zusammenarbeit mit Strafverfolgungsbehörden und führenden Exchanges weltweit.
 
-**Mikro-Design**
-- Border-Radius reduziert (`--radius: 0.25rem`) – kantiger, seriöser
-- Buttons: flach, mit feiner Border; Primär in Navy
-- Cards: ohne starke Schatten, nur 1px Border in Navy/10%
-- Animationen: nur dezente Fade-ins, keine Glow-Pulses
+**CTAs:**
+- Primär: `Kostenlose Fallprüfung` → `/kontakt`
+- Sekundär: `24/7 Notfall-Hotline` (Telefon-Icon) → `/kontakt`
 
-## Umsetzungsschritte
+## Neue Struktur (Split Screen bleibt, aber dichter)
 
-1. **Design-System neu aufsetzen**
-   - `src/index.css`: Farben, Radius, Shadows, Gradients auf Navy-Trust-Tokens umstellen (Light + Dark)
-   - `tailwind.config.ts`: `fontFamily.serif` / `fontFamily.sans` ergänzen
-   - `bun add @fontsource/libre-baskerville @fontsource/ibm-plex-sans` + Import in `src/main.tsx`
-   - Glow- und Mystery-Tokens entfernen bzw. neutralisieren
+```text
+┌──────────────────────────────┬─────────────────────────┐
+│ Eyebrow                      │                         │
+│ H1 (Recovery-Fokus)          │   Video (bleibt)        │
+│ Sub-Headline                 │   + Overlay-Card:       │
+│ Fließtext                    │   "BTC · ETH · USDT     │
+│ [CTA] [CTA]                  │    Multi-Chain Tracing" │
+│                              │                         │
+│ ── Trust-Strip ──            │                         │
+│ 500+ Fälle | €Mio. zurück    │                         │
+│ geführt | 10+ Jahre          │                         │
+└──────────────────────────────┴─────────────────────────┘
+── Unterleiste: BKA · Coinbase · Binance · Chainalysis ──
+```
 
-2. **Globale Komponenten neu stylen**
-   - `Header.tsx` / `HeaderWithDarkBg.tsx`: schlanke, hohe Bar, Serif-Logo, dünne Trennlinie unten
-   - `Footer.tsx`: mehrspaltig, ruhig, Navy-Hintergrund mit hellem Text
-   - `NewsCarousel.tsx`: editorialer Look statt Card-Schatten
+### Konkrete Änderungen gegenüber jetzt
+1. **H1 ersetzen** durch Recovery-Headline, zusätzlich Sub-Headline einführen.
+2. **Fließtext** umschreiben (Scam-Typen + Methodik benennen).
+3. **CTA-Labels** schärfen (`Mandat anfragen` → `Kostenlose Fallprüfung`; `Erstberatung` → `24/7 Notfall-Hotline`).
+4. **Trust-Strip in linker Spalte einbauen** (3 KPIs in Reihe, klein, mit serif-Zahlen): `500+ Fälle` · `€ zweistelliger Mio.-Betrag zurückgeführt` · `10+ Jahre`.
+5. **Overlay-Card auf Video** (ersetzt bisherige Card unten links): zeigt unterstützte Chains/Assets statt generischem Text.
+6. **Untere Leiste** (innerhalb Hero) ersetzt durch Logo-Reihe (BKA, Polizei NRW, Coinbase, Binance, IOSCO) — bestehende Logos aus `partnerLogos` wiederverwendet, monochrom/opacity-50, klein.
+7. Spacing leicht reduzieren (`pt-32 pb-20`), damit die Hero auf 1166×866 ohne Scroll wirkt.
 
-3. **Startseite (`Index.tsx`) neu komponieren**
-   - Split-Screen Hero
-   - Leistungen als zweispaltige Liste mit Serif-Nummerierung
-   - Zahlen/Counter ruhiger, Serif, ohne Glow
-   - Testimonials/News editorial
+## Was unverändert bleibt
+- Video, Bilder, Farb-Tokens (Navy), Typografie, Layout-System (Split Screen).
+- Alle übrigen Sections der Startseite.
+- Routen, Backend, Logik.
 
-4. **Alle Unterseiten redesignen** (gleiche Tokens, Split-Screen-Bänder, gleicher Inhalt):
-   - Kontakt, Blog, BlogPost + alle 10 BlogPost-Varianten
-   - AGB, Datenschutz, Impressum, Haftungsausschluss
-   - Stellenangebote, UnserePartner, Auth, Admin, NotFound
-
-5. **QA**
-   - Preview prüfen (Hero, eine Blog-Detailseite, Footer)
-   - Konsole/Netzwerk auf Fehler prüfen
-   - Mobile-Breakpoint kurz visuell verifizieren
-
-## Was nicht geändert wird
-
-- Texte, Bilder, Videos, Routen, Backend, Edge Functions, Formularlogik, Admin-Funktionen
-- Sprache (Deutsch bleibt)
+## Technische Umsetzung
+- Nur `src/pages/Index.tsx` ändert sich — Block Zeilen ~86–150 (Hero-Section).
+- Keine neuen Dependencies, keine Token-Änderungen.
+- Logos werden aus dem bereits definierten `partnerLogos`-Array referenziert.

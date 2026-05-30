@@ -7,7 +7,7 @@ import Autoplay from "embla-carousel-autoplay";
 import { NewsCarousel } from "@/components/NewsCarousel";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { useSettings } from "@/hooks/useSettings";
+
 
 const AnimatedCounter = ({ end, duration = 1800, suffix = "" }: { end: number; duration?: number; suffix?: string }) => {
   const [count, setCount] = useState(0);

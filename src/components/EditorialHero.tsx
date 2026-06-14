@@ -8,7 +8,7 @@ export interface HeroBreadcrumbItem {
 }
 
 interface EditorialHeroProps {
-  /** Uppercase tracking label above the title, e.g. "Bovensiepen & Partner — Insights" */
+  /** Uppercase tracking label above the title, e.g. "Breuer & Partner — Insights" */
   eyebrow: string;
   /** Breadcrumb trail. Last item should have no href (becomes current page). */
   breadcrumb?: HeroBreadcrumbItem[];
@@ -53,7 +53,7 @@ export const EditorialHero = ({
           playsInline
           preload="metadata"
           className="absolute inset-0 w-full h-full object-cover"
-          aria-label="Bovensiepen & Partner"
+          aria-label="Breuer & Partner"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/55 to-primary/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/40" />

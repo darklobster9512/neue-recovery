@@ -62,7 +62,7 @@ export const Header = () => {
               transparent ? "text-white" : "text-foreground"
             }`}
           >
-            Bovensiepen <span className="opacity-60">&</span> Partner
+            Breuer <span className="opacity-60">&</span> Partner
           </span>
         </Link>
 
@@ -132,7 +132,7 @@ export const Header = () => {
               <div className="flex flex-col gap-6 mt-8">
                 <Link to="/" className="font-serif text-lg">
                   <SheetClose asChild>
-                    <span>Bovensiepen <span className="opacity-60">&</span> Partner</span>
+                    <span>Breuer <span className="opacity-60">&</span> Partner</span>
                   </SheetClose>
                 </Link>
 

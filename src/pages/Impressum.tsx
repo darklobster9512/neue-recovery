@@ -26,7 +26,7 @@ const Impressum = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Anwaltskanzlei</h3>
                 <div className="space-y-2 text-muted-foreground">
-                  <p className="font-medium text-foreground">Bovensiepen & Partner</p>
+                  <p className="font-medium text-foreground">Breuer & Partner</p>
                   <p>Nymphenburger Str. 20</p>
                   <p>80335 München</p>
                   <p>Deutschland</p>
@@ -49,7 +49,7 @@ const Impressum = () => {
               {/* Geschäftsführung */}
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Geschäftsführung</h3>
-                <p className="text-muted-foreground">Bernhard Bovensiepen</p>
+                <p className="text-muted-foreground">Dr. Thomas Breuer</p>
               </div>
 
               <Separator />

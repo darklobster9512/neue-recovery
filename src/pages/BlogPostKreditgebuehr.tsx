@@ -10,7 +10,7 @@ const BlogPostKreditgebuehr = () => {
   return (
     <div className="min-h-screen bg-background">
       <EditorialHero
-        eyebrow="Bovensiepen & Partner — Insights"
+        eyebrow="Breuer & Partner — Insights"
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "News", href: "/blog" },
@@ -22,7 +22,7 @@ const BlogPostKreditgebuehr = () => {
           <>
             <span className="flex items-center gap-2"><Calendar className="w-3.5 h-3.5" />7. Juli 2025</span>
             <span className="flex items-center gap-2"><Clock className="w-3.5 h-3.5" />6 min Lesezeit</span>
-            <span className="flex items-center gap-2"><User className="w-3.5 h-3.5" />Bovensiepen & Partner</span>
+            <span className="flex items-center gap-2"><User className="w-3.5 h-3.5" />Breuer & Partner</span>
           </>
         }
       />

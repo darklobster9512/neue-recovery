@@ -8,7 +8,7 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-background">
       <EditorialHero
-        eyebrow="Bovensiepen & Partner — Insights"
+        eyebrow="Breuer & Partner — Insights"
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "News", href: "/blog" },
@@ -20,7 +20,7 @@ const BlogPost = () => {
           <>
             <span className="flex items-center gap-2"><Calendar className="w-3.5 h-3.5" />7. Juli 2025</span>
             <span className="flex items-center gap-2"><Clock className="w-3.5 h-3.5" />8 min Lesezeit</span>
-            <span className="flex items-center gap-2"><User className="w-3.5 h-3.5" />Bovensiepen & Partner</span>
+            <span className="flex items-center gap-2"><User className="w-3.5 h-3.5" />Breuer & Partner</span>
           </>
         }
       />
@@ -31,7 +31,7 @@ const BlogPost = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
               <p className="text-lg text-muted-foreground mb-8 italic border-l-4 border-primary pl-6">
-                Möglich wurde dies durch die Zusammenarbeit zwischen unserer Kanzlei Bovensiepen & Partner, den Strafverfolgungsbehörden und dem gezielten Einsatz von Blockchain-Forensik. Wir berichten über einen Fall, der zeigt, wie effektiver Rechtsschutz im digitalen Raum aussehen kann – und welche juristischen Herausforderungen es zu meistern galt.
+                Möglich wurde dies durch die Zusammenarbeit zwischen unserer Kanzlei Breuer & Partner, den Strafverfolgungsbehörden und dem gezielten Einsatz von Blockchain-Forensik. Wir berichten über einen Fall, der zeigt, wie effektiver Rechtsschutz im digitalen Raum aussehen kann – und welche juristischen Herausforderungen es zu meistern galt.
               </p>
 
               <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Was ist ein PigButchering Scam?</h2>
@@ -54,7 +54,7 @@ const BlogPost = () => {
 
               <h2 className="text-3xl font-bold mt-12 mb-6 text-foreground">Nachverfolgung Kryptowährung – Schlüssel zum Erfolg bei der Rückholung</h2>
               <p className="mb-6 text-foreground">
-                Über Anleitung der Betrüger überwies unser Mandant im Jahr 2022 rd EUR 350.000,00 auf diverse Krypto-Exchanges (Coinbase, Bitpanda, Nexo) um diese dort in Bitcoin zu wechseln und an eine vermeintliche Handelsplattform zu transferieren. Nachdem er trotz mehrfacher Zusicherung die versprochenen Auszahlungen nicht erhielt sondern vielmehr aufgefordert wurde weiteres Geld einzuzahlen wandte sich das Opfer an die auf CyberCrime und Nachverfolgung von Kryptowährungen spezialisierten Rechtsanwälte von Bovensiepen & Partner sowie an die Kriminalpolizei.
+                Über Anleitung der Betrüger überwies unser Mandant im Jahr 2022 rd EUR 350.000,00 auf diverse Krypto-Exchanges (Coinbase, Bitpanda, Nexo) um diese dort in Bitcoin zu wechseln und an eine vermeintliche Handelsplattform zu transferieren. Nachdem er trotz mehrfacher Zusicherung die versprochenen Auszahlungen nicht erhielt sondern vielmehr aufgefordert wurde weiteres Geld einzuzahlen wandte sich das Opfer an die auf CyberCrime und Nachverfolgung von Kryptowährungen spezialisierten Rechtsanwälte von Breuer & Partner sowie an die Kriminalpolizei.
               </p>
               <p className="mb-8 text-foreground">
                 Durch gezielte Nachverfolgung der Kryptowährung auf der Blockchain war es möglich, den Weg der gestohlenen Assets zu rekonstruieren. Mithilfe modernster forensischer Tools und Know-how im Bereich der Blockchainanalyse konnten die BTC von den Wallets des Opfers zu einer Adresse bei der Kryptohandelsbörse Binance nachverfolgt werden.

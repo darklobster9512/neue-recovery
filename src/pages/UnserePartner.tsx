@@ -73,7 +73,7 @@ const UnserePartner = () => {
   return (
     <div className="min-h-screen bg-background">
       <EditorialHero
-        eyebrow="Bovensiepen & Partner — Netzwerk"
+        eyebrow="Breuer & Partner — Netzwerk"
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "Unsere Partner" },

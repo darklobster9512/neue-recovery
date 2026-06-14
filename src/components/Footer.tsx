@@ -86,7 +86,7 @@ export const Footer = () => {
         <div className="pt-8 border-t border-primary-foreground/15">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-primary-foreground/55">
-              © 2026 Bovensiepen & Partner. Alle Rechte vorbehalten.
+              © 2026 Breuer & Partner. Alle Rechte vorbehalten.
             </p>
             <div className="flex gap-6 text-xs">
               <Link to="/impressum" className="text-primary-foreground/55 hover:text-primary-foreground transition-colors">Impressum</Link>

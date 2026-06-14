@@ -96,7 +96,7 @@ const Index = () => {
           playsInline
           preload="metadata"
           className="absolute inset-0 w-full h-full object-cover"
-          aria-label="Bovensiepen & Partner"
+          aria-label="Breuer & Partner"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/55 to-primary/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/40" />
@@ -104,7 +104,7 @@ const Index = () => {
         <div className="relative z-10 flex-1 flex flex-col justify-end">
           <div className="container mx-auto px-6 lg:px-12 max-w-7xl pt-40 pb-20 lg:pb-24">
             <p className="text-[11px] font-sans tracking-[0.3em] uppercase text-primary-foreground/70 mb-8">
-              Bovensiepen &amp; Partner <span className="mx-2 opacity-50">—</span> Crypto Recovery &amp; Wirtschaftsrecht
+              Breuer &amp; Partner <span className="mx-2 opacity-50">—</span> Crypto Recovery &amp; Wirtschaftsrecht
             </p>
 
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.08] font-normal max-w-4xl mb-6 text-primary-foreground">

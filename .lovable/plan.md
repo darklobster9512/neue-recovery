@@ -1,37 +1,41 @@
-## Einheitlicher Hero-Stil für alle restlichen Seiten
+# Rebranding zu „Breuer & Partner"
 
-Ziel: Der alte Hero-Block (`bg-gray-800`, `bg-black/70`, `text-glow-strong`, `bg-gradient-primary bg-clip-text`, Badges, eingebettetes `<video>` mit Inline-Style) wird auf allen verbliebenen Seiten durch den neuen cinematischen Editorial-Hero (wie auf Kompetenz- und Startseite) ersetzt. Inhalte bleiben 1:1 erhalten — nur Gestaltung.
+## 1. Textuelle Umbenennung
+Ersetze `Bovensiepen & Partner` durch `Breuer & Partner` in allen sichtbaren UI-/SEO-/E-Mail-Texten. **E-Mail-Adresse / Domain `bovensiepenpartner.de` bleibt unverändert** (gemäß Projekt-Memory).
 
-### Betroffene Seiten
-- `src/pages/BlogPost.tsx` (dynamische Generikseite)
-- `src/pages/BlogPostKreditgebuehr.tsx`
-- `src/pages/BlogPostCeoFraud.tsx`
-- `src/pages/Blog.tsx`
-- `src/pages/Kontakt.tsx`
-- `src/pages/Stellenangebote.tsx`
-- `src/pages/UnserePartner.tsx`
+Betroffene Dateien:
+- `index.html` – `<title>`, Author, OG, Twitter Meta
+- `src/components/Header.tsx` (Desktop + Mobile Logo-Text)
+- `src/components/Footer.tsx` (Logo-Text + Copyright)
+- `src/components/KompetenzLayout.tsx` (eyebrow, aria-label)
+- `src/components/EditorialHero.tsx` (Kommentar, aria-label)
+- `src/components/NewsCarousel.tsx` (Fließtext)
+- `src/pages/Index.tsx` (aria-label, Hero-Subline)
+- `src/pages/Blog.tsx`, `BlogPost.tsx`, `BlogPostCeoFraud.tsx`, `BlogPostKreditgebuehr.tsx` (eyebrow + Fließtext)
+- `src/pages/Kontakt.tsx`, `Stellenangebote.tsx`, `UnserePartner.tsx` (eyebrow, Titel, `document.title`)
+- `src/pages/Impressum.tsx` – Firma; **`Bernhard Bovensiepen` → `Dr. Thomas Breuer`** (Geschäftsführer-Name)
+- `src/pages/Datenschutz.tsx`, `Haftungsausschluss.tsx`, `AGB.tsx` (Firmenname in Adressblöcken)
+- `supabase/functions/send-confirmation-email/index.ts` (Header, Footer, Subject, From-Name, Signatur)
 
-### Neuer Hero (einheitlich)
-- `<section class="relative bg-primary text-primary-foreground min-h-[70vh] flex flex-col overflow-hidden">`
-- Full-bleed `/video.mp4` mit zwei Gradient-Overlays (`from-primary/85 via-primary/55 to-primary/30` + Top-Gradient)
-- Breadcrumb dezent, Uppercase-Tracking, `text-primary-foreground/60`
-- Eyebrow-Label (Uppercase, `tracking-[0.3em]`): seitenspezifisch
-  - Blog-Posts: `Bovensiepen & Partner — Insights`
-  - Blog: `Bovensiepen & Partner — News & Insights`
-  - Kontakt: `Bovensiepen & Partner — Kontakt`
-  - Stellenangebote: `Bovensiepen & Partner — Karriere`
-  - Unsere Partner: `Bovensiepen & Partner — Netzwerk`
-- H1 in `font-serif text-4xl md:text-6xl lg:text-7xl`, reines Weiß, **kein Gradient-Text, kein Glow**
-- Akzentlinie `h-px w-24 bg-sky-400/40`
-- Lead-Text in `text-primary-foreground/80`
-- Bei Blog-Posts zusätzlich Meta-Zeile (Datum/Lesezeit/Autor) dezent unter dem Lead in `text-primary-foreground/60`
+## 2. Logo / Brand-Wort
+Aktuell ist „das Logo" reiner Schriftzug in `Header.tsx` und `Footer.tsx` — der wird durch die Textersetzung automatisch zu „Breuer & Partner". Der `favicon-and-blue.png` enthält **keinen Namen** (nur blaues Monogramm) und bleibt unverändert.
 
-### Vorgehen
-- Hero-Reuse: neue, schlanke Komponente `src/components/EditorialHero.tsx` mit Props (`eyebrow`, `breadcrumb`, `title`, `lead`, `meta?`), damit alle Seiten denselben Hero nutzen und `KompetenzLayout` perspektivisch ebenfalls darauf zurückgreifen kann. Initialer Einsatz nur in den oben genannten Seiten — `KompetenzLayout` bleibt unverändert in dieser Welle.
-- Restlicher Seiteninhalt (Artikeltext, Formulare, Listen, Footer) bleibt unverändert.
-- Badges/Glow/Inline-Video-Styles werden entfernt.
-- Keine Routen-, Daten- oder Settings-Änderungen.
+→ **Es wird keine neue Logo-Grafik erzeugt**, da der Brand-Schriftzug ein reiner Textbestandteil ist. Falls eine eigenständige Bild-Logo-Datei gewünscht ist, bitte separat melden.
 
-### Welle
-- Welle 1: `BlogPost.tsx`, `BlogPostKreditgebuehr.tsx`, `BlogPostCeoFraud.tsx`, `Blog.tsx`
-- Welle 2: `Kontakt.tsx`, `Stellenangebote.tsx`, `UnserePartner.tsx`
+## 3. Award-Grafiken (Sektion „Ausgezeichnete Kompetenz")
+Auf der Startseite sind zwei Bilder eingebunden:
+
+| Datei | Inhalt | Aktion |
+|---|---|---|
+| `public/lovable-uploads/9a06dfc4-…png` | anwalt.de 5.0-Sterne-Karte – enthält Kanzleinamen | **Bearbeiten:** nur Textfeld `Bovensiepen & Partner` → `Breuer & Partner`, Layout/Farben/Sterne/Logo 1:1 erhalten |
+| `public/lovable-uploads/f083500d-…png` | Auszeichnungs-Badges 2024/2025 | Wird vor Bearbeitung geprüft. Steht der Name drauf → Text ersetzen. Steht er **nicht** drauf → unverändert lassen |
+
+Methode: `imagegen--edit_image` mit Original-PNG als Input und Prompt, der ausschließlich den Namens-Text austauscht und das restliche Design unangetastet lässt. Ergebnis ersetzt die bestehende Datei am gleichen Pfad (Referenzen im Code bleiben gültig).
+
+## 4. Verifikation
+- `rg "Bovensiepen & Partner"` muss anschließend leer sein (außer Domain/E-Mail).
+- Visuelle Prüfung der beiden Award-Bilder im Preview (`/` Sektion „Ausgezeichnete Kompetenz").
+- Header/Footer/Impressum sichtprüfen.
+
+## Hinweis
+Die Backend-Domain `bovensiepenpartner.de` (E-Mails, Resend-From-Adresse) bleibt erhalten — nur der Anzeige-Name vor `<…>` wird angepasst.

@@ -27,7 +27,7 @@ interface KompetenzLayoutProps {
 }
 
 export const KompetenzLayout = ({
-  eyebrow = "Bovensiepen & Partner — Kompetenz",
+  eyebrow = "Breuer & Partner — Kompetenz",
   breadcrumbLabel,
   title,
   heroLead,
@@ -55,7 +55,7 @@ export const KompetenzLayout = ({
           playsInline
           preload="metadata"
           className="absolute inset-0 w-full h-full object-cover"
-          aria-label="Bovensiepen & Partner"
+          aria-label="Breuer & Partner"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/55 to-primary/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/40" />

@@ -10,115 +10,20 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "13.0.4"
+    PostgrestVersion: "14.5"
   }
   public: {
     Tables: {
-      contact_messages: {
-        Row: {
-          consent: boolean
-          created_at: string
-          damage_amount: string | null
-          email: string
-          id: string
-          message: string
-          name: string
-          phone: string | null
-          source: string | null
-          spam_score: number | null
-          status: string | null
-          submit_duration: number | null
-          topic: string
-          updated_at: string
-        }
-        Insert: {
-          consent?: boolean
-          created_at?: string
-          damage_amount?: string | null
-          email: string
-          id?: string
-          message: string
-          name: string
-          phone?: string | null
-          source?: string | null
-          spam_score?: number | null
-          status?: string | null
-          submit_duration?: number | null
-          topic: string
-          updated_at?: string
-        }
-        Update: {
-          consent?: boolean
-          created_at?: string
-          damage_amount?: string | null
-          email?: string
-          id?: string
-          message?: string
-          name?: string
-          phone?: string | null
-          source?: string | null
-          spam_score?: number | null
-          status?: string | null
-          submit_duration?: number | null
-          topic?: string
-          updated_at?: string
-        }
-        Relationships: []
-      }
-      settings: {
-        Row: {
-          key: string
-          updated_at: string
-          value: string
-        }
-        Insert: {
-          key: string
-          updated_at?: string
-          value: string
-        }
-        Update: {
-          key?: string
-          updated_at?: string
-          value?: string
-        }
-        Relationships: []
-      }
-      user_roles: {
-        Row: {
-          created_at: string
-          id: string
-          role: Database["public"]["Enums"]["app_role"]
-          user_id: string
-        }
-        Insert: {
-          created_at?: string
-          id?: string
-          role: Database["public"]["Enums"]["app_role"]
-          user_id: string
-        }
-        Update: {
-          created_at?: string
-          id?: string
-          role?: Database["public"]["Enums"]["app_role"]
-          user_id?: string
-        }
-        Relationships: []
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      has_role: {
-        Args: {
-          _role: Database["public"]["Enums"]["app_role"]
-          _user_id: string
-        }
-        Returns: boolean
-      }
+      [_ in never]: never
     }
     Enums: {
-      app_role: "admin" | "moderator" | "user"
+      [_ in never]: never
     }
     CompositeTypes: {
       [_ in never]: never
@@ -245,8 +150,6 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {
-      app_role: ["admin", "moderator", "user"],
-    },
+    Enums: {},
   },
 } as const

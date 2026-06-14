@@ -94,7 +94,7 @@ const BlogPostCeoFraud = () => {
                   Bei CEO-Fraud und Überweisungsbetrug ist schnelles Handeln entscheidend. Als spezialisierte CyberCrime Anwälte unterstützen wir Sie umfassend – juristisch fundiert, schnell und effizient.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Für weitere Informationen und individuelle Beratung stehen Ihnen <strong>Bernhard Bovensiepen</strong> und <strong>Steffen Rheinböcker</strong> jederzeit zur Verfügung.
+                  Für weitere Informationen und individuelle Beratung stehen Ihnen <strong>Dr. Thomas Breuer</strong> und <strong>Dr. Sebastian Werner</strong> jederzeit zur Verfügung.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-4">
                   <a href="mailto:info@bovensiepenpartner.de" className="text-primary hover:underline font-medium">

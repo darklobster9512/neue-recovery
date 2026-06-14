@@ -48,12 +48,12 @@ const AnimatedCounter = ({ end, duration = 1800, suffix = "" }: { end: number; d
 };
 
 const team = [
-  { name: "Bernhard Bovensiepen", role: "Rechtsanwalt", focus: "Cybercrime · Datenschutz · Kapitalmarkt · Kryptonachverfolgung", img: "/lovable-uploads/2cad25d9-8d15-482b-bc38-5b1378991be6.png" },
-  { name: "Lea Hartwig", role: "Teamassistentin", focus: "", img: "/lovable-uploads/eb203c07-90e7-479d-8fd8-fdaa83fcce97.png" },
-  { name: "Leonard Grimm", role: "Rechtsanwalt", focus: "Prozessführung · Datenschutz · Kapitalmarktrecht", img: "/lovable-uploads/b4127816-793a-42ef-b5e4-34987580a428.png" },
-  { name: "Martin Willig", role: "Blockchain- / Datenanalyst", focus: "", img: "/lovable-uploads/fb9c5d6b-b0d1-44b0-9835-4301827237bb.png" },
-  { name: "Michael Dorn", role: "Rechtsanwalt", focus: "Immobilienrecht · Prozessführung · Datenschutz", img: "/lovable-uploads/49592374-fd61-4f95-b984-a0cbeeaad8f5.png" },
-  { name: "Steffen Rheinböcker", role: "Rechtsanwalt", focus: "Immobilienrecht · Streitbeilegung · Cybercrime", img: "/lovable-uploads/709d1496-f015-4b38-b331-9cb17b1b6eaa.png" },
+  { name: "Dr. Thomas Breuer", role: "Rechtsanwalt", focus: "Cybercrime · Datenschutz · Kapitalmarkt · Kryptonachverfolgung", img: "/lovable-uploads/2cad25d9-8d15-482b-bc38-5b1378991be6.png" },
+  { name: "Clara Hoffmann", role: "Teamassistentin", focus: "", img: "/lovable-uploads/eb203c07-90e7-479d-8fd8-fdaa83fcce97.png" },
+  { name: "Dr. Maximilian Krause", role: "Rechtsanwalt", focus: "Prozessführung · Datenschutz · Kapitalmarktrecht", img: "/lovable-uploads/b4127816-793a-42ef-b5e4-34987580a428.png" },
+  { name: "Julian Maier", role: "Blockchain- / Datenanalyst", focus: "", img: "/lovable-uploads/fb9c5d6b-b0d1-44b0-9835-4301827237bb.png" },
+  { name: "Dr. Alexander Voigt", role: "Rechtsanwalt", focus: "Immobilienrecht · Prozessführung · Datenschutz", img: "/lovable-uploads/49592374-fd61-4f95-b984-a0cbeeaad8f5.png" },
+  { name: "Dr. Sebastian Werner", role: "Rechtsanwalt", focus: "Immobilienrecht · Streitbeilegung · Cybercrime", img: "/lovable-uploads/709d1496-f015-4b38-b331-9cb17b1b6eaa.png" },
 ];
 
 const partnerLogos = [

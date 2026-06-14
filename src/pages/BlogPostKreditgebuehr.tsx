@@ -100,7 +100,7 @@ const BlogPostKreditgebuehr = () => {
                   Als spezialisierte Rechtsanwälte für Verbraucher- und Bankrecht unterstützen wir Sie bei der Durchsetzung Ihrer Ansprüche – kompetent, effizient und erfolgsorientiert.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Für weitere Informationen und eine Ersteinschätzung stehen Bernhard Bovensiepen und Leonard Grimm jederzeit unter info@bovensiepenpartner.de{phoneEnabled ? ' bzw. telefonisch' : ''} zur Verfügung.
+                  Für weitere Informationen und eine Ersteinschätzung stehen Dr. Thomas Breuer und Dr. Maximilian Krause jederzeit unter info@bovensiepenpartner.de{phoneEnabled ? ' bzw. telefonisch' : ''} zur Verfügung.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-4">
                   <a href="mailto:info@bovensiepenpartner.de" className="text-primary hover:underline font-medium">

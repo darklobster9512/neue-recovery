@@ -8,8 +8,6 @@ import { NewsCarousel } from "@/components/NewsCarousel";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useSettings } from "@/hooks/useSettings";
-import awardAnwaltde from "@/assets/award-anwaltde.png";
-import award20242025 from "@/assets/award-2024-2025.png";
 
 
 
@@ -98,7 +96,7 @@ const Index = () => {
           playsInline
           preload="metadata"
           className="absolute inset-0 w-full h-full object-cover"
-          aria-label="Breuer & Partner"
+          aria-label="Bovensiepen & Partner"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/55 to-primary/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/40" />
@@ -106,7 +104,7 @@ const Index = () => {
         <div className="relative z-10 flex-1 flex flex-col justify-end">
           <div className="container mx-auto px-6 lg:px-12 max-w-7xl pt-40 pb-20 lg:pb-24">
             <p className="text-[11px] font-sans tracking-[0.3em] uppercase text-primary-foreground/70 mb-8">
-              Breuer &amp; Partner <span className="mx-2 opacity-50">—</span> Crypto Recovery &amp; Wirtschaftsrecht
+              Bovensiepen &amp; Partner <span className="mx-2 opacity-50">—</span> Crypto Recovery &amp; Wirtschaftsrecht
             </p>
 
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.08] font-normal max-w-4xl mb-6 text-primary-foreground">
@@ -326,10 +324,10 @@ const Index = () => {
               </div>
               <div className="space-y-4">
                 <div className="bg-background border border-border p-5">
-                  <img src={awardAnwaltde} alt="anwalt.de 5,0 Sterne Bewertung für Breuer & Partner" loading="lazy" width={1536} height={1024} className="w-full h-auto" />
+                  <img src="/lovable-uploads/9a06dfc4-8617-4f69-97cd-82310bdeaa2e.png" alt="anwalt.de 5.0 Sterne Bewertung" className="w-full h-auto" />
                 </div>
                 <div className="bg-background border border-border p-5">
-                  <img src={award20242025} alt="Auszeichnungen 2024/2025 für Breuer & Partner" loading="lazy" width={1536} height={1024} className="w-full h-auto" />
+                  <img src="/lovable-uploads/f083500d-33a2-4506-9c64-bace4f2b1753.png" alt="Verschiedene Auszeichnungen 2024/2025" className="w-full h-auto" />
                 </div>
               </div>
             </div>

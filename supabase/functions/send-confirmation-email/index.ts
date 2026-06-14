@@ -32,7 +32,7 @@ const createEmailTemplate = (data: ContactEmailRequest, firmPhone: string, phone
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bestätigung Ihrer Anfrage - Breuer & Partner</title>
+  <title>Bestätigung Ihrer Anfrage - Bovensiepen & Partner</title>
 </head>
 <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; line-height: 1.6; color: #333;">
   <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
@@ -40,7 +40,7 @@ const createEmailTemplate = (data: ContactEmailRequest, firmPhone: string, phone
     <!-- Header -->
     <div style="background: linear-gradient(135deg, hsl(214 100% 14%) 0%, hsl(214 85% 20%) 100%); padding: 40px 30px; text-align: center;">
       <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">
-        Breuer & Partner
+        Bovensiepen & Partner
       </h1>
       <p style="margin: 8px 0 0 0; color: rgba(255, 255, 255, 0.9); font-size: 16px;">
         Rechtsanwälte für Krypto-Recovery
@@ -126,7 +126,7 @@ const createEmailTemplate = (data: ContactEmailRequest, firmPhone: string, phone
       <!-- Closing -->
       <p style="font-size: 16px; margin: 30px 0 0 0; color: #444;">
         Mit freundlichen Grüßen<br>
-        <strong style="color: hsl(214 100% 14%);">Ihr Team von Breuer & Partner</strong>
+        <strong style="color: hsl(214 100% 14%);">Ihr Team von Bovensiepen & Partner</strong>
       </p>
     </div>
 
@@ -136,7 +136,7 @@ const createEmailTemplate = (data: ContactEmailRequest, firmPhone: string, phone
       <!-- Contact Info -->
       <div style="margin-bottom: 20px;">
         <h4 style="color: hsl(214 100% 14%); font-size: 16px; font-weight: 600; margin: 0 0 10px 0;">
-          Breuer & Partner
+          Bovensiepen & Partner
         </h4>
         <p style="margin: 5px 0; color: #666; font-size: 14px;">
           Nymphenburger Str. 20, 80335 München
@@ -213,9 +213,9 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Sending email to:", requestData.email);
     
     const emailResponse = await resend.emails.send({
-      from: "Breuer & Partner <info@bovensiepenpartner.de>",
+      from: "Bovensiepen & Partner <info@bovensiepenpartner.de>",
       to: [requestData.email],
-      subject: "Bestätigung Ihrer Anfrage - Breuer & Partner",
+      subject: "Bestätigung Ihrer Anfrage - Bovensiepen & Partner",
       html: emailHtml,
     });
 

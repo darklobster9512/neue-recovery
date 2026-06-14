@@ -24,7 +24,7 @@ const Haftungsausschluss = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">1. Allgemeine Hinweise und Rechtsinformationen</h3>
                 <div className="space-y-4 text-muted-foreground text-sm">
                   <p>
-                    Die Rechtsanwaltskanzlei Breuer & Partner stellt auf dieser Website 
+                    Die Rechtsanwaltskanzlei Bovensiepen & Partner stellt auf dieser Website 
                     allgemeine Informationen zur Verfügung. Diese Informationen stellen keine 
                     Rechtsberatung dar und können eine individuelle anwaltliche Beratung nicht ersetzen.
                   </p>
@@ -199,7 +199,7 @@ const Haftungsausschluss = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Kontakt bei Rechtsfragen</h3>
                 <div className="space-y-2 text-muted-foreground">
-                  <p className="font-medium text-foreground">Breuer & Partner</p>
+                  <p className="font-medium text-foreground">Bovensiepen & Partner</p>
                   <p>Nymphenburger Str. 20</p>
                   <p>80335 München</p>
                   <p><span className="font-medium">E-Mail:</span> info@bovensiepenpartner.de</p>

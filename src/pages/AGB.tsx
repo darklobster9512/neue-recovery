@@ -28,7 +28,7 @@ const AGB = () => {
                 <div className="space-y-4 text-muted-foreground text-sm">
                   <p>
                     Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Leistungen der 
-                    Rechtsanwaltskanzlei Breuer & Partner, Nymphenburger Str. 20, 80335 München, 
+                    Rechtsanwaltskanzlei Bovensiepen & Partner, Nymphenburger Str. 20, 80335 München, 
                     nachfolgend "Kanzlei" genannt.
                   </p>
                   <p>
@@ -239,7 +239,7 @@ const AGB = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Kontakt bei Fragen</h3>
                 <div className="space-y-2 text-muted-foreground">
-                  <p className="font-medium text-foreground">Breuer & Partner</p>
+                  <p className="font-medium text-foreground">Bovensiepen & Partner</p>
                   <p>Nymphenburger Str. 20</p>
                   <p>80335 München</p>
                   {phoneEnabled && <p><span className="font-medium">Telefon:</span> <PhoneDisplay /></p>}

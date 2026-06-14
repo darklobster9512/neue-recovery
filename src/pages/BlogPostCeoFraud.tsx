@@ -7,7 +7,7 @@ const BlogPostCeoFraud = () => {
   return (
     <div className="min-h-screen bg-background">
       <EditorialHero
-        eyebrow="Breuer & Partner — Insights"
+        eyebrow="Bovensiepen & Partner — Insights"
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "News", href: "/blog" },

@@ -284,7 +284,7 @@ const faqs = [
 export default function Stellenangebote() {
   // Set page title
   useEffect(() => {
-    document.title = 'Karriere bei Breuer & Partner – Stellenangebote';
+    document.title = 'Karriere bei Bovensiepen & Partner – Stellenangebote';
   }, []);
 
   const scrollToJobs = () => {
@@ -296,12 +296,12 @@ export default function Stellenangebote() {
   return (
     <div className="min-h-screen bg-background">
       <EditorialHero
-        eyebrow="Breuer & Partner — Karriere"
+        eyebrow="Bovensiepen & Partner — Karriere"
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "Karriere" },
         ]}
-        title={<>Karriere bei<br />Breuer & Partner.</>}
+        title={<>Karriere bei<br />Bovensiepen & Partner.</>}
         lead="Spezialisierte Kanzlei für Krypto-Recovery, Wirtschafts- und Kapitalmarktrecht — mit eigener Blockchain-Forensik."
         meta={
           <>
@@ -337,7 +337,7 @@ export default function Stellenangebote() {
       <Section className="py-20 bg-gradient-to-br from-background via-background to-primary/5">
         <div className="container mx-auto px-4">
           <SectionHeader>
-            <SectionTitle>Arbeiten bei Breuer & Partner</SectionTitle>
+            <SectionTitle>Arbeiten bei Bovensiepen & Partner</SectionTitle>
             <SectionDescription>
               Eine spezialisierte Wirtschaftskanzlei mit Schwerpunkt auf Krypto-Recovery, Kapitalmarkt- und Wirtschaftsrecht
             </SectionDescription>

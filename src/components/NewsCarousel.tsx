@@ -57,7 +57,7 @@ export const NewsCarousel = () => {
                   Erfolg und Hoffnung im Kampf gegen Internetbetrug / CyberCrime
                 </h4>
                 <p className="text-lg text-gray-700 leading-relaxed">
-                  Ein österreichisches Betrugsopfer erhielt kürzlich 8,69 Bitcoin zurück – ein Wert von rund 800.000 EUR (Stand Juli 2025). Möglich wurde dies durch die Zusammenarbeit zwischen unserer Kanzlei Breuer & Partner, den Strafverfolgungsbehörden und dem gezielten Einsatz von Blockchain-Forensik.
+                  Ein österreichisches Betrugsopfer erhielt kürzlich 8,69 Bitcoin zurück – ein Wert von rund 800.000 EUR (Stand Juli 2025). Möglich wurde dies durch die Zusammenarbeit zwischen unserer Kanzlei Bovensiepen & Partner, den Strafverfolgungsbehörden und dem gezielten Einsatz von Blockchain-Forensik.
                 </p>
                 <p className="text-lg text-gray-700 leading-relaxed">
                   Wir berichten über einen Fall, der zeigt, wie effektiver Rechtsschutz im digitalen Raum aussehen kann – und welche juristischen Herausforderungen es zu meistern galt.

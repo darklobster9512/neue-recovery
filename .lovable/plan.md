@@ -1,40 +1,37 @@
-# Rebrand zu "Breuer & Partner"
+## Einheitlicher Hero-Stil für alle restlichen Seiten
 
-## 1. Text-Logo (Header & Footer)
-Aktuelles "Logo" ist serif-Text — kein Bild. Ersetzen in:
-- `src/components/Header.tsx` (Z. 65, 135, aria-label)
-- `src/components/Footer.tsx` (Z. 15, 89 Copyright)
+Ziel: Der alte Hero-Block (`bg-gray-800`, `bg-black/70`, `text-glow-strong`, `bg-gradient-primary bg-clip-text`, Badges, eingebettetes `<video>` mit Inline-Style) wird auf allen verbliebenen Seiten durch den neuen cinematischen Editorial-Hero (wie auf Kompetenz- und Startseite) ersetzt. Inhalte bleiben 1:1 erhalten — nur Gestaltung.
 
-→ `Breuer <span class="opacity-60">&</span> Partner`
+### Betroffene Seiten
+- `src/pages/BlogPost.tsx` (dynamische Generikseite)
+- `src/pages/BlogPostKreditgebuehr.tsx`
+- `src/pages/BlogPostCeoFraud.tsx`
+- `src/pages/Blog.tsx`
+- `src/pages/Kontakt.tsx`
+- `src/pages/Stellenangebote.tsx`
+- `src/pages/UnserePartner.tsx`
 
-## 2. Markenname-Anzeige (überall, E-Mail-Adressen bleiben)
-Ersetze "Bovensiepen & Partner" → "Breuer & Partner" in:
-- `src/components/EditorialHero.tsx`, `KompetenzLayout.tsx`, `NewsCarousel.tsx`
-- `src/pages/Index.tsx`, `Blog.tsx`, `BlogPost.tsx`, `BlogPostCeoFraud.tsx`, `BlogPostKreditgebuehr.tsx`
-- `src/pages/Kontakt.tsx`, `Stellenangebote.tsx`, `UnserePartner.tsx`
-- `index.html` (`<title>`, `og:title`, `twitter:title`, `meta author`)
+### Neuer Hero (einheitlich)
+- `<section class="relative bg-primary text-primary-foreground min-h-[70vh] flex flex-col overflow-hidden">`
+- Full-bleed `/video.mp4` mit zwei Gradient-Overlays (`from-primary/85 via-primary/55 to-primary/30` + Top-Gradient)
+- Breadcrumb dezent, Uppercase-Tracking, `text-primary-foreground/60`
+- Eyebrow-Label (Uppercase, `tracking-[0.3em]`): seitenspezifisch
+  - Blog-Posts: `Bovensiepen & Partner — Insights`
+  - Blog: `Bovensiepen & Partner — News & Insights`
+  - Kontakt: `Bovensiepen & Partner — Kontakt`
+  - Stellenangebote: `Bovensiepen & Partner — Karriere`
+  - Unsere Partner: `Bovensiepen & Partner — Netzwerk`
+- H1 in `font-serif text-4xl md:text-6xl lg:text-7xl`, reines Weiß, **kein Gradient-Text, kein Glow**
+- Akzentlinie `h-px w-24 bg-sky-400/40`
+- Lead-Text in `text-primary-foreground/80`
+- Bei Blog-Posts zusätzlich Meta-Zeile (Datum/Lesezeit/Autor) dezent unter dem Lead in `text-primary-foreground/60`
 
-E-Mail-Adressen `info@bovensiepenpartner.de` und die Domain `bovensiepenpartner.de` **bleiben unverändert**.
+### Vorgehen
+- Hero-Reuse: neue, schlanke Komponente `src/components/EditorialHero.tsx` mit Props (`eyebrow`, `breadcrumb`, `title`, `lead`, `meta?`), damit alle Seiten denselben Hero nutzen und `KompetenzLayout` perspektivisch ebenfalls darauf zurückgreifen kann. Initialer Einsatz nur in den oben genannten Seiten — `KompetenzLayout` bleibt unverändert in dieser Welle.
+- Restlicher Seiteninhalt (Artikeltext, Formulare, Listen, Footer) bleibt unverändert.
+- Badges/Glow/Inline-Video-Styles werden entfernt.
+- Keine Routen-, Daten- oder Settings-Änderungen.
 
-## 3. Legal-Seiten (komplett umbenennen)
-- `src/pages/Impressum.tsx`: Kanzlei-Name → "Breuer & Partner", **Geschäftsführung** "Bernhard Bovensiepen" → **"Dr. Thomas Breuer"**
-- `src/pages/AGB.tsx` (Z. 31, 242)
-- `src/pages/Datenschutz.tsx` (Z. 26)
-- `src/pages/Haftungsausschluss.tsx` (Z. 27, 202)
-
-Adresse / Registernummer / USt-IdNr. bleiben unverändert.
-
-## 4. E-Mail-Templates (Resend)
-`supabase/functions/send-confirmation-email/index.ts`: Alle Anzeige-Strings ("Bovensiepen & Partner") auf "Breuer & Partner", inkl. `from: "Breuer & Partner <info@bovensiepenpartner.de>"` und Betreff. Domain bleibt.
-
-## 5. Award-Grafiken neu generieren
-Die 2 PNGs auf der Startseite ("Ausgezeichnete Kompetenz", Z. 327 + 330 in `Index.tsx`) zeigen aktuell "Bovensiepen & Partner". Neu generieren via `imagegen` mit gleichem Stil:
-- **Badge 1** — `anwalt.de` 5,0-Sterne-Bewertung für "Breuer & Partner"
-- **Badge 2** — Auszeichnungs-Collage 2024/2025 ("Top Wirtschaftskanzlei", "Beste Anwälte" usw.) für "Breuer & Partner"
-
-Speichern unter `src/assets/award-anwaltde.png` und `src/assets/award-2024-2025.png`, in `Index.tsx` per ES-Import einbinden und alte `/lovable-uploads/...png`-Pfade ersetzen.
-
-Hinweis: AI-Bild-Modelle können Text auf Badges manchmal verzerrt rendern. Falls die generierten Badges nicht überzeugen, kommen wir als Fallback auf typografische HTML-Karten zurück.
-
-## 6. Memory aktualisieren
-`mem://index.md` und `mem://brand/identity`: Brand-Eintrag von "Bovensiepen & Partner" auf "Breuer & Partner" (Domain `bovensiepenpartner.de` bleibt als technische Domain notiert).
+### Welle
+- Welle 1: `BlogPost.tsx`, `BlogPostKreditgebuehr.tsx`, `BlogPostCeoFraud.tsx`, `Blog.tsx`
+- Welle 2: `Kontakt.tsx`, `Stellenangebote.tsx`, `UnserePartner.tsx`

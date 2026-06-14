@@ -335,7 +335,7 @@ Mit freundlichen Grüßen`;
   return (
     <div className="min-h-screen bg-background">
       <EditorialHero
-        eyebrow="Breuer & Partner — Kontakt"
+        eyebrow="Bovensiepen & Partner — Kontakt"
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "Kontakt" },

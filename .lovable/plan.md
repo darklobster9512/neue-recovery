@@ -1,37 +1,33 @@
-## Datenbank neu aufbauen
+# Kontaktanfragen reparieren
 
-Konsolidierte Migration, die das gesamte vorherige Schema in der neu angebundenen Supabase wiederherstellt. Daten (Kontaktnachrichten, bestehende Nutzer-Rollen) sind verloren – Struktur, Policies, Trigger und Default-Settings werden 1:1 nachgebaut.
+## Problem
+Test-Insert über die anon-API liefert:
+`new row violates row-level security policy for table "contact_messages"`
 
-### Inhalt der Migration
+Ursache: Beim Wiederaufbau der Datenbank wurden zwar Tabellen, RLS-Policies und Trigger angelegt, aber **keine GRANTs**. Ohne explizite GRANTs an `anon`/`authenticated`/`service_role` lehnt PostgREST jeden Zugriff ab — RLS wird gar nicht erst ausgewertet. Betroffen sind alle drei Tabellen: `contact_messages`, `settings`, `user_roles`.
 
-**Enum**
-- `app_role` (`admin`, `moderator`, `user`)
+## Fix — Migration mit GRANTs
 
-**Tabellen** (+ GRANTs + RLS + Policies)
-- `public.user_roles` — `id`, `user_id` (→ `auth.users`, ON DELETE CASCADE), `role`, `created_at`; unique (`user_id`, `role`)
-  - Policies: Admins SELECT/INSERT/UPDATE/DELETE, Users SELECT eigene Rollen
-- `public.contact_messages` — `name`, `email`, `phone`, `topic`, `damage_amount`, `message`, `consent`, `source`, `status`, `spam_score`, `submit_duration`, Timestamps
-  - Policies: anon+authenticated INSERT, Admins SELECT/UPDATE/DELETE
-  - Realtime aktiv, `REPLICA IDENTITY FULL`
-- `public.settings` — `key` (PK), `value`, `updated_at`
-  - Policies: Public SELECT, Admins INSERT/UPDATE/DELETE
+```sql
+-- Kontaktformular: anon darf inserten, Admins (authenticated) lesen/ändern
+GRANT INSERT ON public.contact_messages TO anon;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.contact_messages TO authenticated;
+GRANT ALL ON public.contact_messages TO service_role;
 
-**Funktionen**
-- `public.has_role(_user_id uuid, _role app_role)` — SECURITY DEFINER
-- `public.update_updated_at_column()` — Trigger-Helper
-- `public.handle_new_user_role()` — erster Nutzer wird automatisch Admin, alle weiteren `user`
+-- Settings: jeder darf lesen (Policy "Everyone can read"), Admins schreiben
+GRANT SELECT ON public.settings TO anon;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.settings TO authenticated;
+GRANT ALL ON public.settings TO service_role;
 
-**Trigger**
-- `update_contact_messages_updated_at` auf `contact_messages`
-- `update_settings_updated_at` auf `settings`
-- `on_auth_user_created_set_role` auf `auth.users` (führt `handle_new_user_role` aus)
+-- user_roles: nur eingeloggte User, kein anon
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.user_roles TO authenticated;
+GRANT ALL ON public.user_roles TO service_role;
+```
 
-**Seed-Daten in `settings`**
-- `phone` = `06131-6365850`
-- `phone_enabled` = `true`
+## Verifikation nach dem Fix
+1. Erneuter anon-Insert via REST → erwartet `201`.
+2. Eintrag erscheint im Admin-Panel (`/admin`, Tab Kontaktanfragen) per Realtime-Toast.
+3. Test-Datensatz (`source = 'plan_test'`) wieder löschen.
 
-### Hinweise nach Migration
-
-1. **Erster Login = Admin**: Sobald du dich neu registrierst, bekommst du automatisch die Admin-Rolle (alle alten User-Accounts sind weg).
-2. **RESEND_API_KEY**: Die Edge Function `send-confirmation-email` braucht den Resend-Key. Falls noch nicht in den neuen Secrets, muss er ergänzt werden – ich frage danach, sobald die Migration durch ist.
-3. **Auth-Provider** (E-Mail-Bestätigung, evtl. Google/Apple) müssen ggf. im Supabase-Dashboard erneut konfiguriert werden – das liegt außerhalb der Migration.
+## Hinweis Bestätigungsmail
+`send-confirmation-email` benötigt `RESEND_API_KEY`. Insert in DB funktioniert auch ohne — der Mail-Versand wird im Code bereits in try/catch gekapselt und blockiert das Speichern nicht. Falls die Bestätigungsmail aktiv genutzt werden soll, müsste der Resend-Key separat hinterlegt werden (nicht Teil dieses Plans).

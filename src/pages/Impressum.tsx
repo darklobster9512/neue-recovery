@@ -27,8 +27,8 @@ const Impressum = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Anwaltskanzlei</h3>
                 <div className="space-y-2 text-muted-foreground">
                   <p className="font-medium text-foreground">Breuer & Partner</p>
-                  <p>Nymphenburger Str. 20</p>
-                  <p>80335 München</p>
+                  <p>Wallstraße 13</p>
+                  <p>45468 Mülheim an der Ruhr</p>
                   <p>Deutschland</p>
                 </div>
               </div>
@@ -40,7 +40,7 @@ const Impressum = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Kontakt</h3>
                 <div className="space-y-2 text-muted-foreground">
                   {phoneEnabled && <p><span className="font-medium">Telefon:</span> <PhoneDisplay /></p>}
-                  <p><span className="font-medium">E-Mail:</span> info@bovensiepenpartner.de</p>
+                  <p><span className="font-medium">E-Mail:</span> info@breuer-partner.de</p>
                 </div>
               </div>
 
@@ -58,7 +58,7 @@ const Impressum = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Registereintrag</h3>
                 <div className="space-y-2 text-muted-foreground">
-                  <p><span className="font-medium">Registergericht:</span> Amtsgericht München</p>
+                  <p><span className="font-medium">Registergericht:</span> Amtsgericht Düsseldorf</p>
                   <p><span className="font-medium">Registernummer:</span> PR 318</p>
                 </div>
               </div>
@@ -69,7 +69,7 @@ const Impressum = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Umsatzsteuer-Identifikationsnummer</h3>
                 <p className="text-muted-foreground">
-                  <span className="font-medium">USt-IdNr.:</span> DE192726024
+                  <span className="font-medium">USt-IdNr.:</span> DE317391938
                 </p>
               </div>
 
@@ -80,7 +80,7 @@ const Impressum = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Berufsrechtliche Angaben</h3>
                 <div className="space-y-3 text-muted-foreground">
                   <p><span className="font-medium">Berufsbezeichnung:</span> Rechtsanwalt (verliehen in Deutschland)</p>
-                  <p><span className="font-medium">Zuständige Rechtsanwaltskammer:</span> Rechtsanwaltskammer München</p>
+                  <p><span className="font-medium">Zuständige Rechtsanwaltskammer:</span> Rechtsanwaltskammer Düsseldorf</p>
                   <p><span className="font-medium">Berufsrechtliche Regelungen:</span></p>
                   <ul className="ml-6 space-y-1 list-disc">
                     <li>Bundesrechtsanwaltsordnung (BRAO)</li>
@@ -115,14 +115,14 @@ const Impressum = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Aufsichtsbehörde</h3>
                 <div className="space-y-2 text-muted-foreground">
-                  <p>Rechtsanwaltskammer München</p>
-                  <p>Tal 33</p>
-                  <p>80331 München</p>
-                  <p>Telefon: 089 53029-0</p>
+                  <p>Rechtsanwaltskammer Düsseldorf</p>
+                  <p>Freiligrathstraße 25</p>
+                  <p>40479 Düsseldorf</p>
+                  <p>Telefon: 0211 49502-0</p>
                   <p>
                     Website: 
-                    <a href="http://www.rak-muenchen.de" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">
-                      www.rak-muenchen.de
+                    <a href="https://www.rechtsanwaltskammer-duesseldorf.de" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">
+                      www.rechtsanwaltskammer-duesseldorf.de
                     </a>
                   </p>
                 </div>

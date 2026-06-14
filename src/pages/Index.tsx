@@ -8,6 +8,8 @@ import { NewsCarousel } from "@/components/NewsCarousel";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { useSettings } from "@/hooks/useSettings";
+import awardAnwaltde from "@/assets/award-anwaltde.png";
+import award20242025 from "@/assets/award-2024-2025.png";
 
 
 
@@ -324,10 +326,10 @@ const Index = () => {
               </div>
               <div className="space-y-4">
                 <div className="bg-background border border-border p-5">
-                  <img src="/lovable-uploads/9a06dfc4-8617-4f69-97cd-82310bdeaa2e.png" alt="anwalt.de 5.0 Sterne Bewertung" className="w-full h-auto" />
+                  <img src={awardAnwaltde} alt="anwalt.de 5,0 Sterne Bewertung für Breuer & Partner" loading="lazy" width={1536} height={1024} className="w-full h-auto" />
                 </div>
                 <div className="bg-background border border-border p-5">
-                  <img src="/lovable-uploads/f083500d-33a2-4506-9c64-bace4f2b1753.png" alt="Verschiedene Auszeichnungen 2024/2025" className="w-full h-auto" />
+                  <img src={award20242025} alt="Auszeichnungen 2024/2025 für Breuer & Partner" loading="lazy" width={1536} height={1024} className="w-full h-auto" />
                 </div>
               </div>
             </div>

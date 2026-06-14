@@ -1,19 +1,55 @@
-# Grafik-Update: „RA Bernhard Bovensiepen" → „RA Thomas Breuer"
+## Ziel
 
-## Datei
-`public/lovable-uploads/9ecefdcb-e027-44d3-b2f1-e452a231af2d.png` — eingebunden in `src/components/NewsCarousel.tsx`.
+Alle alten Kanzleidaten (München-Adresse, alte E-Mail, alte USt-IdNr., Amtsgericht/RAK München) durch die neuen Daten ersetzen.
 
-## Was auf der Grafik geändert wird
-Es handelt sich um ein Behördenschreiben (Staatsanwaltschaft Innsbruck) mit zwei Vorkommen des Namens, die ersetzt werden:
+## Neue Daten
 
-1. Im gelb hervorgehobenen Fließtext: `RA Bernhard Bovensiepen` → `RA Thomas Breuer`
-2. Im Absatz darunter: `RA Bernhard Bovensiepen` → `RA Thomas Breuer`
+- **Adresse:** Wallstraße 13, 45468 Mülheim an der Ruhr
+- **E-Mail:** info@breuer-partner.de (auch datenschutz@breuer-partner.de)
+- **USt-IdNr.:** DE317391938
+- **Registergericht:** Amtsgericht Düsseldorf
+- **Gerichtsstand:** Mülheim an der Ruhr
+- **Zuständige RAK:** Rechtsanwaltskammer Düsseldorf — Freiligrathstraße 25, 40479 Düsseldorf, www.rechtsanwaltskammer-duesseldorf.de
 
-## Was unverändert bleibt
-**Alles andere bleibt 1:1 erhalten**: Justiz-Wappen, Briefkopf „STAATSANWALTSCHAFT INNSBRUCK", Adressfeld, Aktenzeichen, gesamter restlicher Text, Schwärzungen (schwarze Balken), die gelbe Markierungsfarbe und ihre exakte Position, Schriftart/-größe, Layout, Hintergrund, Zeilenumbrüche.
+## Betroffene Dateien & Änderungen
 
-## Methode
-`imagegen--edit_image` mit dem Original-PNG als Input und einem präzisen Prompt, der ausschließlich die beiden Namensvorkommen austauscht. Anschließend wird die Datei am selben Pfad überschrieben, sodass die Einbindung in `NewsCarousel.tsx` ohne Code-Änderung weiter funktioniert.
+**src/components/Footer.tsx**
+- Adresse → Wallstraße 13 / 45468 Mülheim an der Ruhr
+- E-Mail → info@breuer-partner.de
 
-## Verifikation
-Visuelle Prüfung des neuen PNG: beide Namensstellen tragen „RA Thomas Breuer", Schwärzungen, gelbe Markierung und alle übrigen Bestandteile bleiben unverändert.
+**src/pages/Impressum.tsx**
+- Adresse, E-Mail, USt-IdNr. → neue Werte
+- Registergericht: Amtsgericht München → Amtsgericht Düsseldorf
+- RAK-Block: München → Rechtsanwaltskammer Düsseldorf, Freiligrathstraße 25, 40479 Düsseldorf, www.rechtsanwaltskammer-duesseldorf.de
+
+**src/pages/AGB.tsx**
+- Kanzleizeile (Adresse), Gerichtsstand München → Mülheim an der Ruhr
+- Adresse + E-Mail unten
+
+**src/pages/Datenschutz.tsx**
+- Adresse, info@ und datenschutz@bovensiepenpartner.de → @breuer-partner.de
+
+**src/pages/Haftungsausschluss.tsx**
+- Gerichtsstand-Satz: München → Mülheim an der Ruhr
+- Adresse + E-Mail
+
+**src/pages/Kontakt.tsx**
+- mailto + Anzeige-E-Mail → info@breuer-partner.de
+- Adresse → Wallstraße 13 / 45468 Mülheim an der Ruhr
+
+**src/pages/Stellenangebote.tsx**
+- Alle 6 `location: "München"` → `"Mülheim an der Ruhr"`
+
+**src/pages/BlogPost.tsx, BlogPostCeoFraud.tsx, BlogPostKreditgebuehr.tsx**
+- info@bovensiepenpartner.de → info@breuer-partner.de (mailto + Anzeigetext)
+
+**supabase/functions/send-confirmation-email/index.ts**
+- Adresse im Footer, beide E-Mail-Erwähnungen, `from:`-Adresse → @breuer-partner.de + neue Anschrift
+
+## Hinweis
+
+Die `from:`-Adresse in der Edge Function (`info@breuer-partner.de`) funktioniert erst, sobald die Domain `breuer-partner.de` in Resend verifiziert ist. Bis dahin schlägt der Mailversand fehl — bitte Domain in Resend hinzufügen/verifizieren.
+
+## Memory-Update
+
+Core-Regel „Email/domain remains bovensiepenpartner.de" und `mem://brand/identity` werden auf die neuen Werte (Adresse Mülheim, Domain breuer-partner.de) aktualisiert.

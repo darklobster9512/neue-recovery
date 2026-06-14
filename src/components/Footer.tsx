@@ -12,7 +12,7 @@ export const Footer = () => {
         <div className="grid lg:grid-cols-5 md:grid-cols-3 gap-12 mb-16">
           <div className="lg:col-span-2">
             <h3 className="font-serif text-2xl mb-6 leading-tight">
-              Bovensiepen <span className="opacity-60">&</span> Partner
+              Breuer <span className="opacity-60">&</span> Partner
             </h3>
             <p className="text-sm text-primary-foreground/70 leading-relaxed max-w-md">
               Spezialisiert auf Kryptowährungsrecht, Betrugswiederherstellung und Anlegerschutz.

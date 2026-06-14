@@ -27,8 +27,8 @@ const Impressum = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Anwaltskanzlei</h3>
                 <div className="space-y-2 text-muted-foreground">
                   <p className="font-medium text-foreground">Breuer & Partner</p>
-                  <p>Nymphenburger Str. 20</p>
-                  <p>80335 München</p>
+                  <p>Wallstraße 13</p>
+                  <p>45468 Mülheim an der Ruhr</p>
                   <p>Deutschland</p>
                 </div>
               </div>
@@ -40,7 +40,7 @@ const Impressum = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Kontakt</h3>
                 <div className="space-y-2 text-muted-foreground">
                   {phoneEnabled && <p><span className="font-medium">Telefon:</span> <PhoneDisplay /></p>}
-                  <p><span className="font-medium">E-Mail:</span> info@bovensiepenpartner.de</p>
+                  <p><span className="font-medium">E-Mail:</span> info@breuer-partner.de</p>
                 </div>
               </div>
 

@@ -434,13 +434,13 @@ Mit freundlichen Grüßen`;
                     className="w-full justify-start h-auto p-4 hover:bg-primary/5"
                     asChild
                   >
-                    <a href="mailto:info@bovensiepenpartner.de" className="flex items-center gap-3">
+                    <a href="mailto:info@breuer-partner.de" className="flex items-center gap-3">
                       <div className="p-2 rounded-full bg-primary/10">
                         <Mail className="h-5 w-5 text-primary" />
                       </div>
                       <div className="text-left">
                         <p className="font-semibold">E-Mail</p>
-                        <p className="text-sm text-muted-foreground">info@bovensiepenpartner.de</p>
+                        <p className="text-sm text-muted-foreground">info@breuer-partner.de</p>
                       </div>
                     </a>
                   </Button>
@@ -451,7 +451,7 @@ Mit freundlichen Grüßen`;
                     </div>
                     <div>
                       <p className="font-semibold">Adresse</p>
-                      <p className="text-sm text-muted-foreground">Nymphenburger Str. 20<br />80335 München</p>
+                      <p className="text-sm text-muted-foreground">Wallstraße 13<br />45468 Mülheim an der Ruhr</p>
                     </div>
                   </div>
                   

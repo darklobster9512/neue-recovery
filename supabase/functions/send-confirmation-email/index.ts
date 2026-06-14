@@ -139,10 +139,10 @@ const createEmailTemplate = (data: ContactEmailRequest, firmPhone: string, phone
           Breuer & Partner
         </h4>
         <p style="margin: 5px 0; color: #666; font-size: 14px;">
-          Nymphenburger Str. 20, 80335 München
+          Wallstraße 13, 45468 Mülheim an der Ruhr
         </p>
         <p style="margin: 5px 0; color: #666; font-size: 14px;">
-          E-Mail: info@bovensiepenpartner.de
+          E-Mail: info@breuer-partner.de
         </p>
         <p style="margin: 5px 0; color: #666; font-size: 14px;">
           Öffnungszeiten: Mo-Fr 8:00-18:00 | Sa 9:00-14:00
@@ -153,7 +153,7 @@ const createEmailTemplate = (data: ContactEmailRequest, firmPhone: string, phone
       <div style="border-top: 1px solid #e2e8f0; padding-top: 20px;">
         <p style="margin: 0; color: #888; font-size: 12px; line-height: 1.4;">
           Diese E-Mail wurde automatisch generiert. Bitte antworten Sie nicht direkt auf diese E-Mail. 
-          Bei Rückfragen wenden Sie sich bitte an info@bovensiepenpartner.de oder rufen Sie uns an.
+          Bei Rückfragen wenden Sie sich bitte an info@breuer-partner.de oder rufen Sie uns an.
         </p>
       </div>
     </div>
@@ -213,7 +213,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Sending email to:", requestData.email);
     
     const emailResponse = await resend.emails.send({
-      from: "Breuer & Partner <info@bovensiepenpartner.de>",
+      from: "Breuer & Partner <info@breuer-partner.de>",
       to: [requestData.email],
       subject: "Bestätigung Ihrer Anfrage - Breuer & Partner",
       html: emailHtml,

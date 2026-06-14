@@ -24,10 +24,10 @@ const Datenschutz = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">1. Verantwortlicher</h3>
                 <div className="space-y-2 text-muted-foreground">
                   <p className="font-medium text-foreground">Breuer & Partner</p>
-                  <p>Nymphenburger Str. 20</p>
-                  <p>80335 München</p>
+                  <p>Wallstraße 13</p>
+                  <p>45468 Mülheim an der Ruhr</p>
                   <p>Deutschland</p>
-                  <p><span className="font-medium">E-Mail:</span> info@bovensiepenpartner.de</p>
+                  <p><span className="font-medium">E-Mail:</span> info@breuer-partner.de</p>
                 </div>
               </div>
 
@@ -38,7 +38,7 @@ const Datenschutz = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">2. Datenschutzbeauftragter</h3>
                 <p className="text-muted-foreground">
                   Für Fragen zum Datenschutz wenden Sie sich bitte an unseren Datenschutzbeauftragten 
-                  unter datenschutz@bovensiepenpartner.de
+                  unter datenschutz@breuer-partner.de
                 </p>
               </div>
 

@@ -141,8 +141,8 @@ const BlogPost = () => {
                   Für weitere Informationen und individuelle Beratung stehen Ihnen <strong>Dr. Thomas Breuer</strong> und <strong>Dr. Maximilian Krause</strong> jederzeit zur Verfügung.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-4">
-                  <a href="mailto:info@bovensiepenpartner.de" className="text-primary hover:underline font-medium">
-                    info@bovensiepenpartner.de
+                  <a href="mailto:info@breuer-partner.de" className="text-primary hover:underline font-medium">
+                    info@breuer-partner.de
                   </a>
                   <PhoneLink />
                 </div>

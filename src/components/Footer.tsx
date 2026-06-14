@@ -67,7 +67,7 @@ export const Footer = () => {
             <div className="space-y-3 text-sm text-primary-foreground/80">
               <div className="flex items-start gap-3">
                 <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0 opacity-70" />
-                <span>Nymphenburger Str. 20<br />80335 München</span>
+                <span>Wallstraße 13<br />45468 Mülheim an der Ruhr</span>
               </div>
               {phoneEnabled && (
                 <div className="flex items-center gap-3">
@@ -77,7 +77,7 @@ export const Footer = () => {
               )}
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 flex-shrink-0 opacity-70" />
-                <span>info@bovensiepenpartner.de</span>
+                <span>info@breuer-partner.de</span>
               </div>
             </div>
           </div>

@@ -219,7 +219,7 @@ const AGB = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">§ 10 Schlussbestimmungen</h3>
                 <div className="space-y-4 text-muted-foreground text-sm">
                   <p>
-                    Es gilt deutsches Recht. Erfüllungsort und Gerichtsstand ist München, 
+                    Es gilt deutsches Recht. Erfüllungsort und Gerichtsstand ist Mülheim an der Ruhr, 
                     sofern der Mandant Vollkaufmann, juristische Person des öffentlichen 
                     Rechts oder öffentlich-rechtliches Sondervermögen ist.
                   </p>

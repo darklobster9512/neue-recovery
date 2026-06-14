@@ -174,7 +174,7 @@ const Haftungsausschluss = () => {
                   </p>
                   <p>
                     Bei Vollkaufleuten, juristischen Personen des öffentlichen Rechts oder 
-                    öffentlich-rechtlichen Sondervermögen ist München ausschließlicher Gerichtsstand 
+                    öffentlich-rechtlichen Sondervermögen ist Mülheim an der Ruhr ausschließlicher Gerichtsstand 
                     für alle sich aus dem Vertragsverhältnis ergebenden Streitigkeiten.
                   </p>
                 </div>

@@ -174,7 +174,7 @@ const Haftungsausschluss = () => {
                   </p>
                   <p>
                     Bei Vollkaufleuten, juristischen Personen des öffentlichen Rechts oder 
-                    öffentlich-rechtlichen Sondervermögen ist Mülheim an der Ruhr ausschließlicher Gerichtsstand 
+                    öffentlich-rechtlichen Sondervermögen ist Hamburg ausschließlicher Gerichtsstand 
                     für alle sich aus dem Vertragsverhältnis ergebenden Streitigkeiten.
                   </p>
                 </div>
@@ -200,8 +200,8 @@ const Haftungsausschluss = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Kontakt bei Rechtsfragen</h3>
                 <div className="space-y-2 text-muted-foreground">
                   <p className="font-medium text-foreground">Breuer & Partner</p>
-                  <p>Wallstraße 13</p>
-                  <p>45468 Mülheim an der Ruhr</p>
+                  <p>Domstraße 15</p>
+                  <p>20095 Hamburg</p>
                   <p><span className="font-medium">E-Mail:</span> info@breuer-partner.de</p>
                   <p className="text-xs mt-4 p-3 bg-amber-50 dark:bg-amber-950 rounded border-l-4 border-amber-400">
                     <strong>Wichtiger Hinweis:</strong> Für eine verbindliche Rechtsberatung 

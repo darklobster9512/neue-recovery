@@ -24,8 +24,8 @@ const Datenschutz = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">1. Verantwortlicher</h3>
                 <div className="space-y-2 text-muted-foreground">
                   <p className="font-medium text-foreground">Breuer & Partner</p>
-                  <p>Wallstraße 13</p>
-                  <p>45468 Mülheim an der Ruhr</p>
+                  <p>Domstraße 15</p>
+                  <p>20095 Hamburg</p>
                   <p>Deutschland</p>
                   <p><span className="font-medium">E-Mail:</span> info@breuer-partner.de</p>
                 </div>

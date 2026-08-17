@@ -197,16 +197,24 @@ export default function Admin() {
 
       <div className="container mx-auto px-4 py-8">
         <Tabs defaultValue="messages" className="w-full">
-          <TabsList className="grid w-full grid-cols-2">
+          <TabsList className="grid w-full grid-cols-3">
             <TabsTrigger value="messages" className="flex items-center gap-2">
               <MessageSquare className="h-4 w-4" />
               Kontaktanfragen
+            </TabsTrigger>
+            <TabsTrigger value="telegram" className="flex items-center gap-2">
+              <Send className="h-4 w-4" />
+              Telegram
             </TabsTrigger>
             <TabsTrigger value="settings" className="flex items-center gap-2">
               <Settings className="h-4 w-4" />
               Einstellungen
             </TabsTrigger>
           </TabsList>
+
+          <TabsContent value="telegram" className="space-y-6">
+            <TelegramSettings />
+          </TabsContent>
           
           <TabsContent value="messages" className="space-y-6">
         {/* Stats */}

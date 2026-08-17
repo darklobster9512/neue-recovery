@@ -28,7 +28,7 @@ const AGB = () => {
                 <div className="space-y-4 text-muted-foreground text-sm">
                   <p>
                     Diese Allgemeinen Geschäftsbedingungen (AGB) gelten für alle Leistungen der 
-                    Rechtsanwaltskanzlei Breuer & Partner, Wallstraße 13, 45468 Mülheim an der Ruhr, 
+                    Rechtsanwaltskanzlei Breuer & Partner, Domstraße 15, 20095 Hamburg, 
                     nachfolgend "Kanzlei" genannt.
                   </p>
                   <p>
@@ -219,7 +219,7 @@ const AGB = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">§ 10 Schlussbestimmungen</h3>
                 <div className="space-y-4 text-muted-foreground text-sm">
                   <p>
-                    Es gilt deutsches Recht. Erfüllungsort und Gerichtsstand ist Mülheim an der Ruhr, 
+                    Es gilt deutsches Recht. Erfüllungsort und Gerichtsstand ist Hamburg, 
                     sofern der Mandant Vollkaufmann, juristische Person des öffentlichen 
                     Rechts oder öffentlich-rechtliches Sondervermögen ist.
                   </p>
@@ -240,8 +240,8 @@ const AGB = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Kontakt bei Fragen</h3>
                 <div className="space-y-2 text-muted-foreground">
                   <p className="font-medium text-foreground">Breuer & Partner</p>
-                  <p>Wallstraße 13</p>
-                  <p>45468 Mülheim an der Ruhr</p>
+                  <p>Domstraße 15</p>
+                  <p>20095 Hamburg</p>
                   {phoneEnabled && <p><span className="font-medium">Telefon:</span> <PhoneDisplay /></p>}
                   <p><span className="font-medium">E-Mail:</span> info@breuer-partner.de</p>
                 </div>

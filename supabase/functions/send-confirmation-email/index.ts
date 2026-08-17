@@ -139,7 +139,7 @@ const createEmailTemplate = (data: ContactEmailRequest, firmPhone: string, phone
           Breuer & Partner
         </h4>
         <p style="margin: 5px 0; color: #666; font-size: 14px;">
-          Wallstraße 13, 45468 Mülheim an der Ruhr
+          Domstraße 15, 20095 Hamburg
         </p>
         <p style="margin: 5px 0; color: #666; font-size: 14px;">
           E-Mail: info@breuer-partner.de

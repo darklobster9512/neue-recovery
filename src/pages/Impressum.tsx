@@ -27,8 +27,8 @@ const Impressum = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Anwaltskanzlei</h3>
                 <div className="space-y-2 text-muted-foreground">
                   <p className="font-medium text-foreground">Breuer & Partner</p>
-                  <p>Wallstraße 13</p>
-                  <p>45468 Mülheim an der Ruhr</p>
+                  <p>Domstraße 15</p>
+                  <p>20095 Hamburg</p>
                   <p>Deutschland</p>
                 </div>
               </div>
@@ -58,8 +58,8 @@ const Impressum = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Registereintrag</h3>
                 <div className="space-y-2 text-muted-foreground">
-                  <p><span className="font-medium">Registergericht:</span> Amtsgericht Düsseldorf</p>
-                  <p><span className="font-medium">Registernummer:</span> PR 318</p>
+                  <p><span className="font-medium">Registergericht:</span> Amtsgericht Hamburg</p>
+                  <p><span className="font-medium">Registernummer:</span> PR 317</p>
                 </div>
               </div>
 
@@ -80,7 +80,7 @@ const Impressum = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Berufsrechtliche Angaben</h3>
                 <div className="space-y-3 text-muted-foreground">
                   <p><span className="font-medium">Berufsbezeichnung:</span> Rechtsanwalt (verliehen in Deutschland)</p>
-                  <p><span className="font-medium">Zuständige Rechtsanwaltskammer:</span> Rechtsanwaltskammer Düsseldorf</p>
+                  <p><span className="font-medium">Zuständige Rechtsanwaltskammer:</span> Hanseatische Rechtsanwaltskammer Hamburg</p>
                   <p><span className="font-medium">Berufsrechtliche Regelungen:</span></p>
                   <ul className="ml-6 space-y-1 list-disc">
                     <li>Bundesrechtsanwaltsordnung (BRAO)</li>
@@ -115,14 +115,14 @@ const Impressum = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Aufsichtsbehörde</h3>
                 <div className="space-y-2 text-muted-foreground">
-                  <p>Rechtsanwaltskammer Düsseldorf</p>
-                  <p>Freiligrathstraße 25</p>
-                  <p>40479 Düsseldorf</p>
-                  <p>Telefon: 0211 49502-0</p>
+                  <p>Hanseatische Rechtsanwaltskammer Hamburg</p>
+                  <p>Valentinskamp 88</p>
+                  <p>20355 Hamburg</p>
+                  <p>Telefon: 040 357441-0</p>
                   <p>
                     Website: 
-                    <a href="https://www.rechtsanwaltskammer-duesseldorf.de" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">
-                      www.rechtsanwaltskammer-duesseldorf.de
+                    <a href="https://www.rak-hamburg.de" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline ml-1">
+                      www.rak-hamburg.de
                     </a>
                   </p>
                 </div>

@@ -451,7 +451,7 @@ Mit freundlichen Grüßen`;
                     </div>
                     <div>
                       <p className="font-semibold">Adresse</p>
-                      <p className="text-sm text-muted-foreground">Wallstraße 13<br />45468 Mülheim an der Ruhr</p>
+                      <p className="text-sm text-muted-foreground">Domstraße 15<br />20095 Hamburg</p>
                     </div>
                   </div>
                   

@@ -241,6 +241,18 @@ Mit freundlichen Grüßen`;
         return;
       }
 
+      // Notify the team via Telegram (non-blocking)
+      supabase.functions.invoke('send-telegram-notification', {
+        body: {
+          name: data.name,
+          email: data.email,
+          phone: data.phone || null,
+          topic: data.topic,
+          damage_amount: data.damage_amount || null,
+          message: data.message,
+        },
+      }).catch((err) => console.error('Telegram notification failed:', err));
+
       // If Supabase insert successful, send confirmation email
       try {
         console.log('Sending confirmation email...');

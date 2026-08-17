@@ -13,6 +13,7 @@ import { toast } from 'sonner';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { AdminSettings } from '@/components/AdminSettings';
+import { TelegramSettings } from '@/components/TelegramSettings';
 import { format } from 'date-fns';
 import { de } from 'date-fns/locale';
 

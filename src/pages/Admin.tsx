@@ -46,7 +46,8 @@ export default function Admin() {
 
   useEffect(() => {
     fetchMessages();
-    setupRealtimeSubscription();
+    const cleanup = setupRealtimeSubscription();
+    return cleanup;
   }, []);
 
   useEffect(() => {

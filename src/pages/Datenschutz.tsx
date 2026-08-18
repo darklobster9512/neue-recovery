@@ -23,11 +23,11 @@ const Datenschutz = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">1. Verantwortlicher</h3>
                 <div className="space-y-2 text-muted-foreground">
-                  <p className="font-medium text-foreground">Breuer & Partner</p>
+                  <p className="font-medium text-foreground">Korte & Partner</p>
                   <p>Domstraße 15</p>
                   <p>20095 Hamburg</p>
                   <p>Deutschland</p>
-                  <p><span className="font-medium">E-Mail:</span> info@breuer-partner.de</p>
+                  <p><span className="font-medium">E-Mail:</span> info@korte-partner.de</p>
                 </div>
               </div>
 
@@ -38,7 +38,7 @@ const Datenschutz = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">2. Datenschutzbeauftragter</h3>
                 <p className="text-muted-foreground">
                   Für Fragen zum Datenschutz wenden Sie sich bitte an unseren Datenschutzbeauftragten 
-                  unter datenschutz@breuer-partner.de
+                  unter datenschutz@korte-partner.de
                 </p>
               </div>
 

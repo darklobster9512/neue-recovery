@@ -48,7 +48,7 @@ const AnimatedCounter = ({ end, duration = 1800, suffix = "" }: { end: number; d
 };
 
 const team = [
-  { name: "Dr. Thomas Breuer", role: "Rechtsanwalt", focus: "Cybercrime · Datenschutz · Kapitalmarkt · Kryptonachverfolgung", img: "/lovable-uploads/2cad25d9-8d15-482b-bc38-5b1378991be6.png" },
+  { name: "Dr. Thomas Korte", role: "Rechtsanwalt", focus: "Cybercrime · Datenschutz · Kapitalmarkt · Kryptonachverfolgung", img: "/lovable-uploads/2cad25d9-8d15-482b-bc38-5b1378991be6.png" },
   { name: "Clara Hoffmann", role: "Teamassistentin", focus: "", img: "/lovable-uploads/eb203c07-90e7-479d-8fd8-fdaa83fcce97.png" },
   { name: "Dr. Maximilian Krause", role: "Rechtsanwalt", focus: "Prozessführung · Datenschutz · Kapitalmarktrecht", img: "/lovable-uploads/b4127816-793a-42ef-b5e4-34987580a428.png" },
   { name: "Julian Maier", role: "Blockchain- / Datenanalyst", focus: "", img: "/lovable-uploads/fb9c5d6b-b0d1-44b0-9835-4301827237bb.png" },
@@ -96,7 +96,7 @@ const Index = () => {
           playsInline
           preload="metadata"
           className="absolute inset-0 w-full h-full object-cover"
-          aria-label="Breuer & Partner"
+          aria-label="Korte & Partner"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-primary/85 via-primary/55 to-primary/30" />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/70 via-transparent to-primary/40" />
@@ -104,7 +104,7 @@ const Index = () => {
         <div className="relative z-10 flex-1 flex flex-col justify-end">
           <div className="container mx-auto px-6 lg:px-12 max-w-7xl pt-40 pb-20 lg:pb-24">
             <p className="text-[11px] font-sans tracking-[0.3em] uppercase text-primary-foreground/70 mb-8">
-              Breuer &amp; Partner <span className="mx-2 opacity-50">—</span> Crypto Recovery &amp; Wirtschaftsrecht
+              Korte &amp; Partner <span className="mx-2 opacity-50">—</span> Crypto Recovery &amp; Wirtschaftsrecht
             </p>
 
             <h1 className="font-serif text-4xl md:text-6xl lg:text-7xl leading-[1.08] font-normal max-w-4xl mb-6 text-primary-foreground">

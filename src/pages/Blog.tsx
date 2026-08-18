@@ -38,7 +38,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
       <EditorialHero
-        eyebrow="Breuer & Partner — News & Insights"
+        eyebrow="Korte & Partner — News & Insights"
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "News" },

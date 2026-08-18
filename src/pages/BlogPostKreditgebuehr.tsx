@@ -10,7 +10,7 @@ const BlogPostKreditgebuehr = () => {
   return (
     <div className="min-h-screen bg-background">
       <EditorialHero
-        eyebrow="Breuer & Partner — Insights"
+        eyebrow="Korte & Partner — Insights"
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "News", href: "/blog" },
@@ -22,7 +22,7 @@ const BlogPostKreditgebuehr = () => {
           <>
             <span className="flex items-center gap-2"><Calendar className="w-3.5 h-3.5" />7. Juli 2025</span>
             <span className="flex items-center gap-2"><Clock className="w-3.5 h-3.5" />6 min Lesezeit</span>
-            <span className="flex items-center gap-2"><User className="w-3.5 h-3.5" />Breuer & Partner</span>
+            <span className="flex items-center gap-2"><User className="w-3.5 h-3.5" />Korte & Partner</span>
           </>
         }
       />
@@ -100,11 +100,11 @@ const BlogPostKreditgebuehr = () => {
                   Als spezialisierte Rechtsanwälte für Verbraucher- und Bankrecht unterstützen wir Sie bei der Durchsetzung Ihrer Ansprüche – kompetent, effizient und erfolgsorientiert.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Für weitere Informationen und eine Ersteinschätzung stehen Dr. Thomas Breuer und Dr. Maximilian Krause jederzeit unter info@breuer-partner.de{phoneEnabled ? ' bzw. telefonisch' : ''} zur Verfügung.
+                  Für weitere Informationen und eine Ersteinschätzung stehen Dr. Thomas Korte und Dr. Maximilian Krause jederzeit unter info@korte-partner.de{phoneEnabled ? ' bzw. telefonisch' : ''} zur Verfügung.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-4">
-                  <a href="mailto:info@breuer-partner.de" className="text-primary hover:underline font-medium">
-                    info@breuer-partner.de
+                  <a href="mailto:info@korte-partner.de" className="text-primary hover:underline font-medium">
+                    info@korte-partner.de
                   </a>
                   {phoneEnabled && <PhoneLink />}
                 </div>

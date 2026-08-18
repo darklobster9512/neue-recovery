@@ -347,7 +347,7 @@ Mit freundlichen Grüßen`;
   return (
     <div className="min-h-screen bg-background">
       <EditorialHero
-        eyebrow="Breuer & Partner — Kontakt"
+        eyebrow="Korte & Partner — Kontakt"
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "Kontakt" },
@@ -446,13 +446,13 @@ Mit freundlichen Grüßen`;
                     className="w-full justify-start h-auto p-4 hover:bg-primary/5"
                     asChild
                   >
-                    <a href="mailto:info@breuer-partner.de" className="flex items-center gap-3">
+                    <a href="mailto:info@korte-partner.de" className="flex items-center gap-3">
                       <div className="p-2 rounded-full bg-primary/10">
                         <Mail className="h-5 w-5 text-primary" />
                       </div>
                       <div className="text-left">
                         <p className="font-semibold">E-Mail</p>
-                        <p className="text-sm text-muted-foreground">info@breuer-partner.de</p>
+                        <p className="text-sm text-muted-foreground">info@korte-partner.de</p>
                       </div>
                     </a>
                   </Button>

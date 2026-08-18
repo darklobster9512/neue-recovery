@@ -32,7 +32,7 @@ const createEmailTemplate = (data: ContactEmailRequest, firmPhone: string, phone
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bestätigung Ihrer Anfrage - Breuer & Partner</title>
+  <title>Bestätigung Ihrer Anfrage - Korte & Partner</title>
 </head>
 <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; line-height: 1.6; color: #333;">
   <div style="max-width: 600px; margin: 0 auto; background-color: #ffffff;">
@@ -40,7 +40,7 @@ const createEmailTemplate = (data: ContactEmailRequest, firmPhone: string, phone
     <!-- Header -->
     <div style="background: linear-gradient(135deg, hsl(214 100% 14%) 0%, hsl(214 85% 20%) 100%); padding: 40px 30px; text-align: center;">
       <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">
-        Breuer & Partner
+        Korte & Partner
       </h1>
       <p style="margin: 8px 0 0 0; color: rgba(255, 255, 255, 0.9); font-size: 16px;">
         Rechtsanwälte für Krypto-Recovery
@@ -126,7 +126,7 @@ const createEmailTemplate = (data: ContactEmailRequest, firmPhone: string, phone
       <!-- Closing -->
       <p style="font-size: 16px; margin: 30px 0 0 0; color: #444;">
         Mit freundlichen Grüßen<br>
-        <strong style="color: hsl(214 100% 14%);">Ihr Team von Breuer & Partner</strong>
+        <strong style="color: hsl(214 100% 14%);">Ihr Team von Korte & Partner</strong>
       </p>
     </div>
 
@@ -136,13 +136,13 @@ const createEmailTemplate = (data: ContactEmailRequest, firmPhone: string, phone
       <!-- Contact Info -->
       <div style="margin-bottom: 20px;">
         <h4 style="color: hsl(214 100% 14%); font-size: 16px; font-weight: 600; margin: 0 0 10px 0;">
-          Breuer & Partner
+          Korte & Partner
         </h4>
         <p style="margin: 5px 0; color: #666; font-size: 14px;">
           Domstraße 15, 20095 Hamburg
         </p>
         <p style="margin: 5px 0; color: #666; font-size: 14px;">
-          E-Mail: info@breuer-partner.de
+          E-Mail: info@korte-partner.de
         </p>
         <p style="margin: 5px 0; color: #666; font-size: 14px;">
           Öffnungszeiten: Mo-Fr 8:00-18:00 | Sa 9:00-14:00
@@ -153,7 +153,7 @@ const createEmailTemplate = (data: ContactEmailRequest, firmPhone: string, phone
       <div style="border-top: 1px solid #e2e8f0; padding-top: 20px;">
         <p style="margin: 0; color: #888; font-size: 12px; line-height: 1.4;">
           Diese E-Mail wurde automatisch generiert. Bitte antworten Sie nicht direkt auf diese E-Mail. 
-          Bei Rückfragen wenden Sie sich bitte an info@breuer-partner.de oder rufen Sie uns an.
+          Bei Rückfragen wenden Sie sich bitte an info@korte-partner.de oder rufen Sie uns an.
         </p>
       </div>
     </div>
@@ -213,9 +213,9 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Sending email to:", requestData.email);
     
     const emailResponse = await resend.emails.send({
-      from: "Breuer & Partner <info@breuer-partner.de>",
+      from: "Korte & Partner <info@korte-partner.de>",
       to: [requestData.email],
-      subject: "Bestätigung Ihrer Anfrage - Breuer & Partner",
+      subject: "Bestätigung Ihrer Anfrage - Korte & Partner",
       html: emailHtml,
     });
 

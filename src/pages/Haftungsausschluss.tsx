@@ -24,7 +24,7 @@ const Haftungsausschluss = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">1. Allgemeine Hinweise und Rechtsinformationen</h3>
                 <div className="space-y-4 text-muted-foreground text-sm">
                   <p>
-                    Die Rechtsanwaltskanzlei Breuer & Partner stellt auf dieser Website 
+                    Die Rechtsanwaltskanzlei Korte & Partner stellt auf dieser Website 
                     allgemeine Informationen zur Verfügung. Diese Informationen stellen keine 
                     Rechtsberatung dar und können eine individuelle anwaltliche Beratung nicht ersetzen.
                   </p>
@@ -199,10 +199,10 @@ const Haftungsausschluss = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Kontakt bei Rechtsfragen</h3>
                 <div className="space-y-2 text-muted-foreground">
-                  <p className="font-medium text-foreground">Breuer & Partner</p>
+                  <p className="font-medium text-foreground">Korte & Partner</p>
                   <p>Domstraße 15</p>
                   <p>20095 Hamburg</p>
-                  <p><span className="font-medium">E-Mail:</span> info@breuer-partner.de</p>
+                  <p><span className="font-medium">E-Mail:</span> info@korte-partner.de</p>
                   <p className="text-xs mt-4 p-3 bg-amber-50 dark:bg-amber-950 rounded border-l-4 border-amber-400">
                     <strong>Wichtiger Hinweis:</strong> Für eine verbindliche Rechtsberatung 
                     kontaktieren Sie uns bitte direkt. Die Informationen auf dieser Website 

@@ -98,7 +98,7 @@ export const TelegramSettings = () => {
           phone: '040 1234567',
           topic: 'Krypto-Recovery',
           damage_amount: '50.000 - 100.000 EUR',
-          message: 'Dies ist eine Testnachricht aus dem Admin-Panel von Breuer & Partner.',
+          message: 'Dies ist eine Testnachricht aus dem Admin-Panel von Korte & Partner.',
         },
       });
 

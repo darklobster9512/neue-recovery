@@ -12,7 +12,7 @@ export const Footer = () => {
         <div className="grid lg:grid-cols-5 md:grid-cols-3 gap-12 mb-16">
           <div className="lg:col-span-2">
             <h3 className="font-serif text-2xl mb-6 leading-tight">
-              Breuer <span className="opacity-60">&</span> Partner
+              Korte <span className="opacity-60">&</span> Partner
             </h3>
             <p className="text-sm text-primary-foreground/70 leading-relaxed max-w-md">
               Spezialisiert auf Kryptowährungsrecht, Betrugswiederherstellung und Anlegerschutz.
@@ -77,7 +77,7 @@ export const Footer = () => {
               )}
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 flex-shrink-0 opacity-70" />
-                <span>info@breuer-partner.de</span>
+                <span>info@korte-partner.de</span>
               </div>
             </div>
           </div>
@@ -86,7 +86,7 @@ export const Footer = () => {
         <div className="pt-8 border-t border-primary-foreground/15">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-primary-foreground/55">
-              © 2026 Breuer & Partner. Alle Rechte vorbehalten.
+              © 2026 Korte & Partner. Alle Rechte vorbehalten.
             </p>
             <div className="flex gap-6 text-xs">
               <Link to="/impressum" className="text-primary-foreground/55 hover:text-primary-foreground transition-colors">Impressum</Link>

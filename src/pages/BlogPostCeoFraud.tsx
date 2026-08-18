@@ -7,7 +7,7 @@ const BlogPostCeoFraud = () => {
   return (
     <div className="min-h-screen bg-background">
       <EditorialHero
-        eyebrow="Breuer & Partner — Insights"
+        eyebrow="Korte & Partner — Insights"
         breadcrumb={[
           { label: "Home", href: "/" },
           { label: "News", href: "/blog" },
@@ -94,11 +94,11 @@ const BlogPostCeoFraud = () => {
                   Bei CEO-Fraud und Überweisungsbetrug ist schnelles Handeln entscheidend. Als spezialisierte CyberCrime Anwälte unterstützen wir Sie umfassend – juristisch fundiert, schnell und effizient.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Für weitere Informationen und individuelle Beratung stehen Ihnen <strong>Dr. Thomas Breuer</strong> und <strong>Dr. Sebastian Werner</strong> jederzeit zur Verfügung.
+                  Für weitere Informationen und individuelle Beratung stehen Ihnen <strong>Dr. Thomas Korte</strong> und <strong>Dr. Sebastian Werner</strong> jederzeit zur Verfügung.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-4">
-                  <a href="mailto:info@breuer-partner.de" className="text-primary hover:underline font-medium">
-                    info@breuer-partner.de
+                  <a href="mailto:info@korte-partner.de" className="text-primary hover:underline font-medium">
+                    info@korte-partner.de
                   </a>
                   <PhoneLink />
                 </div>

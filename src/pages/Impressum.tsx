@@ -26,7 +26,7 @@ const Impressum = () => {
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Anwaltskanzlei</h3>
                 <div className="space-y-2 text-muted-foreground">
-                  <p className="font-medium text-foreground">Breuer & Partner</p>
+                  <p className="font-medium text-foreground">Korte & Partner</p>
                   <p>Domstraße 15</p>
                   <p>20095 Hamburg</p>
                   <p>Deutschland</p>
@@ -40,7 +40,7 @@ const Impressum = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Kontakt</h3>
                 <div className="space-y-2 text-muted-foreground">
                   {phoneEnabled && <p><span className="font-medium">Telefon:</span> <PhoneDisplay /></p>}
-                  <p><span className="font-medium">E-Mail:</span> info@breuer-partner.de</p>
+                  <p><span className="font-medium">E-Mail:</span> info@korte-partner.de</p>
                 </div>
               </div>
 
@@ -49,7 +49,7 @@ const Impressum = () => {
               {/* Geschäftsführung */}
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Geschäftsführung</h3>
-                <p className="text-muted-foreground">Dr. Thomas Breuer</p>
+                <p className="text-muted-foreground">Dr. Thomas Korte</p>
               </div>
 
               <Separator />

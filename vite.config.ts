@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
-    allowedHosts: ['breuer-partner.de'],
+    allowedHosts: ['korte-partner.de'],
   },
   plugins: [
     react(),

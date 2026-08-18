@@ -1,31 +1,41 @@
 # SSL-Fehler korte-kanzlei.de beheben
 
-## Befund (gemessen)
+## Befund (erneut gemessen, nach Umstellung auf Full strict)
 
-- `korte-kanzlei.de` löst auf Cloudflare-IPs auf (188.114.96.2 / 188.114.97.2, sowie 104.21.83.250 / 172.67.184.1), **nicht** auf deinen VPS.
-- HTTP-Antwort kommt von `Server: cloudflare` mit Redirect auf HTTPS.
-- Der TLS-Handshake auf Port 443 endet mit `handshake failure` — also direkt an der Cloudflare-Kante, bevor dein VPS überhaupt gefragt wird.
+- Nameserver: `leonard.ns.cloudflare.com` / `paloma.ns.cloudflare.com` — die Domain läuft vollständig über Cloudflare.
+- HTTPS auf `korte-kanzlei.de` **und** `www.korte-kanzlei.de`: `TLS alert, handshake failure` — der Fehler kommt von der Cloudflare-Kante, nicht vom VPS.
+- Keine CAA-Records vorhanden (blockieren die Ausstellung also nicht).
 
-Ergebnis: Dein Certbot-Zertifikat auf dem VPS ist nicht das Problem — es wird nie benutzt. Cloudflare terminiert TLS und hat für diese Domain kein gültiges Edge-Zertifikat (Universal SSL nicht ausgestellt/aktiv). Daher `ERR_SSL_VERSION_OR_CIPHER_MISMATCH`.
+Wichtig: Der SSL-Modus (Flexible / Full / Full strict) regelt nur die Verbindung **Cloudflare → dein VPS**. Er hat keinen Einfluss auf den Fehler im Browser. Der Browser scheitert schon **vor** dem VPS, weil Cloudflare für diese Domain kein Edge-Zertifikat ausliefert. Deshalb hat der Wechsel auf Full strict nichts geändert.
 
-## Lösungsweg (eine der zwei Varianten)
+## Ursache
+Universal SSL (das Edge-Zertifikat von Cloudflare) ist für die Zone nicht ausgestellt bzw. nicht aktiv.
 
-### Variante A — Cloudflare weiter nutzen (empfohlen, wenn Proxy gewollt)
-1. Cloudflare Dashboard → Domain → **SSL/TLS → Overview**: Modus auf **Full (strict)** setzen (nicht "Off", nicht "Flexible").
-2. **SSL/TLS → Edge Certificates**: prüfen, ob **Universal SSL** aktiviert ist und der Status `Active` lautet. Falls `Pending`/deaktiviert: Universal SSL aus- und wieder einschalten, dann bis zu ~15–60 Min warten.
-3. Prüfen, dass die Domain bei Cloudflare wirklich `Active` ist (Nameserver am Registrar auf die Cloudflare-NS gesetzt). Bei Status "Pending Nameserver Update" wird kein Edge-Zertifikat ausgestellt.
-4. Auf dem VPS das Certbot-Zertifikat behalten (Full strict braucht ein gültiges Origin-Zertifikat) oder alternativ ein **Cloudflare Origin Certificate** installieren.
-5. Doppelte A-Records aufräumen: aktuell sind zwei verschiedene IP-Paare sichtbar — pro Name (`@`, `www`) nur ein Record auf die VPS-IP, Proxy-Wolke orange.
+## Vorgehen
 
-### Variante B — Cloudflare-Proxy abschalten, direkt auf den VPS
-1. In Cloudflare DNS die Records für `@` und `www` auf **DNS only** (graue Wolke) stellen und auf die echte VPS-IP zeigen lassen.
-2. Nach DNS-Propagation liefert nginx/Apache direkt das Certbot-Zertifikat aus.
-3. Auf dem VPS sicherstellen: Port 443 in der Firewall offen, `listen 443 ssl;` mit `ssl_certificate`/`ssl_certificate_key` gesetzt, `server_name korte-kanzlei.de www.korte-kanzlei.de;`, danach `nginx -t && systemctl reload nginx`.
-4. Zertifikat muss beide Namen abdecken: `certbot --nginx -d korte-kanzlei.de -d www.korte-kanzlei.de`.
+### Schritt 1 — Edge-Zertifikat reparieren (Hauptmaßnahme)
+1. Cloudflare Dashboard → Domain `korte-kanzlei.de` → **SSL/TLS → Edge Certificates**.
+2. Status der Einträge unter "Edge Certificates" prüfen. Erwartet: ein Universal-Zertifikat mit Status `Active` für `korte-kanzlei.de` und `*.korte-kanzlei.de`.
+   - Status `Pending Validation` / `Initializing` → warten (bis ~60 Min nach Zonenaktivierung).
+   - Kein Eintrag oder `Universal SSL` ausgeschaltet → unten bei **Disable Universal SSL** aus- und wieder einschalten (Neu-Ausstellung, dauert bis ~24 h, meist unter 1 h).
+3. Zusätzlich prüfen: **Minimum TLS Version** darf nicht auf `TLS 1.3` stehen (unter Edge Certificates) — auf `TLS 1.2` setzen.
+4. Prüfen, ob die Zone im Dashboard oben als **Active** markiert ist (nicht "Pending Nameserver Update").
 
-## Verifikation
-- `curl -vI https://korte-kanzlei.de` muss ohne Handshake-Fehler durchlaufen.
-- `openssl s_client -connect korte-kanzlei.de:443 -servername korte-kanzlei.de` zeigt den Aussteller (Let's Encrypt bei Variante B, Google Trust/Let's Encrypt via Cloudflare bei Variante A).
+### Schritt 2 — DNS-Records aufräumen
+Es sind mehrere A-Record-Sätze sichtbar. Pro Name genau ein Record:
+- `A  @    <VPS-IP>`   Proxy: orange
+- `A  www  <VPS-IP>`   Proxy: orange
+Alte/überzählige A- oder AAAA-Records löschen.
 
-## Am Code ist nichts zu ändern
-Das ist reine Hosting-/DNS-Konfiguration. Optional könnte ich `korte-kanzlei.de` bereits vorhandene `allowedHosts` in `vite.config.ts` prüfen — dort steht die Domain schon drin.
+### Schritt 3 — Sofort-Workaround, falls das Edge-Zertifikat weiter hängt
+DNS-Records für `@` und `www` auf **DNS only** (graue Wolke) stellen. Dann liefert dein VPS direkt das Certbot-Zertifikat aus und die Seite ist sofort per HTTPS erreichbar. Voraussetzung auf dem VPS:
+- Port 443 offen (`ufw allow 443`)
+- nginx-Vhost mit `listen 443 ssl;`, korrektem `server_name` und `ssl_certificate`-Pfaden
+- Zertifikat für beide Namen: `certbot --nginx -d korte-kanzlei.de -d www.korte-kanzlei.de`
+
+### Schritt 4 — Verifikation
+- `curl -vI https://korte-kanzlei.de` läuft ohne Handshake-Fehler durch
+- `openssl s_client -connect korte-kanzlei.de:443 -servername korte-kanzlei.de` zeigt einen gültigen Aussteller
+
+## Am Projektcode ist nichts zu ändern
+Das ist reine DNS-/Hosting-Konfiguration. `korte-kanzlei.de` steht in `vite.config.ts` bereits unter `allowedHosts`.

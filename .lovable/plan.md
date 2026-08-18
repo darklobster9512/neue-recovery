@@ -27,8 +27,8 @@ Es sind mehrere A-Record-Sätze sichtbar. Pro Name genau ein Record:
 - `A  www  <VPS-IP>`   Proxy: orange
 Alte/überzählige A- oder AAAA-Records löschen.
 
-### Schritt 3 — Sofort-Workaround, falls das Edge-Zertifikat weiter hängt
-DNS-Records für `@` und `www` auf **DNS only** (graue Wolke) stellen. Dann liefert dein VPS direkt das Certbot-Zertifikat aus und die Seite ist sofort per HTTPS erreichbar. Voraussetzung auf dem VPS:
+### Schritt 3 — Sofort-Workaround (empfohlen, damit die Seite jetzt online geht)
+DNS-Records für `@` und `www` auf **DNS only** (graue Wolke) stellen. Dann übernimmt dein VPS die TLS-Terminierung mit dem bereits vorhandenen Certbot-Zertifikat und die Seite ist innerhalb weniger Minuten per HTTPS erreichbar. Sobald Universal SSL `Active` ist, kannst du den Proxy wieder auf orange schalten. Voraussetzung auf dem VPS:
 - Port 443 offen (`ufw allow 443`)
 - nginx-Vhost mit `listen 443 ssl;`, korrektem `server_name` und `ssl_certificate`-Pfaden
 - Zertifikat für beide Namen: `certbot --nginx -d korte-kanzlei.de -d www.korte-kanzlei.de`

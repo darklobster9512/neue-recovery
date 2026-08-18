@@ -8,18 +8,18 @@
 
 Wichtig: Der SSL-Modus (Flexible / Full / Full strict) regelt nur die Verbindung **Cloudflare → dein VPS**. Er hat keinen Einfluss auf den Fehler im Browser. Der Browser scheitert schon **vor** dem VPS, weil Cloudflare für diese Domain kein Edge-Zertifikat ausliefert. Deshalb hat der Wechsel auf Full strict nichts geändert.
 
-## Ursache
-Universal SSL (das Edge-Zertifikat von Cloudflare) ist für die Zone nicht ausgestellt bzw. nicht aktiv.
+## Ursache (bestätigt)
+Unter **SSL/TLS → Edge Certificates** steht "Cloudflare will validate the certificate on your behalf. No action is required." — das Universal-SSL-Zertifikat ist also **noch in Ausstellung/Validierung** und noch nicht `Active`. Solange kein aktives Edge-Zertifikat existiert, bricht jeder Browser mit `ERR_SSL_VERSION_OR_CIPHER_MISMATCH` ab. Das ist erwartbar bei einer frisch zu Cloudflare umgezogenen Domain.
 
 ## Vorgehen
 
-### Schritt 1 — Edge-Zertifikat reparieren (Hauptmaßnahme)
-1. Cloudflare Dashboard → Domain `korte-kanzlei.de` → **SSL/TLS → Edge Certificates**.
-2. Status der Einträge unter "Edge Certificates" prüfen. Erwartet: ein Universal-Zertifikat mit Status `Active` für `korte-kanzlei.de` und `*.korte-kanzlei.de`.
-   - Status `Pending Validation` / `Initializing` → warten (bis ~60 Min nach Zonenaktivierung).
-   - Kein Eintrag oder `Universal SSL` ausgeschaltet → unten bei **Disable Universal SSL** aus- und wieder einschalten (Neu-Ausstellung, dauert bis ~24 h, meist unter 1 h).
-3. Zusätzlich prüfen: **Minimum TLS Version** darf nicht auf `TLS 1.3` stehen (unter Edge Certificates) — auf `TLS 1.2` setzen.
-4. Prüfen, ob die Zone im Dashboard oben als **Active** markiert ist (nicht "Pending Nameserver Update").
+### Schritt 1 — Ausstellung abwarten
+Typisch 15–60 Minuten, im Worst Case bis 24 Stunden. In der Zwischenzeit bleibt die Seite über HTTPS nicht erreichbar. Kein manueller Eingriff nötig, solange der Status sich weiterbewegt.
+
+Falls nach ~24 h weiter kein `Active`:
+1. Unter **Edge Certificates** ganz unten **Disable Universal SSL** → speichern → wieder aktivieren. Das erzwingt eine Neu-Ausstellung.
+2. Prüfen, dass die Zone oben im Dashboard als **Active** markiert ist (nicht "Pending Nameserver Update").
+3. **Minimum TLS Version** auf `TLS 1.2` stellen (nicht `TLS 1.3`).
 
 ### Schritt 2 — DNS-Records aufräumen
 Es sind mehrere A-Record-Sätze sichtbar. Pro Name genau ein Record:

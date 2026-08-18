@@ -202,7 +202,7 @@ const Haftungsausschluss = () => {
                   <p className="font-medium text-foreground">Korte & Partner</p>
                   <p>Domstraße 15</p>
                   <p>20095 Hamburg</p>
-                  <p><span className="font-medium">E-Mail:</span> info@korte-partner.de</p>
+                  <p><span className="font-medium">E-Mail:</span> info@korte-kanzlei.de</p>
                   <p className="text-xs mt-4 p-3 bg-amber-50 dark:bg-amber-950 rounded border-l-4 border-amber-400">
                     <strong>Wichtiger Hinweis:</strong> Für eine verbindliche Rechtsberatung 
                     kontaktieren Sie uns bitte direkt. Die Informationen auf dieser Website 

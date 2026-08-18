@@ -40,7 +40,7 @@ const Impressum = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">Kontakt</h3>
                 <div className="space-y-2 text-muted-foreground">
                   {phoneEnabled && <p><span className="font-medium">Telefon:</span> <PhoneDisplay /></p>}
-                  <p><span className="font-medium">E-Mail:</span> info@korte-partner.de</p>
+                  <p><span className="font-medium">E-Mail:</span> info@korte-kanzlei.de</p>
                 </div>
               </div>
 

@@ -77,7 +77,7 @@ export const Footer = () => {
               )}
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 flex-shrink-0 opacity-70" />
-                <span>info@korte-partner.de</span>
+                <span>info@korte-kanzlei.de</span>
               </div>
             </div>
           </div>

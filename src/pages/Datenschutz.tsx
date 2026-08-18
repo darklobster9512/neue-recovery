@@ -27,7 +27,7 @@ const Datenschutz = () => {
                   <p>Domstraße 15</p>
                   <p>20095 Hamburg</p>
                   <p>Deutschland</p>
-                  <p><span className="font-medium">E-Mail:</span> info@korte-partner.de</p>
+                  <p><span className="font-medium">E-Mail:</span> info@korte-kanzlei.de</p>
                 </div>
               </div>
 
@@ -38,7 +38,7 @@ const Datenschutz = () => {
                 <h3 className="text-xl font-semibold mb-4 text-foreground">2. Datenschutzbeauftragter</h3>
                 <p className="text-muted-foreground">
                   Für Fragen zum Datenschutz wenden Sie sich bitte an unseren Datenschutzbeauftragten 
-                  unter datenschutz@korte-partner.de
+                  unter datenschutz@korte-kanzlei.de
                 </p>
               </div>
 

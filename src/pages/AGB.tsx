@@ -243,7 +243,7 @@ const AGB = () => {
                   <p>Domstraße 15</p>
                   <p>20095 Hamburg</p>
                   {phoneEnabled && <p><span className="font-medium">Telefon:</span> <PhoneDisplay /></p>}
-                  <p><span className="font-medium">E-Mail:</span> info@korte-partner.de</p>
+                  <p><span className="font-medium">E-Mail:</span> info@korte-kanzlei.de</p>
                 </div>
               </div>
 

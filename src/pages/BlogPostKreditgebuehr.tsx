@@ -100,11 +100,11 @@ const BlogPostKreditgebuehr = () => {
                   Als spezialisierte Rechtsanwälte für Verbraucher- und Bankrecht unterstützen wir Sie bei der Durchsetzung Ihrer Ansprüche – kompetent, effizient und erfolgsorientiert.
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  Für weitere Informationen und eine Ersteinschätzung stehen Dr. Thomas Korte und Dr. Maximilian Krause jederzeit unter info@korte-partner.de{phoneEnabled ? ' bzw. telefonisch' : ''} zur Verfügung.
+                  Für weitere Informationen und eine Ersteinschätzung stehen Dr. Thomas Korte und Dr. Maximilian Krause jederzeit unter info@korte-kanzlei.de{phoneEnabled ? ' bzw. telefonisch' : ''} zur Verfügung.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-4">
-                  <a href="mailto:info@korte-partner.de" className="text-primary hover:underline font-medium">
-                    info@korte-partner.de
+                  <a href="mailto:info@korte-kanzlei.de" className="text-primary hover:underline font-medium">
+                    info@korte-kanzlei.de
                   </a>
                   {phoneEnabled && <PhoneLink />}
                 </div>

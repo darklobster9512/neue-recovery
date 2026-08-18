@@ -446,13 +446,13 @@ Mit freundlichen Grüßen`;
                     className="w-full justify-start h-auto p-4 hover:bg-primary/5"
                     asChild
                   >
-                    <a href="mailto:info@korte-partner.de" className="flex items-center gap-3">
+                    <a href="mailto:info@korte-kanzlei.de" className="flex items-center gap-3">
                       <div className="p-2 rounded-full bg-primary/10">
                         <Mail className="h-5 w-5 text-primary" />
                       </div>
                       <div className="text-left">
                         <p className="font-semibold">E-Mail</p>
-                        <p className="text-sm text-muted-foreground">info@korte-partner.de</p>
+                        <p className="text-sm text-muted-foreground">info@korte-kanzlei.de</p>
                       </div>
                     </a>
                   </Button>

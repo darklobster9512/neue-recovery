@@ -142,7 +142,7 @@ const createEmailTemplate = (data: ContactEmailRequest, firmPhone: string, phone
           Domstraße 15, 20095 Hamburg
         </p>
         <p style="margin: 5px 0; color: #666; font-size: 14px;">
-          E-Mail: info@korte-partner.de
+          E-Mail: info@korte-kanzlei.de
         </p>
         <p style="margin: 5px 0; color: #666; font-size: 14px;">
           Öffnungszeiten: Mo-Fr 8:00-18:00 | Sa 9:00-14:00
@@ -153,7 +153,7 @@ const createEmailTemplate = (data: ContactEmailRequest, firmPhone: string, phone
       <div style="border-top: 1px solid #e2e8f0; padding-top: 20px;">
         <p style="margin: 0; color: #888; font-size: 12px; line-height: 1.4;">
           Diese E-Mail wurde automatisch generiert. Bitte antworten Sie nicht direkt auf diese E-Mail. 
-          Bei Rückfragen wenden Sie sich bitte an info@korte-partner.de oder rufen Sie uns an.
+          Bei Rückfragen wenden Sie sich bitte an info@korte-kanzlei.de oder rufen Sie uns an.
         </p>
       </div>
     </div>
@@ -213,7 +213,7 @@ const handler = async (req: Request): Promise<Response> => {
     console.log("Sending email to:", requestData.email);
     
     const emailResponse = await resend.emails.send({
-      from: "Korte & Partner <info@korte-partner.de>",
+      from: "Korte & Partner <info@korte-kanzlei.de>",
       to: [requestData.email],
       subject: "Bestätigung Ihrer Anfrage - Korte & Partner",
       html: emailHtml,

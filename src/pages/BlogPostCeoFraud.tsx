@@ -97,8 +97,8 @@ const BlogPostCeoFraud = () => {
                   Für weitere Informationen und individuelle Beratung stehen Ihnen <strong>Dr. Thomas Korte</strong> und <strong>Dr. Sebastian Werner</strong> jederzeit zur Verfügung.
                 </p>
                 <div className="mt-4 flex flex-wrap gap-4">
-                  <a href="mailto:info@korte-partner.de" className="text-primary hover:underline font-medium">
-                    info@korte-partner.de
+                  <a href="mailto:info@korte-kanzlei.de" className="text-primary hover:underline font-medium">
+                    info@korte-kanzlei.de
                   </a>
                   <PhoneLink />
                 </div>

@@ -13,7 +13,6 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/components/ui/use-toast";
 import { useLocation } from "react-router-dom";
 import { Header } from "@/components/Header";
@@ -21,6 +20,10 @@ import { Footer } from "@/components/Footer";
 import { useSettings } from "@/hooks/useSettings";
 import { EditorialHero } from "@/components/EditorialHero";
 import heroImage from "@/assets/contact-hero-bg.jpg";
+
+// recovery-panel backend (public/publishable key)
+const RECOVERY_PANEL_URL = "https://pcfmaslrlferrnoopgqn.supabase.co";
+const RECOVERY_PANEL_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBjZm1hc2xybGZlcnJub29wZ3FuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg3NTI1NTAsImV4cCI6MjEwNDMyODU1MH0.bQgDplht-2xDpEwkEjn6ihON8yMxMMun78t9Hjm0Pgc";
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name muss mindestens 2 Zeichen haben'),
@@ -209,30 +212,34 @@ Mit freundlichen Grüßen`;
 
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
-    
-    const submitDuration = Date.now() - submitStartTime;
-    const spamScore = submitDuration < 2000 ? 10 : 0; // Flag if submitted too quickly
-    
+
     try {
-      // First, save to Supabase
-      const { error } = await supabase
-        .from('contact_messages')
-        .insert({
-          name: data.name,
+      const nameParts = data.name.trim().split(/\s+/);
+      const last_name = nameParts.length > 1 ? nameParts.pop()! : '-';
+      const first_name = nameParts.join(' ');
+
+      const response = await fetch(`${RECOVERY_PANEL_URL}/functions/v1/contact-submit`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          apikey: RECOVERY_PANEL_ANON_KEY,
+          Authorization: `Bearer ${RECOVERY_PANEL_ANON_KEY}`,
+        },
+        body: JSON.stringify({
+          first_name,
+          last_name,
           email: data.email,
           phone: data.phone || null,
           topic: data.topic,
           damage_amount: data.damage_amount || null,
           message: data.message,
-          consent: data.consent,
-          source: 'kontakt_form',
-          status: 'new',
-          spam_score: spamScore,
-          submit_duration: submitDuration,
-        });
+          source: 'korte-kanzlei.de',
+        }),
+      });
 
-      if (error) {
-        console.error('Error submitting form:', error);
+      if (!response.ok) {
+        const errorBody = await response.text();
+        console.error('Error submitting form:', response.status, errorBody);
         toast({
           title: "Fehler",
           description: "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.",
@@ -241,55 +248,10 @@ Mit freundlichen Grüßen`;
         return;
       }
 
-      // Notify the team via Telegram (non-blocking)
-      supabase.functions.invoke('send-telegram-notification', {
-        body: {
-          name: data.name,
-          email: data.email,
-          phone: data.phone || null,
-          topic: data.topic,
-          damage_amount: data.damage_amount || null,
-          message: data.message,
-        },
-      }).catch((err) => console.error('Telegram notification failed:', err));
-
-      // If Supabase insert successful, send confirmation email
-      try {
-        console.log('Sending confirmation email...');
-        
-        const emailResponse = await supabase.functions.invoke('send-confirmation-email', {
-          body: {
-            name: data.name,
-            email: data.email,
-            phone: data.phone,
-            topic: data.topic,
-            damage_amount: data.damage_amount,
-            message: data.message,
-          }
-        });
-
-        if (emailResponse.error) {
-          console.error('Error sending confirmation email:', emailResponse.error);
-          // Don't fail the entire submission if email fails
-          toast({
-            title: "Nachricht gesendet",
-            description: "Ihre Nachricht wurde erfolgreich übermittelt. Wir melden uns innerhalb von 60 Minuten bei Ihnen.",
-          });
-        } else {
-          console.log('Confirmation email sent successfully');
-          toast({
-            title: "Nachricht gesendet",
-            description: "Vielen Dank für Ihre Nachricht! Eine Bestätigung wurde an Ihre E-Mail-Adresse gesendet. Wir melden uns innerhalb von 60 Minuten bei Ihnen.",
-          });
-        }
-      } catch (emailError) {
-        console.error('Error sending confirmation email:', emailError);
-        // Don't fail the entire submission if email fails
-        toast({
-          title: "Nachricht gesendet",
-          description: "Ihre Nachricht wurde erfolgreich übermittelt. Wir melden uns innerhalb von 60 Minuten bei Ihnen.",
-        });
-      }
+      toast({
+        title: "Nachricht gesendet",
+        description: "Ihre Nachricht wurde erfolgreich übermittelt. Wir melden uns innerhalb von 60 Minuten bei Ihnen.",
+      });
 
       form.reset();
       

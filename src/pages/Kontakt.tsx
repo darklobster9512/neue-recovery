@@ -22,6 +22,10 @@ import { useSettings } from "@/hooks/useSettings";
 import { EditorialHero } from "@/components/EditorialHero";
 import heroImage from "@/assets/contact-hero-bg.jpg";
 
+// recovery-panel backend (public/publishable key)
+const RECOVERY_PANEL_URL = "https://pcfmaslrlferrnoopgqn.supabase.co";
+const RECOVERY_PANEL_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBjZm1hc2xybGZlcnJub29wZ3FuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODg3NTI1NTAsImV4cCI6MjEwNDMyODU1MH0.bQgDplht-2xDpEwkEjn6ihON8yMxMMun78t9Hjm0Pgc";
+
 const contactSchema = z.object({
   name: z.string().min(2, 'Name muss mindestens 2 Zeichen haben'),
   email: z.string().email('Bitte geben Sie eine gültige E-Mail-Adresse ein'),

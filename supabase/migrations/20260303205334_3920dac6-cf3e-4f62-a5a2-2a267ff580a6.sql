@@ -1,1 +1,0 @@
-UPDATE settings SET value = '06131-6365850' WHERE key = 'phone';

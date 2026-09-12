@@ -1,38 +1,39 @@
-# Landingpage lädt 20 Sekunden — Ursache und Fix
+# Datenbank-Verbindung komplett entfernen
+
+## Warum
+
+Die Landingpage wartet beim Start auf die Datenbank (Einstellungen wie Telefonnummer).
+Da die Datenbank entfernt wurde, laufen die Anfragen in Wiederholversuche und einen
+Timeout — das sind die ~20 Sekunden "Laden...". Das Kontaktformular ist davon nicht
+betroffen: es sendet direkt an dein recovery-panel und bleibt unverändert.
 
 ## Was passiert
 
-Beim Start blendet die App einen Vollbild-Ladescreen ("Laden...") ein und zeigt die
-Seite erst, wenn die globalen Einstellungen (Telefonnummer, Telefon-Anzeige an/aus)
-geladen sind. Diese Einstellungen kommen aus der Datenbank.
+1. Ladescreen und Datenbank-Abfrage der Einstellungen entfallen. Telefonnummer
+   (040 573086462) und die Telefon-Anzeige stehen fest im Code — Seite lädt sofort.
+2. Login und Admin-Bereich werden entfernt, da beide nur mit Datenbank funktionieren:
+   - Seiten `/auth` und `/admin` fallen weg (führen künftig auf die 404-Seite)
+   - Admin-Einstellungen und Telegram-Einstellungen fallen weg
+3. Alle Datenbank-Dateien und Verweise werden gelöscht, damit keine Verbindung mehr
+   versucht wird.
+4. Das Kontaktformular bleibt genau wie es ist (Versand an recovery-panel).
 
-Die Datenbank ist aktuell nicht erreichbar: die Anfrage an
-`.../rest/v1/settings?...` schlägt mit "Failed to fetch" fehl und wird mehrfach
-wiederholt (in den Netzwerk-Logs sichtbar: Versuch, Retry 1, Retry 2). Erst wenn
-alle Versuche abgelaufen sind, gibt die App auf und rendert — das sind die ~20
-Sekunden.
-
-Kurz: Nicht die Seite ist langsam, sondern sie wartet auf eine Antwort, die nie kommt.
-
-## Lösung
-
-Die Seite soll nie auf die Einstellungen warten:
-
-1. Ladescreen entfernen — die Seite rendert sofort mit sinnvollen Standardwerten
-   (Telefonnummer aus dem letzten bekannten Stand, Telefon-Anzeige aktiv).
-2. Einstellungen im Hintergrund nachladen. Kommt eine Antwort, aktualisiert sich
-   die Telefonnummer stillschweigend.
-3. Harte Zeitgrenze (2 Sekunden) plus Abbruch statt Wiederholversuche, damit ein
-   toter Datenbank-Anschluss die Seite niemals mehr blockiert.
+Folge: Telefonnummer und Telefon-Sichtbarkeit sind danach nicht mehr über ein
+Admin-Panel änderbar, sondern nur durch eine Textänderung im Code — sag einfach
+Bescheid, dann ändere ich sie.
 
 ## Technische Details
 
-- `src/App.tsx`: `LoadingScreen`-Gate in `AppContent` entfernen (kein Blockieren
-  auf `useSettings().isLoading` mehr).
-- `src/hooks/useSettings.tsx`:
-  - Startwerte direkt setzen, `isLoading` bleibt für Konsumenten verfügbar, blockiert
-    aber nichts mehr.
-  - Fetch mit `AbortSignal.timeout(2000)` umschließen, Fehler still abfangen und
-    auf Defaults zurückfallen.
-- Danach im Preview prüfen: Landingpage rendert sofort, Telefonnummer erscheint
-  korrekt bzw. bleibt beim Standard, keine Endlos-Retries in den Netzwerk-Logs.
+- Löschen: `src/integrations/supabase/*`, `src/hooks/useAuth.tsx`,
+  `src/pages/Auth.tsx`, `src/pages/Admin.tsx`, `src/components/AdminSettings.tsx`,
+  `src/components/TelegramSettings.tsx`, `src/components/ProtectedRoute.tsx`,
+  `src/components/AdminAutoRedirect.tsx`, `supabase/` (config + functions),
+  `.env`-Supabase-Variablen.
+- `src/hooks/useSettings.tsx`: auf statische Konstanten reduzieren (`phone`,
+  `phoneEnabled`), Provider-API bleibt, damit `PhoneDisplay`/`PhoneLink`/Footer/
+  Impressum/AGB/Index unverändert weiterlaufen; `isLoading` immer `false`.
+- `src/App.tsx`: `AuthProvider`, `AdminAutoRedirect`, `LoadingScreen`-Gate sowie
+  die Routen `/auth` und `/admin` entfernen.
+- `@supabase/supabase-js` aus den Abhängigkeiten entfernen.
+- Prüfen: Landingpage rendert ohne Verzögerung, keine `supabase.co`-Anfragen mehr
+  außer dem Kontaktformular-Versand, Typprüfung ohne Fehler.

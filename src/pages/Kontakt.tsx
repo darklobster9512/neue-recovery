@@ -215,7 +215,8 @@ Mit freundlichen Grüßen`;
 
     try {
       const nameParts = data.name.trim().split(/\s+/);
-      const last_name = nameParts.length > 1 ? nameParts.pop()! : '-';
+      const lastNamePart = nameParts.length > 1 ? nameParts.pop() : undefined;
+      const last_name = lastNamePart ?? '-';
       const first_name = nameParts.join(' ');
 
       const response = await fetch(`${RECOVERY_PANEL_URL}/functions/v1/contact-submit`, {

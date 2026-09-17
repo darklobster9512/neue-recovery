@@ -215,7 +215,8 @@ Mit freundlichen Grüßen`;
 
     try {
       const nameParts = data.name.trim().split(/\s+/);
-      const last_name = nameParts.length > 1 ? nameParts.pop()! : '-';
+      const lastNamePart = nameParts.length > 1 ? nameParts.pop() : undefined;
+      const last_name = lastNamePart ?? '-';
       const first_name = nameParts.join(' ');
 
       const response = await fetch(`${RECOVERY_PANEL_URL}/functions/v1/contact-submit`, {
@@ -233,7 +234,7 @@ Mit freundlichen Grüßen`;
           topic: data.topic,
           damage_amount: data.damage_amount || null,
           message: data.message,
-          source: 'korte-kanzlei.de',
+          source: 'kortekanzlei.com',
         }),
       });
 
@@ -408,13 +409,13 @@ Mit freundlichen Grüßen`;
                     className="w-full justify-start h-auto p-4 hover:bg-primary/5"
                     asChild
                   >
-                    <a href="mailto:info@korte-kanzlei.de" className="flex items-center gap-3">
+                    <a href="mailto:info@kortekanzlei.com" className="flex items-center gap-3">
                       <div className="p-2 rounded-full bg-primary/10">
                         <Mail className="h-5 w-5 text-primary" />
                       </div>
                       <div className="text-left">
                         <p className="font-semibold">E-Mail</p>
-                        <p className="text-sm text-muted-foreground">info@korte-kanzlei.de</p>
+                        <p className="text-sm text-muted-foreground">info@kortekanzlei.com</p>
                       </div>
                     </a>
                   </Button>

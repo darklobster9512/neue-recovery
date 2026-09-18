@@ -1,7 +1,7 @@
 import React, { createContext, useContext, ReactNode } from 'react';
 
 // Statische Einstellungen (keine Datenbank-Verbindung mehr).
-const PHONE = '040 573076450';
+const PHONE = '030 692097830';
 const PHONE_ENABLED = true;
 
 interface SettingsContextType {

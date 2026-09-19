@@ -1,5 +1,8 @@
 # Werbebild-Texte: 10 Varianten
 
+## Vorbemerkung
+Beim letzten Bereinigungsschritt (Datenbank-Entfernung) ist eine alte, nicht mehr benötigte Datei übrig geblieben, die den Build blockiert. Erster Schritt im Build-Modus: diese Überbleibsel löschen, damit die Seite wieder sauber läuft.
+
 ## Ziel
 10 alternative Texte für das Werbebild (aktuell: „Opfer von Anlagebetrug? Wir holen Ihre Krypto-Werte zurück"), um verschiedene Ansätze zu testen. Danach wird der gewählte Text 1:1 auf das bestehende Werbebild gesetzt (Grafik bleibt sonst identisch).
 

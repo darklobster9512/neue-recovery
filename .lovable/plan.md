@@ -8,40 +8,40 @@ Beim letzten Bereinigungsschritt (Datenbank-Entfernung) ist eine alte, nicht meh
 
 ## Die 10 Vorschläge
 
-1. **Ihre Krypto-Werte sind weg? Wir holen sie rechtlich zurück.**
-   (Direkter Schmerz + Lösung, seriös)
+1. **Betrogen. Abgezockt. Nicht verloren.**
+   (Dreiklang mit Wendung — bleibt im Kopf, ohne zu jammern)
 
-2. **Betrogen worden? Krypto ist nicht verloren.**
-   (Hoffnungsbotschaft, kurz und stark)
+2. **Wo Ihr Geld hingeht, kommen wir hin.**
+   (Forensik als Selbstverständlichkeit; Selbstbewusstsein der Kanzlei)
 
-3. **Anlagebetrug erkannt — jetzt handeln.**
-   (Handlungsaufforderung, dringlich ohne Panik)
+3. **Die Blockchain vergisst nichts. Auch nicht, wer Ihr Geld hat.**
+   (Nutzt die Technik als natürlichen Verbündeten — einzigartig bei Krypto)
 
-4. **Gestohlene Krypto-Werte. Juristisch zurückgeholt.**
-   (Zwei kurze Sätze, nüchtern-sachlich wie eine Kanzlei-Headline)
+4. **Ihr Verlust. Unser Mandat.**
+   (Kürzestmöglicher Claim, wirkt hochwertig und seriös)
 
-5. **Ihr Krypto-Verlust hat eine Spur. Wir verfolgen sie.**
-   (Forensik-Fokus, hebt Blockchain-Nachverfolgung hervor)
+5. **Aufgeben war gestern. Zurückholen ist jetzt.**
+   (Aktivierung ohne Opfer-Ton)
 
-6. **Anlagebetrug? Fordern Sie Ihr Geld zurück.**
-   (Aktives Anspruchsdenken statt Opferrolle)
+6. **Krypto-Scam? Erst die Spur, dann der Anspruch.**
+   (Zeigt Methode: forensisch arbeiten, dann rechtlich durchsetzen)
 
-7. **Scam, Fake-Plattform, Wallet-Hack? Wir prüfen Ihren Fall.**
-   (Deckt mehrere Betrugsarten ab, breite Zielgruppe)
+7. **Betrug sieht unsichtbar aus. Ihr Geld nicht.**
+   (Spannungsbogen: sichtbarmachen als Kernleistung)
 
-8. **Krypto-Betrug ist kein Einzelfall. Ihre Rückholung schon.**
-   (Differenzierung: individueller Fall statt Massenabfertigung)
+8. **Fake-Plattform, Wallet-Hack, Anlagebetrug — wir prüfen Ihren Fall.**
+   (Breite Abdeckung der Betrugsarten, direkte Selbst-Qualifizierung des Lesers)
 
-9. **Verlorenes Krypto-Vermögen? Zeit zu handeln ist jetzt.**
-   (Dringlichkeit, ohne Fristen-Claim)
+9. **Man hat Ihnen ein Versprechen verkauft. Wir holen das Geld.**
+   (Benennt den Betrug exakt: das verkaufte Versprechen)
 
-10. **Rechtlich. International. Nachweisbar. Wir holen Ihre Krypto-Werte zurück.**
-    (Übernimmt die bewährte Hero-Logik der Website in die Anzeige)
+10. **Verloren wirkt es. Verloren ist es nicht.**
+    (Hoffnung ohne blankes Versprechen — wörtliche Kehrseite)
 
 ## Hinweise
-- Keine Erfolgsgarantien (Meta-Richtlinien): Formulierungen wie „zurückgeholt" bleiben die Kanzlei-Leistung beschreibend, keine Zusicherung im Einzelfall.
-- Alle Varianten sind kurz genug für Werbebild-Overlay (max. ~8 Wörter Kernaussage plus Hook).
-- Empfehlung zum Testen: 1 (Schmerz + Lösung), 4 (seriöse Kanzlei-Sprache), 7 (breite Zielgruppe) — drei sehr unterschiedliche Ansätze für einen A/B-Vergleich.
+- Keine Erfolgsgarantien (Meta-Richtlinien): Varianten 2, 4 und 10 formulieren die Kanzlei-Leistung, stellen keinen Einzelerfolg in Aussicht.
+- Alle Varianten sind als Overlay auf dem Werbebild lesbar: Hook maximal ~8 Wörter.
+- Empfehlung zum A/B-Test: 1 (emotionaler Dreiklang), 3 (technischer Einwand gekippt), 4 (Premium-Claim) — drei grundsätzlich verschiedene Ansätze.
 
 ## Nächster Schritt
 Nutzer wählt eine oder mehrere Varianten; der gewählte Text wird per Bildbearbeitung auf das bestehende Werbebild gesetzt — Bildkomposition, Person und restliche Grafik bleiben 1:1 erhalten.

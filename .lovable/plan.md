@@ -1,46 +1,36 @@
-# Werbebild-Texte: 10 Varianten
+# Meta-Ads-Copy: 10 Varianten-Sets (5× Kanzlei, 5× Europol)
 
 ## Ziel
-10 sehr direkte Texte für das Werbebild, die maximale Rückhol-Entschlossenheit vermitteln, ohne einen rechtlich unzulässigen Einzelerfolg zu garantieren.
+10 komplette Meta-Ads-Sets für Korte & Partner — je Set mit Primary Text, Headline und Description. Ausgeschrieben, mit Absätzen und sparsamen, seriösen Emojis. Ziel: Lead-Generierung über das Kontaktformular (kostenlose, vertrauliche Ersteinschätzung).
 
-## Die 10 Vorschläge
+## Struktur
 
-1. **Wir holen Ihr verlorenes Geld zurück.**
-   (Klarste und stärkste Variante)
+### Block A — 5× aus Sicht der Kanzlei
+Direkte Ansprache der Opfer, Kompetenz und Rückhol-Anspruch im Vordergrund:
+1. **Direkt & selbstbewusst** — "Wir holen Ihr Geld zurück" als Kern.
+2. **Krypto-Fokus** — Blockchain-Nachverfolgung als Alleinstellungsmerkmal.
+3. **Opfer-Perspektive** — Scham nehmen, Handlung ermöglichen.
+4. **Anti-Recovery-Scam** — Abgrenzung von unseriösen "Recovery"-Anbietern (echte Kanzlei, keine Vorkasse-Masche).
+5. **Autorität & Erfahrung** — Wirtschaftskanzlei, international, gerichtsfest.
 
-2. **Krypto-Betrug? Wir holen Ihr Geld zurück.**
-   (Betrugsart und Ergebnis sofort verständlich)
+### Block B — 5× aus Sicht von Europol / Behörden-Bezug
+Knüpft an die Europol-Beschlagnahme (50 Mio. €, Anlagebetrugsnetzwerke, Frist) an:
+1. **News-Anknüpfung** — "Europol hat zugeschlagen" → Ihr Fall ist der nächste Schritt.
+2. **Frist-Dringlichkeit** — Fristbetonung mit Handlungsaufruf.
+3. **Behörden + Kanzlei** — "Die Fahnder finden die Netzwerke. Wir vertreten Sie."
+4. **Statistik/Größe** — Dimension des Betrugs → individueller Anspruch.
+5. **Opfer der beschlagnahmten Netzwerke** — direkte Zielgruppen-Ansprache.
 
-3. **Ihr Geld ist weg. Wir holen es zurück.**
-   (Emotional, einfach und kompromisslos)
+## Format pro Set
+- **Primary Text:** ausführlicher Fließtext mit 2–4 Absätzen, Emojis (⚖️ 🔍 💼 🚨 ✅ o. ä.) nur als seriöse Akzente, klarer CTA am Ende.
+- **Headline:** groß, aussagekräftig (max. ~40 Zeichen).
+- **Description:** kurz, ergänzend (max. ~30 Zeichen).
 
-4. **Wir verfolgen Ihr Geld. Bis zum Empfänger.**
-   (Konkretes Bild der Nachverfolgung)
-
-5. **Betrüger verstecken Ihr Geld. Wir finden es.**
-   (Klarer Gegner und klare Leistung)
-
-6. **Wir finden Ihre Krypto-Werte und holen sie zurück.**
-   (Nachverfolgung und Rückholung in einem Satz)
-
-7. **Verloren geglaubt. Von uns zurückgeholt.**
-   (Starke Wendung mit seriösem Kanzlei-Ton)
-
-8. **Krypto verloren? Wir setzen Ihre Ansprüche durch.**
-   (Juristisch glaubwürdiger und dennoch offensiv)
-
-9. **Ihr Geld gehört Ihnen. Wir kämpfen dafür.**
-   (Emotionaler Anspruch ohne falsches Erfolgsversprechen)
-
-10. **Anlagebetrug? Holen Sie sich Ihr Geld zurück.**
-    (Direkter Handlungsimpuls an den Betroffenen)
-
-## Empfehlung
-- **Am stärksten:** „Ihr Geld ist weg. Wir holen es zurück."
-- **Für Krypto-Zielgruppen:** „Krypto-Betrug? Wir holen Ihr Geld zurück."
-- **Am glaubwürdigsten für eine Kanzlei:** „Krypto verloren? Wir setzen Ihre Ansprüche durch."
-
-„Garantiert“, „100 %“ oder „sicher“ wird nicht verwendet: Eine solche Erfolgsgarantie wäre bei individuellen Rechtsfällen nicht belegbar und kann zur Ablehnung der Anzeige führen.
+## Vorgaben
+- Keine Erfolgsgarantien ("garantiert", "100 %", "sicher") — Meta-Richtlinien.
+- Seriöser Kanzlei-Ton, kein Clickbait.
+- Bild-/Themenbezug: Krypto-Recovery, Anlagebetrug, Europol-Operation.
+- CTA: Kontaktformular / kostenlose Ersteinschätzung.
 
 ## Nächster Schritt
-Eine oder mehrere Varianten für den A/B-Test auswählen.
+Die 10 Sets im Chat ausliefern; Auswahl und ggf. Feinschliff für den A/B-Test.

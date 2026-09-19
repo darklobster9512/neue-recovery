@@ -1,47 +1,46 @@
 # Werbebild-Texte: 10 Varianten
 
-## Vorbemerkung
-Beim letzten Bereinigungsschritt (Datenbank-Entfernung) ist eine alte, nicht mehr benötigte Datei übrig geblieben, die den Build blockiert. Erster Schritt im Build-Modus: diese Überbleibsel löschen, damit die Seite wieder sauber läuft.
-
 ## Ziel
-10 alternative Texte für das Werbebild (aktuell: „Opfer von Anlagebetrug? Wir holen Ihre Krypto-Werte zurück"), um verschiedene Ansätze zu testen. Danach wird der gewählte Text 1:1 auf das bestehende Werbebild gesetzt (Grafik bleibt sonst identisch).
+10 sehr direkte Texte für das Werbebild, die maximale Rückhol-Entschlossenheit vermitteln, ohne einen rechtlich unzulässigen Einzelerfolg zu garantieren.
 
 ## Die 10 Vorschläge
 
-1. **Betrogen. Abgezockt. Nicht verloren.**
-   (Dreiklang mit Wendung — bleibt im Kopf, ohne zu jammern)
+1. **Wir holen Ihr verlorenes Geld zurück.**
+   (Klarste und stärkste Variante)
 
-2. **Wo Ihr Geld hingeht, kommen wir hin.**
-   (Forensik als Selbstverständlichkeit; Selbstbewusstsein der Kanzlei)
+2. **Krypto-Betrug? Wir holen Ihr Geld zurück.**
+   (Betrugsart und Ergebnis sofort verständlich)
 
-3. **Die Blockchain vergisst nichts. Auch nicht, wer Ihr Geld hat.**
-   (Nutzt die Technik als natürlichen Verbündeten — einzigartig bei Krypto)
+3. **Ihr Geld ist weg. Wir holen es zurück.**
+   (Emotional, einfach und kompromisslos)
 
-4. **Ihr Verlust. Unser Mandat.**
-   (Kürzestmöglicher Claim, wirkt hochwertig und seriös)
+4. **Wir verfolgen Ihr Geld. Bis zum Empfänger.**
+   (Konkretes Bild der Nachverfolgung)
 
-5. **Aufgeben war gestern. Zurückholen ist jetzt.**
-   (Aktivierung ohne Opfer-Ton)
+5. **Betrüger verstecken Ihr Geld. Wir finden es.**
+   (Klarer Gegner und klare Leistung)
 
-6. **Krypto-Scam? Erst die Spur, dann der Anspruch.**
-   (Zeigt Methode: forensisch arbeiten, dann rechtlich durchsetzen)
+6. **Wir finden Ihre Krypto-Werte und holen sie zurück.**
+   (Nachverfolgung und Rückholung in einem Satz)
 
-7. **Betrug sieht unsichtbar aus. Ihr Geld nicht.**
-   (Spannungsbogen: sichtbarmachen als Kernleistung)
+7. **Verloren geglaubt. Von uns zurückgeholt.**
+   (Starke Wendung mit seriösem Kanzlei-Ton)
 
-8. **Fake-Plattform, Wallet-Hack, Anlagebetrug — wir prüfen Ihren Fall.**
-   (Breite Abdeckung der Betrugsarten, direkte Selbst-Qualifizierung des Lesers)
+8. **Krypto verloren? Wir setzen Ihre Ansprüche durch.**
+   (Juristisch glaubwürdiger und dennoch offensiv)
 
-9. **Man hat Ihnen ein Versprechen verkauft. Wir holen das Geld.**
-   (Benennt den Betrug exakt: das verkaufte Versprechen)
+9. **Ihr Geld gehört Ihnen. Wir kämpfen dafür.**
+   (Emotionaler Anspruch ohne falsches Erfolgsversprechen)
 
-10. **Verloren wirkt es. Verloren ist es nicht.**
-    (Hoffnung ohne blankes Versprechen — wörtliche Kehrseite)
+10. **Anlagebetrug? Holen Sie sich Ihr Geld zurück.**
+    (Direkter Handlungsimpuls an den Betroffenen)
 
-## Hinweise
-- Keine Erfolgsgarantien (Meta-Richtlinien): Varianten 2, 4 und 10 formulieren die Kanzlei-Leistung, stellen keinen Einzelerfolg in Aussicht.
-- Alle Varianten sind als Overlay auf dem Werbebild lesbar: Hook maximal ~8 Wörter.
-- Empfehlung zum A/B-Test: 1 (emotionaler Dreiklang), 3 (technischer Einwand gekippt), 4 (Premium-Claim) — drei grundsätzlich verschiedene Ansätze.
+## Empfehlung
+- **Am stärksten:** „Ihr Geld ist weg. Wir holen es zurück."
+- **Für Krypto-Zielgruppen:** „Krypto-Betrug? Wir holen Ihr Geld zurück."
+- **Am glaubwürdigsten für eine Kanzlei:** „Krypto verloren? Wir setzen Ihre Ansprüche durch."
+
+„Garantiert“, „100 %“ oder „sicher“ wird nicht verwendet: Eine solche Erfolgsgarantie wäre bei individuellen Rechtsfällen nicht belegbar und kann zur Ablehnung der Anzeige führen.
 
 ## Nächster Schritt
-Nutzer wählt eine oder mehrere Varianten; der gewählte Text wird per Bildbearbeitung auf das bestehende Werbebild gesetzt — Bildkomposition, Person und restliche Grafik bleiben 1:1 erhalten.
+Eine oder mehrere Varianten für den A/B-Test auswählen.
